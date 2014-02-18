@@ -48,7 +48,11 @@ function getCoord(city, fn){
 }
 
 function showPictures(self){
-	getCoord($(self).val(), function(coord, city){
+	p = /([a-z]+)/ig;
+	cityName = $(self).val();
+	cityName = p.exec(cityName)[1];
+	
+	getCoord(cityName, function(coord, city){
 		$.getJSON("/api/getpics.php?minx="+coord['minX']+"&miny="+coord['minY']+"&maxx="+coord['maxX']+"&maxy="+coord['maxY'], function( data ) {
 			var items = [];
 			b = true;

@@ -5,19 +5,29 @@
 
 .navbar-fixed-top{
 	border-radius: 0px !important;
+	border-bottom: 3px solid #359dd6;
+
 }
 
+.navbar-wrapper{
+	z-index: 200;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
 
 .searchbar{
 	position: absolute;
-	padding: 10px;
+	
 	z-index: 100;
 	padding: 10px;
 	background: rgba(0,0,0,0.7);
 	float:left;
 	width: 250px;
-	height: 360px;
-	top: 50px;
+	height: 357px;
+	top: 53px;
 
 	color: white;
 	font-weight: bold;
