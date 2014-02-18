@@ -83,8 +83,8 @@
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
         </div></p>
-      <p><input class="btn" type="submit" style="button" value="SUBMIT"></p>
-
+    </form>
+    <a class="btn" href="showAnswers.html" onclick="$(this).closest('form').submit()">Submit Link</a>
     </div>
 
 
@@ -208,13 +208,13 @@
     </script>
     <script type="text/javascript">
       $.fn.datetimepicker.defaults = {
-        maskInput: true,           // disables the text input mask
-        pickDate: true,            // disables the date picker
-        pickTime: false,            // disables de time picker
-        pick12HourFormat: false,   // enables the 12-hour format time picker
-        pickSeconds: false,         // disables seconds in the time picker
-        startDate: 2014,      // set a minimum date
-        endDate: Infinity          // set a maximum date
+        maskInput: true,        
+        pickDate: true,
+        pickTime: false,
+        pick12HourFormat: false,
+        pickSeconds: false,
+        startDate: 2014,
+        endDate: Infinity
       };
       $('#datetimepicker').datetimepicker({
         format: 'dd/MM/yyyy',
