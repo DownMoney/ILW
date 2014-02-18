@@ -24,7 +24,13 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+
     <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
     <link href="/css/custom.css" rel="stylesheet">
 
   </head>
@@ -72,17 +78,31 @@
 
     <div class="searchbar">
     <form>
-      <div class="ui-widget">
+
+            <div class="ui-widget">
   <label for="from">FLY FROM: </label>
   <input id="from" onkeyup="autocompleteCity(this);">
 </div>
-      <p>DATE<input type="text" value="18/02/2014" data-datepicker="datepicker"></p>
-       <div class="ui-widget">
+      <p>DATE
+        <div id="datetimepicker" class="input-append date">
+          <input type="text"></input>
+          <span class="add-on">
+            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+          </span>
+        </div></p>
+        <div class="ui-widget">
   <label for="to">FLY TO: </label>
   <input id="to" onkeyup="autocompleteCity(this);" onblur="showPictures(this);">
 </div>
-      <p>DATE<input type="text"></p>
-      <p><input type="submit" style="button" value="SUBMIT"></p>
+      <p>DATE
+        <div id="datetimepicker1" class="input-append date">
+          <input type="text"></input>
+          <span class="add-on">
+            <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+          </span>
+        </div></p>
+      <p><input class="btn" type="submit" style="button" value="SUBMIT"></p>
+
     </div>
 
 
@@ -197,6 +217,33 @@
     <script src="/js/bootstrap.min.js"></script>
 
     <script src="/js/scripts.js"></script>
+
+    <script type="text/javascript"
+     src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript">
+      $.fn.datetimepicker.defaults = {
+        maskInput: true,           // disables the text input mask
+        pickDate: true,            // disables the date picker
+        pickTime: false,            // disables de time picker
+        pick12HourFormat: false,   // enables the 12-hour format time picker
+        pickSeconds: false,         // disables seconds in the time picker
+        startDate: 2014,      // set a minimum date
+        endDate: Infinity          // set a maximum date
+      };
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'en-US'
+      });
+
+      $('#datetimepicker1').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'en-US'
+      });
+    </script>
 
     <script>
       getRandomPic();
