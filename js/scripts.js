@@ -33,6 +33,15 @@ function autocompleteCity(text){
 	});
 }
 
+function getCityLocation(city, fn){
+	$.getJSON( "https://maps.googleapis.com/maps/api/geocode/json?address="+city+"&sensor=false&key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58", function( data ) {
+	  coord = data['results'][0]['geometry']['location'];
+	  
+
+	  fn(coord, city);
+	});
+}
+
 function getCoord(city, fn){
 	$.getJSON( "https://maps.googleapis.com/maps/api/geocode/json?address="+city+"&sensor=false&key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58", function( data ) {
 	  coord = data['results'][0]['geometry']['bounds'];
