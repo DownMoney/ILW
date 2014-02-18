@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #customForm {
 	background-color: red;
 	width: 20%;
@@ -9,7 +9,7 @@
 	visibility: visible;
 	z-index: 1500;
 	float:left;
-=======
+}
 .searchbar{
 	position: absolute;
 	z-index: 99999;
@@ -18,5 +18,5 @@
 	width: 250px;
 	height: 400px;
 	top: 150px;
->>>>>>> 6e6296a0d17afddaa77bf6f15160c46f74f50197
+
 }
