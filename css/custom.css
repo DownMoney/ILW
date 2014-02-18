@@ -1,0 +1,11 @@
+#customForm {
+	background-color: red;
+	width: 20%;
+	height: 100%;
+	position: absolute;
+	margin-left: 0;
+	margin-top: 0;
+	visibility: visible;
+	z-index: 1500;
+	float:left;
+}
