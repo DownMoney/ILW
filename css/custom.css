@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-=======
+
 .carousel{
 	margin-top: 50px;
 }
->>>>>>> 106fc53690aeb01636dc8eed1be273d53d9a90bb
 
 #customForm {
 	background-color: red;
@@ -16,10 +14,7 @@
 	z-index: 1500;
 	float:left;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 106fc53690aeb01636dc8eed1be273d53d9a90bb
 .searchbar{
 	position: absolute;
 	z-index: 99999;
@@ -27,10 +22,7 @@
 	float:left;
 	width: 250px;
 	height: 400px;
-<<<<<<< HEAD
 	top: 150px;
-=======
 	top: 100px;
->>>>>>> 106fc53690aeb01636dc8eed1be273d53d9a90bb
 
 }
