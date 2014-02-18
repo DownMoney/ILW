@@ -1,6 +1,19 @@
+@font-face
+{
+font-family: 'HelveticaUL';
+src: url('/fonts/HelveticaNeueLTStd-UltLt.otf');
+}
+
+@font-face
+{
+	font-family: 'HelveticaNeue';
+	src: url('/fonts/HelveticaNeueLTPro-Th.otf');
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
+	font-family: 'HelveticaNeue';
 }
 
 body{
@@ -9,6 +22,12 @@ body{
 }
 .carousel{
 	margin-top: 50px;
+}
+
+
+.carousel-caption{
+	height: 140px;
+	overflow: hidden;
 }
 
 .navbar-fixed-top{
@@ -44,10 +63,44 @@ img{
 
 .searchbar input{
 	color: black;
+	height: 34px !important;
+}
+
+.add-on{
+	height: 34px !important;
+}
+
+.add-on i{
+	margin-top: 5px;
+}
+
+.input-append input{
+	width: 204px !important;
 }
 
 #googlemapcanvas {
 	width: 100%;
 	height: 70%;
 	margin-top: 50px;
+}
+
+.modal{
+	margin-bottom: 50px;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	padding: 10px;
+
+}
+
+.eventsList{
+	padding: 20px;
+	list-style-type: none;
+}
+
+.eventsList .row{
+
+	min-height: 135px;
+	max-height: auto;
+	margin-top: 5px;
+	border-bottom: 2px solid #359dd6;
 }

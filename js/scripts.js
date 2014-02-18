@@ -10,7 +10,7 @@ function getRandomPic(){
 			}
 			else
 				items.push ('<div class="item"> ');
-		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['title']+'</h1>              <p>'+val['topic_description']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button">Fly here</a></p>            </div>          </div>        </div>');
+		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['topic_description']+'</h1>              <p>'+(val['title'])+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" >Fly here</a></p>            </div>          </div>        </div>');
 		});
 
 		$('div.carousel-inner').html(items.join(''));
@@ -74,7 +74,7 @@ function showPictures(self){
 			}
 			else
 				items.push ('<div class="item"> ');
-		  items.push(' <img src="'+val['photo_file_url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+city+'</h1>              <p>'+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button">Check events</a></p>            </div>          </div>        </div>');
+		  items.push(' <img src="'+val['photo_file_url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+city+'</h1>              <p>'+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="showEvents(\''+val['latitude']+','+val['longitude']+'\');">Check events</a></p>            </div>          </div>        </div>');
 		});
 
 		$('div.carousel-inner').html(items.join(''));
@@ -82,5 +82,25 @@ function showPictures(self){
 				
 		$('.carousel').carousel(0);	
 		});
+	});
+}
+
+function getEvents(city, fn){
+	$.getJSON('/api/events.php?city='+city, function(data){
+		fn(data['events']['event'], city);
+	});
+}
+
+function showEvents(coord){
+
+	getEvents(coord, function(events, city){
+		
+		items = [];
+		$.each(events, function(val){
+			items.push('<div class="row"><div class="col-md-3"><img src="'+events[val]['image']['medium']['url']+'"/></div><div class="col-md-7"><h4><a href="'+events[val]['url']+'" target ="_blank">'+events[val]['title']+'</a></h4><p>'+events[val]['start_time']+'</p><p>'+events[val]['venue_name']+'</p><p>'+events[val]['venue_address']+'</p></div></div>');
+		});
+
+		$('div.eventsList').html(items.join(''));
+		$('#events').modal('toggle');
 	});
 }
