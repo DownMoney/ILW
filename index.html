@@ -24,6 +24,9 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+
+    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen"
      href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
@@ -75,7 +78,11 @@
 
     <div class="searchbar">
     <form>
-      <p>FLY FROM:<input class="typeahead" type="text" data-provide="typeahead"></p>
+
+            <div class="ui-widget">
+  <label for="from">FLY FROM: </label>
+  <input id="from" onkeyup="autocompleteCity(this);">
+</div>
       <p>DATE
         <div id="datetimepicker" class="input-append date">
           <input type="text"></input>
@@ -83,7 +90,10 @@
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
         </div></p>
-      <p>FLY TO:<input class="typeahead" type="text" data-provide="typeahead"></p>
+        <div class="ui-widget">
+  <label for="to">FLY TO: </label>
+  <input id="to" onkeyup="autocompleteCity(this);" onblur="showPictures(this);">
+</div>
       <p>DATE
         <div id="datetimepicker1" class="input-append date">
           <input type="text"></input>
@@ -160,7 +170,7 @@
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
-
+<input type="text" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
       <hr class="featurette-divider">
 
       <div class="row featurette">
@@ -203,7 +213,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+
     <script src="/js/scripts.js"></script>
 
     <script type="text/javascript"
