@@ -32,7 +32,7 @@ public class Search {
 				}
 			}
 		}
-		return null;
+		return fin;
 	}
 	
 	public void filter(List<Node> v, int N){
