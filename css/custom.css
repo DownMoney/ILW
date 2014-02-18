@@ -21,7 +21,7 @@
 
 .searchbar{
 	position: absolute;
-
+	padding: 10px;
 	z-index: 100;
 
 	background: rgba(0,0,0,0.7);
