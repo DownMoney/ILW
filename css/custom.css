@@ -2,6 +2,10 @@
 .carousel{
 	margin-top: 50px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f70dd890f9973472f7fd209456662bebbc396a0
 
 #customForm {
 	background-color: red;
@@ -22,7 +26,12 @@
 	float:left;
 	width: 250px;
 	height: 400px;
+<<<<<<< HEAD
 	top: 150px;
+=======
+
+
+>>>>>>> 9f70dd890f9973472f7fd209456662bebbc396a0
 	top: 100px;
 
 }
