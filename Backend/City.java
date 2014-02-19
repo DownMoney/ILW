@@ -8,4 +8,8 @@ public class City {
 	TimeDate time;
 	long pop;
 	Vector<String> airports;
+	public City(String name)
+	{
+		this.name = name;
+	}
 }
