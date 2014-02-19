@@ -5,6 +5,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Vector;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -28,7 +29,7 @@ public class ApiToDB {
 	{
 		System.setProperty("http.agent", "");
 		ApiToDB api = new ApiToDB("GB", "GBP", "en-GB");
-		api.queryQuotes("EDI", "SIP", "anytime", "anytime");
+		api.queryRoutes("UK", "SIP", "anytime", "anytime");
 	}
 	
 	
@@ -38,17 +39,22 @@ public class ApiToDB {
 		this.currency = currency;
 		this.locale = locale;
 		cities = new HashMap<String,City>();
-		//trans = new List<Transport>();
-		//events = new List<Event>();
+		trans = new Vector<Transport>();
+		events = new Vector<Event>();
 	}
 	public void queryQuotes(String from, String to, String indate, String outdate)
 	{
 		String query = "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/"+country+"/"+currency+"/"+locale+"/"+from+"/"+to+"/"+indate+"/"+outdate+"?apiKey="+apikey;
 		sendQuery(query);
 	}
-	public void queryRoads(String from, String to, String indate, String outdate)
+	public void queryRoutes(String from, String to, String indate, String outdate)
 	{
 		String query = "http://partners.api.skyscanner.net/apiservices/browseroutes/v1.0/"+country+"/"+currency+"/"+locale+"/"+from+"/"+to+"/"+indate+"/"+outdate+"?apiKey="+apikey;
+		sendQuery(query);
+	}
+	public void queryDates(String from, String to, String indate, String outdate)
+	{
+		String query = "http://partners.api.skyscanner.net/apiservices/browsedates/v1.0/"+country+"/"+currency+"/"+locale+"/"+from+"/"+to+"/"+indate+"/"+outdate+"?apiKey="+apikey;
 		sendQuery(query);
 	}
 	public void sendQuery(String query)
@@ -110,7 +116,7 @@ public class ApiToDB {
 					{
 						NodeList inside = all_.item(j).getChildNodes();
 						for(int k = 0; k < inside.getLength(); k++)
-						{
+						{	
 							if(inside.item(k).getNodeName().equals("PlaceId"))
 							{
 								id = inside.item(k).getFirstChild().getNodeValue();
@@ -131,15 +137,54 @@ public class ApiToDB {
 			}
 			else if(all.item(i).getNodeName().equals("Routes"))
 			{
+				System.out.println("Routes");
 				NodeList all_ = all.item(i).getChildNodes();
 				for(int j = 0; j < all_.getLength(); j++)
 				{
+					System.out.println("Routes1");
 					String origin = null;
 					String destination = null;
 					String price = null;
+					if(all_.item(j).getChildNodes().getLength() > 1)
+					{
+						System.out.println("Routes2");
+						NodeList inside = all_.item(j).getChildNodes();
+						for(int k = 0; k < inside.getLength(); k++)
+						{
+							System.out.println("Routes3");//+inside.item(k).getNodeName());
+							if(inside.item(k).getNodeName().equals("OriginId"))
+							{
+								origin = inside.item(k).getFirstChild().getNodeValue();
+							}
+							else if(inside.item(k).getNodeName().equals("DestinationId"))
+							{
+								destination = inside.item(k).getFirstChild().getNodeValue();
+							}
+							else if(inside.item(k).getNodeName().equals("Price"))
+							{
+								price = inside.item(k).getFirstChild().getNodeValue();
+							}
+						}
+					}
+					if(origin != null)
+					{
+						Transport c = new Transport(Integer.parseInt(origin), Integer.parseInt(destination), Double.parseDouble(price));
+						System.out.println("Got trans!");
+						trans.add(c);
+					}
 				}
 			}
 				
 		}
+		
+		for(int i = 0; i < trans.size(); i++)
+		{
+			System.out.println("SIZE");
+			int s = trans.get(i).s;
+			int e = trans.get(i).e;
+			//System.out.println("Updating "+ s + " to " + cities.get(s).name);
+			trans.get(i).update(cities.get(s), cities.get(e));
+		}
+		
 	}
 }
