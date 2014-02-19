@@ -6,9 +6,25 @@ public class Route implements Comparable<Route> {
 	double score;
 	int index = 0;
 	int size = 0;
-	public Route(){}
+	City lastCity;
+	public Route(){
+		lastCity = null;
+		time = null;
+		score = 0;
+		cost = 0;
+	}
+	public Route(Vector<Activity> r, double co, TimeDate t, double s, int i, int si, City lc){
+		route = r;
+		cost = co;
+		time = t;
+		score = s;
+		index = i;
+		size = si;
+		lastCity = lc;
+	}
 	public void addActivity(City c, double s, TimeDate t){
 		route.add(new Activity(c, t));
+		lastCity = c;
 		score += s;
 		size++;
 		time = t;
@@ -54,6 +70,13 @@ public class Route implements Comparable<Route> {
 		size--;
 		cost -= a.cost;
 		time = route.get(size-1).time;
+	}
+	public Route copy(){
+		Vector<Activity> nr = new Vector<Activity>();
+		for(Activity ai : route){
+			nr.add(ai);
+		}
+		return new Route(nr, cost, time, score, index, size, lastCity);
 	}
 	private class Activity{
 		City city;
