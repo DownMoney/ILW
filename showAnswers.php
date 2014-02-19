@@ -77,7 +77,7 @@
 
 
 		</div>
-	<div id="timeline-outputtext" style=" top: 150px; left: 0px;"></div>
+	<div id="timeline-outputtext" style=" top: 150px; left: -275px;"></div>
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
