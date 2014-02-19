@@ -16,7 +16,7 @@ function getRandomPic(){
 			}
 			else
 				items.push ('<div class="item"> ');
-		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['topic_description']+'</h1>              <p>'+(val['title'])+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" >Fly here</a></p>            </div>          </div>        </div>');
+		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['title']+'</h1>              <p>'+val['topic_description']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button">Fly here</a></p>            </div>          </div>        </div>');
 		});
 
 		$('div.carousel-inner').html(items.join(''));
@@ -83,8 +83,9 @@ function showPictures(self){
 			}
 			else
 				items.push ('<div class="item"> ');
+
 		  items.push(' <img src="'+val['photo_file_url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+city+'</h1>              <p>'+ '</p>              <p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#events" role="button">Check events</a></p>            </div>          </div>        </div>');
-		});
+
 
 		$('div.carousel-inner').html(items.join(''));
 		$('.carousel').carousel("pause").removeData();
@@ -94,6 +95,7 @@ function showPictures(self){
 		});
 	});
 }
+
 
 function getEvents(city, fn){
 	$.getJSON('/api/events.php?city='+city, function(data){
@@ -113,4 +115,8 @@ function showEvents(coord){
 		$('div.eventsList').html(items.join(''));
 		//$('#events').modal('toggle');
 	});
+
+function getRoute(depart, arrive, other) {
+	 
+
 }

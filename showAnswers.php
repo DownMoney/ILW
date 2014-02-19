@@ -44,6 +44,7 @@
 
    
 	<div id="googlemapcanvas"></div>
+	<div id="panel" style="width: 300px; float: right;"></div> 
 	<div id="schematictravel"></div>
 
 	<!-- Bootstrap core JavaScript
@@ -57,17 +58,38 @@
     </script>
     <script type="text/javascript" src="./js/scripts.js"></script>
         <script>
-		var map;
-		getCityLocation('<?php echo $_GET["from"] ?>', function(coord,city){
-			console.log(coord);
+
+		/*var map;
+		getCityLocation('edinburgh', function(coord, city){
 			var mapOptions = {
-    			zoom: 10,
+    			zoom: 8,
     			center: new google.maps.LatLng(coord['lat'], coord['lng'])
   			};
   			map = new google.maps.Map(document.getElementById('googlemapcanvas'), mapOptions);
-		});
- 			
-		
+			});*/
+			var directionsService = new google.maps.DirectionsService();
+     var directionsDisplay = new google.maps.DirectionsRenderer();
+
+     var map = new google.maps.Map(document.getElementById('googlemapcanvas'), {
+       zoom:7,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     });
+
+     directionsDisplay.setMap(map);
+     //directionsDisplay.setPanel(document.getElementById('panel'));
+
+     var request = {
+       origin: '<?php echo $_GET["from"] ?>', 
+       destination: 'New York',
+       travelMode: google.maps.DirectionsTravelMode.DRIVING
+     };
+
+     directionsService.route(request, function(response, status) {
+       if (status == google.maps.DirectionsStatus.OK) {
+         directionsDisplay.setDirections(response);
+       	}
+     	});
+
 
     	</script>
 
