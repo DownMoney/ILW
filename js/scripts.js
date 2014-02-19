@@ -169,3 +169,9 @@ function toTimeline(cities){
 
 	bubbles();
 }
+
+function getRoute(start, end, travelMode, fn){
+	$.getJSON('/api/route.php?start='+start+'&end='+end+'mode='+travelMode, function(data){
+		fn(data['routes']);
+	});
+}
