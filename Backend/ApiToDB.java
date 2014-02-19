@@ -5,6 +5,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 import java.util.Vector;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -21,6 +22,7 @@ public class ApiToDB {
 	String currency;
 	String locale;
 	String country;
+	int d,m,y;
 	HashMap<String,City> cities;
 	List<Transport> trans;
 	List<Event> events;
@@ -29,7 +31,15 @@ public class ApiToDB {
 	{
 		System.setProperty("http.agent", "");
 		ApiToDB api = new ApiToDB("GB", "GBP", "en-GB");
+		api.setTime(24,2,2014);
 		api.queryRoutes("UK", "SIP", "anytime", "anytime");
+	}
+	
+	public void setTime(int a, int b, int c)
+	{
+		d = a;
+		m = b;
+		y = c;
 	}
 	
 	
@@ -171,6 +181,11 @@ public class ApiToDB {
 						Transport c = new Transport(Integer.parseInt(origin), Integer.parseInt(destination), Double.parseDouble(price));
 						System.out.println("Got trans!");
 						c.type = TransType.FLIGHT;
+						Random rnd = new Random();
+						int day = d+rnd.nextInt(1);
+						int h = rnd.nextInt(19);
+						c.out = new TimeDate(h, rnd.nextInt(59), 0, y, m, day);
+						c.in = new TimeDate(h+2, rnd.nextInt(59), 0, y,m, day);
 						trans.add(c);
 					}
 				}
