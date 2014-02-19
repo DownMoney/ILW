@@ -79,7 +79,7 @@
      //directionsDisplay.setPanel(document.getElementById('panel'));
 
      var request = {
-       origin: '<?php echo $_GET["from"] ?>', 
+       origin: 'Chicago', 
        destination: 'New York',
        travelMode: google.maps.DirectionsTravelMode.DRIVING
      };

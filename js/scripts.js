@@ -86,6 +86,7 @@ function showPictures(self){
 
 		  items.push(' <img src="'+val['photo_file_url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+city+'</h1>              <p>'+ '</p>              <p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#events" role="button">Check events</a></p>            </div>          </div>        </div>');
 
+		});
 
 		$('div.carousel-inner').html(items.join(''));
 		$('.carousel').carousel("pause").removeData();
@@ -115,8 +116,7 @@ function showEvents(coord){
 		$('div.eventsList').html(items.join(''));
 		//$('#events').modal('toggle');
 	});
-
+}
 function getRoute(depart, arrive, other) {
 	 
-
 }
