@@ -170,6 +170,7 @@ public class ApiToDB {
 					{
 						Transport c = new Transport(Integer.parseInt(origin), Integer.parseInt(destination), Double.parseDouble(price));
 						System.out.println("Got trans!");
+						c.type = TransType.FLIGHT;
 						trans.add(c);
 					}
 				}
