@@ -49,7 +49,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Cookie Light District</a>
+              <a class="navbar-brand" href="/">Cookie Light District</a>
             </div>
             
           </div>
@@ -59,32 +59,33 @@
     </div>
 
     <div class="searchbar">
-    <form>
+    <form id="searchForm" method="GET" action="/showAnswers.php">
 
             <div class="ui-widget">
   <label for="from">FLY FROM: </label>
-  <input id="from" class="form-control" onkeyup="autocompleteCity(this);">
+  <input id="from" name="from" class="form-control" onkeyup="autocompleteCity(this);">
 </div>
        <div class="ui-widget"> <label for="from">DEPARTURE DATE: </label>
         <div id="datetimepicker" class="input-append date">
-          <input type="text" class="form-control"></input>
+          <input type="text" name="ddate" class="form-control"></input>
           <span class="add-on">
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
         </div></div>
         <div class="ui-widget">
   <label for="to">FLY TO: </label>
-  <input id="to" class="form-control" onkeyup="autocompleteCity(this);" onblur="showPictures(this);">
+  <input id="to" class="form-control" name="to" onkeyup="autocompleteCity(this);" onblur="showPictures(this);">
 </div>
        <div class="ui-widget"><label for="from">ARRIVAL DATE: </label>
         <div id="datetimepicker1" class="input-append date">
-          <input type="text" class="form-control"></input>
+          <input type="text" name="adate" class="form-control"></input>
           <span class="add-on">
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
         </div></div>
+    
+    <input type="submit"class="btn btn-success" value="Search"/>
     </form>
-    <a class="btn btn-success" href="showAnswers.html" onclick="$(this).closest('form').submit()">Search</a>
     </div>
 
 
@@ -131,11 +132,11 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Not sure about your next destination? <span class="text-muted">We will help you.</span></h2>
+          <p class="lead">Whenever you visit our website you will get destination suggestions from around the world, ones that you probaly never knew you wanted to visit.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="/img/caribbean.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -143,23 +144,23 @@
 
       <div class="row featurette">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="/img/concert.jpg" alt="Generic placeholder image">
         </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">While you at it why not go to a gig? <span class="text-muted">Or two.</span></h2>
+          <p class="lead">Nothing is better than saving few quid on a journey; unless you combine it with a chance to attend that event you always wanted.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p class="lead">We take care of everything for you: flights, events, transport, and we always get you the cheapest price. Stop wasting money and time and book your next escapade today.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="/img/relax.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -182,6 +183,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="/js/jquery.validate.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 
     <script src="/js/scripts.js"></script>
@@ -213,6 +215,31 @@
 
     <script>
       getRandomPic();
+      $( window ).resize(function() {
+          updateHeight();
+      });
+
+      $(document).ready(function () {
+
+        $('#searchForm').validate({ // initialize the plugin
+            rules: {
+                from: {
+                    required: true
+                    
+                },
+                
+                ddate: {
+                    required: true
+                },
+                
+            },
+            errorPlacement: function(error, element) {
+                error.insertBefore(element);
+            }
+        });
+
+      });
+
     </script>
   </body>
 </html>

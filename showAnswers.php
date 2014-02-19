@@ -35,7 +35,7 @@
 		<div class="navbar nav navbar-inverse navbar-fixed-top" role="navigation">
 		  <div class="container">
 			<div class="navbar-header">
-			  <a class="navbar-brand" href="#">Cookie Light District</a>
+			  <a class="navbar-brand" href="/">Cookie Light District</a>
 			</div>
 		  </div>
 		</div>
@@ -58,14 +58,16 @@
     <script type="text/javascript" src="./js/scripts.js"></script>
         <script>
 		var map;
-		function initialize() {
- 			var mapOptions = {
-    			zoom: 8,
-    			center: new google.maps.LatLng(-34.397, 150.644)
+		getCityLocation('<?php echo $_GET["from"] ?>', function(coord,city){
+			console.log(coord);
+			var mapOptions = {
+    			zoom: 10,
+    			center: new google.maps.LatLng(coord['lat'], coord['lng'])
   			};
   			map = new google.maps.Map(document.getElementById('googlemapcanvas'), mapOptions);
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
+		});
+ 			
+		
 
     	</script>
 

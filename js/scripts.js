@@ -1,3 +1,9 @@
+ function updateHeight(){
+        $('div.carousel, div.carousel-inner, div.item, img').css('height', $(window).height()-50);
+        $('div.searchbar').css('height', $(window).height()-243);
+      }
+
+
 function getRandomPic(){
 	$.getJSON( '/api/randomphoto.php', function(data) {
 		b = true;
@@ -17,6 +23,8 @@ function getRandomPic(){
 		console.log(data);
 		$('.carousel').carousel("pause").removeData();
 		$('.carousel').carousel(0);	
+
+		updateHeight();
 	});
 }
 
@@ -60,8 +68,9 @@ function showPictures(self){
 	p = /([a-z]+)/ig;
 	cityName = $(self).val();
 	cityName = p.exec(cityName)[1];
-	
+	showEvents(cityName);
 	getCoord(cityName, function(coord, city){
+
 		$.getJSON("/api/getpics.php?minx="+coord['minX']+"&miny="+coord['minY']+"&maxx="+coord['maxX']+"&maxy="+coord['maxY'], function( data ) {
 			var items = [];
 			b = true;
@@ -74,13 +83,14 @@ function showPictures(self){
 			}
 			else
 				items.push ('<div class="item"> ');
-		  items.push(' <img src="'+val['photo_file_url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+city+'</h1>              <p>'+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="showEvents(\''+val['latitude']+','+val['longitude']+'\');">Check events</a></p>            </div>          </div>        </div>');
+		  items.push(' <img src="'+val['photo_file_url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+city+'</h1>              <p>'+ '</p>              <p><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#events" role="button">Check events</a></p>            </div>          </div>        </div>');
 		});
 
 		$('div.carousel-inner').html(items.join(''));
 		$('.carousel').carousel("pause").removeData();
 				
 		$('.carousel').carousel(0);	
+		updateHeight();
 		});
 	});
 }
@@ -101,6 +111,6 @@ function showEvents(coord){
 		});
 
 		$('div.eventsList').html(items.join(''));
-		$('#events').modal('toggle');
+		//$('#events').modal('toggle');
 	});
 }
