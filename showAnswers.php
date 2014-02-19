@@ -35,7 +35,7 @@
 		<div class="navbar nav navbar-inverse navbar-fixed-top" role="navigation">
 		  <div class="container">
 			<div class="navbar-header">
-			  <a class="navbar-brand" href="#">Cookie Light District</a>
+			  <a class="navbar-brand" href="#" id="mm">Cookie Light District</a>
 			</div>
 		  </div>
 		</div>
@@ -54,42 +54,10 @@
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/scripts.js"></script>
 	<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58&sensor=true">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58&sensor=false">
     </script>
     <script type="text/javascript" src="./js/scripts.js"></script>
-        <script>
-		/*var map;
-		getCityLocation('edinburgh', function(coord, city){
-			var mapOptions = {
-    			zoom: 8,
-    			center: new google.maps.LatLng(coord['lat'], coord['lng'])
-  			};
-  			map = new google.maps.Map(document.getElementById('googlemapcanvas'), mapOptions);
-			});*/
-			var directionsService = new google.maps.DirectionsService();
-     var directionsDisplay = new google.maps.DirectionsRenderer();
-
-     var map = new google.maps.Map(document.getElementById('googlemapcanvas'), {
-       zoom:7,
-       mapTypeId: google.maps.MapTypeId.ROADMAP
-     });
-
-     directionsDisplay.setMap(map);
-     //directionsDisplay.setPanel(document.getElementById('panel'));
-
-     var request = {
-       origin: 'Chicago', 
-       destination: 'New York',
-       travelMode: google.maps.DirectionsTravelMode.DRIVING
-     };
-
-     directionsService.route(request, function(response, status) {
-       if (status == google.maps.DirectionsStatus.OK) {
-         directionsDisplay.setDirections(response);
-       	}
-     	});
-
-    	</script>
+    <script type="text/javascript" src= "./js/googlemap.js"></script>
 
 
   </body>
