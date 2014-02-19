@@ -16,7 +16,7 @@ function getRandomPic(){
 			}
 			else
 				items.push ('<div class="item"> ');
-		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['title']+'</h1>              <p>'+val['topic_description']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button">Fly here</a></p>            </div>          </div>        </div>');
+		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['title']+'</h1>              <p>'+val['topic_description']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="getAirport(\''+val['position'][1]+'\',\''+val['position'][0]+'\');">Fly here</a></p>            </div>          </div>        </div>');
 		});
 
 		$('div.carousel-inner').html(items.join(''));
@@ -173,5 +173,11 @@ function toTimeline(cities){
 function getRoute(start, end, travelMode, fn){
 	$.getJSON('/api/route.php?start='+start+'&end='+end+'mode='+travelMode, function(data){
 		fn(data['routes']);
+	});
+}
+
+function getAirport(lng, lat){
+	$.getJSON('/api/airport.php?location='+lat.toString()+','+lng.toString(), function(data){
+		$('#to').val(data['results'][0]['name']);
 	});
 }
