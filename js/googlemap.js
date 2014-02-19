@@ -12,7 +12,7 @@ function initialize() {
   	var flightPlanCoordinates = [];
 
     for (var r = 0; r < 10; r++) {
-        flightPlanCoordinates[r] = new google.maps.LatLng(Math.round((Math.random() * 360)) - 180,Math.round((Math.random() * 140)) - 70);
+        flightPlanCoordinates[r] = new google.maps.LatLng((Math.random() * 180) - 90,(Math.random() * 360) - 180);
         console.log(flightPlanCoordinates);  
     }
 

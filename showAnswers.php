@@ -122,7 +122,6 @@
          directionsDisplay.setDirections(response);
        	}
      	});
->>>>>>> 72c182e635753c54ca21f7af4e8533e79e611dc5
 
 
     	</script>
