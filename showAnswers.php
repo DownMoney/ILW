@@ -44,6 +44,7 @@
 
    
 	<div id="googlemapcanvas"></div>
+	<div id="panel" style="width: 300px; float: right;"></div> 
 	<div id="schematictravel"></div>
 
 	<!-- Bootstrap core JavaScript
@@ -57,15 +58,36 @@
     </script>
     <script type="text/javascript" src="./js/scripts.js"></script>
         <script>
-		var map;
-		function initialize() {
- 			var mapOptions = {
+		/*var map;
+		getCityLocation('edinburgh', function(coord, city){
+			var mapOptions = {
     			zoom: 8,
-    			center: new google.maps.LatLng(-34.397, 150.644)
+    			center: new google.maps.LatLng(coord['lat'], coord['lng'])
   			};
   			map = new google.maps.Map(document.getElementById('googlemapcanvas'), mapOptions);
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
+			});*/
+			var directionsService = new google.maps.DirectionsService();
+     var directionsDisplay = new google.maps.DirectionsRenderer();
+
+     var map = new google.maps.Map(document.getElementById('googlemapcanvas'), {
+       zoom:7,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     });
+
+     directionsDisplay.setMap(map);
+     //directionsDisplay.setPanel(document.getElementById('panel'));
+
+     var request = {
+       origin: 'Chicago', 
+       destination: 'New York',
+       travelMode: google.maps.DirectionsTravelMode.DRIVING
+     };
+
+     directionsService.route(request, function(response, status) {
+       if (status == google.maps.DirectionsStatus.OK) {
+         directionsDisplay.setDirections(response);
+       	}
+     	});
 
     	</script>
 
