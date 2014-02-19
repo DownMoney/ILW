@@ -120,3 +120,52 @@ function showEvents(coord){
 function getRoute(depart, arrive, other) {
 	 
 }
+
+function bubbles(){
+	$('body').css('overflow-x','hidden');
+	var con = $('.timeline-container');
+	var position = con.position();
+	$('#timeline-outputtext').css('top',(position.top));
+	
+	$('.time-line-href').on('click', function(e){
+		e.preventDefault();
+		$('.circleLine').css('opacity','0')
+		$(this).find('div').css('opacity','1')
+		$('#timeline-outputtext').animate({
+		    'left':-275
+		});
+	});
+	$('.timeline-circles').on('click',function(){
+		//$('#timeline-outputtext').css('top', '0px');
+		var outputR = $('#timeline-outputtext').css('<?php echo direction;?>');
+		if(outputR == '-275px'){
+			$('#timeline-outputtext').animate({
+				'left':'0'
+			});
+		}else {
+			$('#timeline-outputtext').animate({
+				'left':'-275px'
+			}).animate({
+				'left':'0'
+			});
+		}	
+	});
+}
+
+function ptext(test){
+	$('#timeline-outputtext').html('text');
+}
+
+function toTimeline(cities){
+	$('#legend').html('');
+	$('#bubbles').html('');
+	for (var i = 0; i < cities.length; i++) {
+		$('#legend').append('<div class="time-line-circle" style="width:25%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+cities[i]['city']+'</span></a>				</div>');
+		for (var j = 0; j < cities[i]['events'].length; j++)
+		{
+			$('#bubbles').append('<div class="timeline-circles timeline-circle2change2" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\''+cities[i]['events'][j]['name']+'\');" class="timeline-textformat textincircle2and1">'+cities[i]['events'][j]['name']+'</span></div>');
+		}
+	};
+
+	bubbles();
+}

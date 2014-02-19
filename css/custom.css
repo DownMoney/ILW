@@ -13,7 +13,7 @@ src: url('/fonts/HelveticaNeueLTStd-UltLt.otf');
 html, body {
 	height: 100%;
 	width: 100%;
-	font-family: 'HelveticaNeue';
+	font-family: 'HelveticaNeue' !important;
 }
 
 body{
@@ -108,4 +108,8 @@ img{
 	max-height: auto;
 	margin-top: 5px;
 	border-bottom: 2px solid #359dd6;
+}
+
+.timeline-container{
+	
 }
