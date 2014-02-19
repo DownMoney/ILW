@@ -117,9 +117,7 @@ function showEvents(coord){
 		//$('#events').modal('toggle');
 	});
 }
-function getRoute(depart, arrive, other) {
-	 
-}
+
 
 function bubbles(){
 	$('body').css('overflow-x','hidden');

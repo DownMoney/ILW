@@ -49,7 +49,7 @@
 	<div id="schematictravel"></div> 
 
 
-	<div class="timeline-container" style="width:800;margin-top:50px;">
+	<div class="timeline-container" onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="width:800;margin-top:50px;">
 		<div class="time-line-time">
 			<div id="timeline-line" style="width:800;"></div>
 			<span id="legend">
@@ -77,7 +77,7 @@
 
 
 		</div>
-	<div id="timeline-outputtext" style=" top: 150px; left: -275px;"></div>
+	<div id="timeline-outputtext" style=" top: 150px; left: -275px;" ></div>
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -90,40 +90,6 @@
     </script>
     <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src= "./js/googlemap.js"></script>
-        <script>
-
-		/*var map;
-		getCityLocation('edinburgh', function(coord, city){
-			var mapOptions = {
-    			zoom: 8,
-    			center: new google.maps.LatLng(coord['lat'], coord['lng'])
-  			};
-  			map = new google.maps.Map(document.getElementById('googlemapcanvas'), mapOptions);
-			});*/
-			var directionsService = new google.maps.DirectionsService();
-     var directionsDisplay = new google.maps.DirectionsRenderer();
-
-     var map = new google.maps.Map(document.getElementById('googlemapcanvas'), {
-       zoom:7,
-       mapTypeId: google.maps.MapTypeId.ROADMAP
-     });
-
-     directionsDisplay.setMap(map);
-     //directionsDisplay.setPanel(document.getElementById('panel'));
-
-     var request = {
-       origin: 'Chicago', 
-       destination: 'New York',
-       travelMode: google.maps.DirectionsTravelMode.DRIVING
-     };
-
-     directionsService.route(request, function(response, status) {
-       if (status == google.maps.DirectionsStatus.OK) {
-         directionsDisplay.setDirections(response);
-       	}
-     	});
-
-
-    	</script>
+       
   </body>
 </html>
