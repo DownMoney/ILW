@@ -3,19 +3,22 @@ import java.util.*;
 public class Search {
 	public User user;
 
-	public Route[] findPaths(City[] cities, double maxCost, TimeDate start, TimeDate maxTime,
+	public Vector<Route> findPaths(City city, double maxCost, TimeDate start, TimeDate maxTime,
 			int N, User u) {
 		user = u;
+		Vector<Route> fin = new Vector<Route>(); 
 		List<Node> next = new Vector<Node>();
-		next.add(new Node(cities[0], start));
+		next.add(new Node(city, start));
 		List<Node> curr = new Vector<Node>();
 		while (!next.isEmpty()) {
 			filter(next, N);
+			filterR(fin, N);
 			curr = next;
 			next = new Vector<Node>();
 			while (!curr.isEmpty()) {
 				Node top = curr.get(curr.size() - 1);
-				checkRoutes(top, maxCost, maxTime);
+				checkRoutes(top, maxCost, maxTime, fin);
+				trim(fin, maxCost, maxTime);
 				if (top.routes.size() == 0) {
 					continue;
 				}
@@ -29,7 +32,7 @@ public class Search {
 				}
 			}
 		}
-		return null;
+		return fin;
 	}
 	
 	public void filter(List<Node> v, int N){
@@ -44,11 +47,25 @@ public class Search {
 			v.add(new Node(rs.get(i)));
 		}
 	}
+	public void filterR(Vector<Route> v, int N){
+		if(v.size() <= N) return;
+		Collections.sort(v);
+		v.setSize(N);
+	}
 	
-	public void checkRoutes(Node n, double mc, TimeDate mt){
+	public void checkRoutes(Node n, double mc, TimeDate mt, Vector<Route> f){
 		for(Route ri : n.routes){
 			if(ri.cost > mc || TimeDate.diffSZ(mt, ri.time).toSecs() > 0){
+				f.add(ri);
 				n.routes.remove(ri);
+			}
+		}
+	}
+	
+	public void trim(Vector<Route> v, double mc, TimeDate mt){
+		for(Route ri : v){
+			while(ri.cost > mc || TimeDate.diffSZ(mt, ri.time).toSecs() > 0){
+				ri.pop();
 			}
 		}
 	}
@@ -83,7 +100,7 @@ public class Search {
 			routes = r;
 			time = t.in;
 			for (Route ri : routes) {
-				ri.addActivity(city, getScore(city));
+				ri.addActivity(city, getScore(city), time);
 			}
 		}
 

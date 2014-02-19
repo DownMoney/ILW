@@ -7,10 +7,11 @@ public class Route implements Comparable<Route> {
 	int index = 0;
 	int size = 0;
 	public Route(){}
-	public void addActivity(City c, double s){
-		route.add(new Activity(c));
+	public void addActivity(City c, double s, TimeDate t){
+		route.add(new Activity(c, t));
 		score += s;
 		size++;
+		time = t;
 	}
 	public void addActivity(Transport t){
 		route.add(new Activity(t));
@@ -47,19 +48,33 @@ public class Route implements Comparable<Route> {
 	public int compareTo(Route r){
 		return (new Double(score)).compareTo(new Double(r.score));
 	}
-	
+	public void pop(){
+		Activity a = route.get(size-1);
+		route.remove(size-1);
+		size--;
+		cost -= a.cost;
+		time = route.get(size-1).time;
+	}
 	private class Activity{
 		City city;
 		Transport trans;
 		Event event;
+		double cost;
+		TimeDate time;
 		public Activity(Event e){
 			event = e;
+			cost = e.cost;
+			time = e.end;
 		}
-		public Activity(City c){
+		public Activity(City c, TimeDate t){
 			city = c;
+			cost = 0;
+			time = t;
 		}
 		public Activity(Transport t){
 			trans = t;
+			cost = t.cost;
+			time = t.in;
 		}
 		public boolean isCity(){
 			return !(city == null);
