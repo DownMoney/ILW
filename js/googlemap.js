@@ -1,12 +1,39 @@
 function initialize() {
 
 	var mapOptions = {
-		zoom: 1,
-	    center: new google.maps.LatLng(0, -180),	
+		zoom: 5,
+	    center: new google.maps.LatLng(50,20),	
 	    mapTypeId: google.maps.MapTypeId.DRIVING
 	};
 
   	var map = new google.maps.Map(document.getElementById('googlemapcanvas'), mapOptions);
+
+
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            alert("HEHE");
+            var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude); 
+            alert("Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude);
+            map.setCenter(pos);
+        }, function() {
+            alert("WRONG");
+            //handleNoGeolocation(true);
+        });
+    } else {
+    // Browser doesn't support Geolocation
+        //handleNoGeolocation(false);
+        alert("WRONG");
+    }
+
+
+function handleNoGeolocation(errorFlag) {
+  if (errorFlag) {
+    var content = 'Error: The Geolocation service failed.';
+  } else {
+    var content = 'Error: Your browser doesn\'t support geolocation.';
+  }
+}
 
 
   	var flightPlanCoordinates = [];
