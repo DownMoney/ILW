@@ -113,3 +113,11 @@ img{
 .timeline-container{
 	
 }
+
+.ui-widget{
+	margin-top: 5px !important;
+}
+
+p a:nth-child(2){
+	margin-left: 7px;
+}
