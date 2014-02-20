@@ -215,3 +215,11 @@ function getCurrentAirport(){
 	});
 	});
 }
+
+function betterSearchBar() {
+	if($('#searchForm').height() > 550) {
+		$('#via').hide();
+		$('#VIA').css('display','block');
+		$('#VIA').animate({height:"50px"});
+	}
+}
