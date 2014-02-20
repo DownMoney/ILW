@@ -107,13 +107,13 @@ $depDate ="";
 	return $returnJson;
 }
 
-$startCode = 'EDI';
+$startCode = $_GET['startCode'];
 $code = $startCode;
 $endCode = '';
-$city = 'LONDON';
+$city = $_GET['startCity'];
 $cost = 0;
-$sDate = ('2014-09-03');
-$eDate = ('2014-09-15');
+$sDate = date('Y-m-d', strtotime($_GET['startDate']));
+$eDate = date('Y-m-d', strtotime($_GET['endDate']));
 $routes = '{"Routes":[';
 $visited = array();
 $stops = 5;
@@ -148,7 +148,8 @@ for ($i=0; $i < $stops; $i++) {
 			$routes= $routes.'{"From":"'.$code.'", "To": "'.$json['code'].'", "Price":'.$json['price'].', "FromCity":"'.$city.'", "ToCity":"'.$json['airport'].'", "Date": "'.$json['departureDate'].'"},';
 			$cost += $json['price'];
 		}
-	}
+		break
+;	}
 }
 $routes = rtrim($routes, ",");
 $routes = $routes.'], "Price":'.$cost.'}';

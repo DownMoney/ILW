@@ -93,11 +93,55 @@
 	<script src="/js/scripts.js"></script>
 	<script src="/js/select.js"></script>
 	<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58&sensor=true">
     </script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	
 
     <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src= "./js/googlemap.js"></script>
+
+    <script>
+    var flightPlanCoordinates2 = [];
+    var map2;
+    function loadPoints(map){
+    	map2 = map;
+    p = /([a-z]+|[a-z]\s[a-z])+\s?\(([a-z]+)\)/ig;
+	cityName = '<?php echo $_GET["from"] ?>';
+	m = p.exec(cityName);
+	code= m[2];
+	city = m[1];
+		console.log('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city);
+    	$.getJSON('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city, function(data){
+    		console.log(data);
+    		
+    		$.each(data['Routes'], function(i){
+    			p = /([a-z]+)/ig;
+    			console.log(i);
+				name = data['Routes'][i]['FromCity'];
+			    name = p.exec(name)[1];
+			    console.log(name);
+    			getCityLocation(name, function(coord, city){
+    				console.log(coord);
+    				point = new google.maps.LatLng(coord['lat'], coord['lng']);
+    				flightPlanCoordinates2.push(point);
+    				temp = new google.maps.Marker({
+			  			position : point,
+			  			map : map,
+			  			title : "Point " + i
+			  		});
+    			});
+    		});
+
+    		setTimeout(draw, 2000);
+    		console.log(flightPlanCoordinates)
+    		
+
+    	});
+    }
+
+    function draw(){
+    	connectPoints(flightPlanCoordinates2, map2);
+    }
+    </script>
   </body>
 </html>

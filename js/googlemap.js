@@ -45,32 +45,53 @@ function handleNoGeolocation(errorFlag) {
   	var i = 1;
   	var j = [];
   	var temp;
-  	$.each(flightPlanCoordinates, function(index,point) {
+  	/*$.each(flightPlanCoordinates, function(index,point) {
   		temp = new google.maps.Marker({
   			position : point,
   			map : map,
   			title : "Point " + i
   		})
   		i++;
-  	});
+  	});*/
 
-  	$.each(flightPlanCoordinates, function(index,point) {
-  		j = [];
-  		if(index < flightPlanCoordinates.length - 1) {
-  			j = [point, flightPlanCoordinates[index+1]];
-  			console.log(j);
-  			var temp = new google.maps.Polyline({
-  				path : j,
-  				map: map,
-  				geodesic: true,
-  				strokeColor: getRandomColor(),
-  				strokeOpacity: 1.0,
-  				strokeWeight: 2
-  			});
-  		}
-  	})
+  	
+loadPoints(map);
+
 }
+
+
+
+
 google.maps.event.addDomListener(window, 'load', initialize);
+
+function connectPoints(flightPlanCoordinates, map){
+  $.each(flightPlanCoordinates, function(index,point) {
+      j = [];
+      if(index < flightPlanCoordinates.length - 1) {
+        j = [point, flightPlanCoordinates[index+1]];
+        console.log(j);
+        var temp = new google.maps.Polyline({
+          path : j,
+          map: map,
+          geodesic: true,
+          strokeColor: getRandomColor(),
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+      }
+    });
+
+  new google.maps.Polyline({
+          path : [flightPlanCoordinates[flightPlanCoordinates.length-1], flightPlanCoordinates[0]],
+          map: map,
+          geodesic: true,
+          strokeColor: getRandomColor(),
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+}
+
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
