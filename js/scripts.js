@@ -19,7 +19,7 @@ function getRandomPic(){
 			}
 			else
 				items.push ('<div class="item"> ');
-		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['topic_description']+'</h1>              <p>'+val['title']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="getAirport(\''+val['position'][1]+'\',\''+val['position'][0]+'\');">Fly here</a><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#events" role="button">Check events</a></p>            </div>          </div>        </div>');
+		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['topic_description']+'</h1>              <p>'+val['title']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="betterSearchBar();getAirport(\''+val['position'][1]+'\',\''+val['position'][0]+'\');">Fly here</a><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#events" role="button">Check events</a></p>            </div>          </div>        </div>');
 		});
 
 		$('div.carousel-inner').html(items.join(''));
@@ -250,7 +250,8 @@ function getVia() {
 		setTimeout($('#via').animate({
 			display : 'block',
 			visibility : "visible",
-			height : "200px"
+			height : "200px",
+			padding : "10px"
 		}),500);
 		clicked = true;
 	} else {
@@ -258,7 +259,8 @@ function getVia() {
 		$('#via').animate({
 			display : 'none',
 			visibility : 'hidden',
-			height: "0px"
+			height: "0px",
+			padding : "0px"
 		});
 		clicked = false;
 	}
