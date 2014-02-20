@@ -167,12 +167,28 @@ function toTimeline(cities){
 	$('#legend').html('');
 	$('#bubbles').html('');
 	div = 100/cities.length;
+	p  = /[a-z]+/ig;
+    			
+			   
 	for (var i = 0; i < cities.length; i++) {
-		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+cities[i]['FromCity']+'</span></a>				</div>');
-		/*for (var j = 0; j < cities[i]['events'].length; j++)
-		{
-			$('#bubbles').append('<div class="timeline-circles timeline-circle2change2" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\''+cities[i]['events'][j]['name']+'\');" class="timeline-textformat textincircle2and1">'+cities[i]['events'][j]['name']+'</span></div>');
-		}*/
+		name = cities[i]['FromCity'].trim();
+		m = p.exec(name);
+		if (m!=null)
+			name = m[0];
+		console.log(m);
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+name+'</span></a>				</div>');
+		
+		getEvents(name, function(data){
+			console.log(data);
+			for (var j = 0; j < data.length; j++)
+			{
+				try{
+				$('#bubbles').append('<div class="timeline-circles timeline-circle2change2" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\''+data[j]['title']+'\');" class="timeline-textformat textincircle2and1">'+data[j]['title']+'</span></div>');
+				}
+				catch(errr){}
+			}
+		});
+		/**/
 	};
 
 	bubbles();
@@ -187,10 +203,23 @@ function getRoute(start, end, travelMode, fn){
 function getAirport(lng, lat){
 	showEvents(lat.toString()+','+lng.toString());
 	$.getJSON('/api/airport.php?location='+lat.toString()+','+lng.toString(), function(data){
+
+
+		p = /([a-z]+)/ig;
+			cityName = data['results'][0]['name'];
+			cityName = p.exec(cityName);
+			$.getJSON('/api/autocomplete.php?city='+cityName, function(data2){
+		
+		
+		
 		i =($('#via').children().length);
 		addField();
-		$('#via'+i.toString()).val(data['results'][0]['name']);
+		$('#via'+i.toString()).val(data2[0]['PlaceName']+' ('+data2[0]['PlaceId']+')');
 		getRandomPic();
+		
+	});
+
+		
 	});
 }
 
@@ -211,7 +240,18 @@ function getCurrentAirport(){
 	$.getJSON('/api/getCurLocation.php', function(dat){
 		$.getJSON('/api/airport.php?location='+dat['lat'].toString()+','+dat['lon'].toString(), function(data){
 		
-		$('#from').val(data['results'][0]['name']);
+			p = /([a-z]+)/ig;
+			cityName = data['results'][0]['name'];
+			cityName = p.exec(cityName);
+			$.getJSON('/api/autocomplete.php?city='+cityName, function(data2){
+		
+		
+	
+		$('#from').val(data2[0]['PlaceName']+' ('+data2[0]['PlaceId']+')');
+		//getRandomPic();
+		});
+
+			//$('#from').val(data['results'][0]['name']);
 		
 	});
 	});
