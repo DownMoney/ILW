@@ -52,9 +52,9 @@
 	?></div> 
 
 	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
-	<div class="timeline-container"  style="width:800;">
+	<div class="timeline-container"  style="width:900;">
 		<div class="time-line-time">
-			<div id="timeline-line" style="width:800;"></div>
+			<div id="timeline-line" style="width:900;"></div>
 			<span id="legend">
 				<div class="time-line-circle" style="width:25%">
 					<a class="time-line-href href1" href="#" onclick="change1()">
@@ -62,7 +62,7 @@
 					<span>2001</span></a>
 				</div>
 			</span>
-			<div id="bubbles" style="width:800; height:400;margin-top:50px;">
+			<div id="bubbles" style="width:900; height:400;margin-top:50px;">
 				<div class="timeline-circles timeline-circle1change2" id="timeline-circid1">
 					<span id="textcircid1" onclick="ptext();" class="timeline-textformat textincircle1and2">University</span></div>
 				<div class="timeline-circles timeline-circle2change2" id="timeline-circid2">
