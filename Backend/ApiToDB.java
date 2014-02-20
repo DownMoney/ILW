@@ -1,21 +1,20 @@
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-import java.util.Vector;
+  import java.io.InputStreamReader;
+  import java.net.URL;
+  import java.net.URLConnection;
+  import java.util.ArrayList;
+  import java.util.HashMap;
+  import java.util.List;
+  import java.util.Random;
+  import java.util.Vector;
   
   import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+  import javax.xml.parsers.DocumentBuilderFactory;
   
   import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
+  import org.w3c.dom.Node;
+  import org.w3c.dom.NodeList;
+  import org.xml.sax.InputSource;
   
   public class ApiToDB {
   	private String apikey = "ilw03824094427015676662223000993";
@@ -25,16 +24,16 @@ import org.xml.sax.InputSource;
   	String country;
  	int d,m,y;
   	HashMap<String,City> cities;
-  	Vector<Transport> trans;
+  	List<Transport> trans;
   	List<Event> events;
   	
-  	public static void main(String argvs[])
+  	/*public static void main(String argvs[])
   	{
   		System.setProperty("http.agent", "");
   		ApiToDB api = new ApiToDB("GB", "GBP", "en-GB");
  		api.setTime(24,2,2014);
   		api.queryRoutes("UK", "SIP", "anytime", "anytime");
-  	}
+  	}*/
   	
  	public void setTime(int a, int b, int c)
  	{
@@ -43,36 +42,6 @@ import org.xml.sax.InputSource;
  		y = c;
  	}
  	
- 	public Vector<Transport> getAllTrans(City city, TimeDate date)
- 	{
- 		queryRoutes(city.name, "anywhere", date.toDateB(), "anytime");
- 		HashMap<Integer,String> countries = new HashMap<Integer,String>();
- 		HashMap<Integer,String> cities1 = new HashMap<Integer,String>();
- 		Set<String> keys = cities.keySet();
- 		for(int i = 0; i < trans.size(); i++)
-		{
-				if(trans.get(i).start.type == 1)
-				{
-					trans.remove(i);
-					i--;
-				}
-		}
- 		for(String k : keys)
- 		{
- 			if(cities.get(k).type == 1)
- 			{
- 				queryRoutes(city.name, cities.get(k).name, date.toDateB(), "anytime");
- 			}
- 			else
- 			{
- 				cities1.put(Integer.parseInt(k), cities.get(k).name);
- 			}
- 		}
- 		Vector<Transport> t = new Vector<Transport>();
- 		t.addAll(trans);
- 		trans.clear();
- 		return t;
- 	}
   	
   	public ApiToDB(String country, String currency, String locale)
   	{
@@ -153,7 +122,6 @@ import org.xml.sax.InputSource;
   				{
   					String id = null;
   					String name = null;
-  					int type = 0;
   					if(all_.item(j).getChildNodes().getLength() > 1)
   					{
   						NodeList inside = all_.item(j).getChildNodes();
@@ -166,15 +134,6 @@ import org.xml.sax.InputSource;
   							else if(inside.item(k).getNodeName().equals("Name"))
   							{
   								name = inside.item(k).getFirstChild().getNodeValue();
-  							}
-  							else if(inside.item(k).getNodeName().equals("Type"))
-  							{
-  								if(inside.item(k).getFirstChild().getNodeValue().equals("Station"))
-  								{
-  									type = 0;
-  								} else {
-  									type = 1;
-  								}
   							}
   						}
   					}

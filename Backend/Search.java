@@ -15,17 +15,23 @@ public class Search {
 			filter(fin, N);
 			curr = next;
 			next = new Vector<Node>();
+			System.out.println("next");
 			while (!curr.isEmpty()) {
+				System.out.println("curr");
 				Node top = curr.get(curr.size() - 1);
+				curr.remove(curr.size()-1);
+				System.out.println(top.time == null);
 				Vector<Event> events = getAllEvents(top.city, top.time, maxTime);
 				for(Event ei : events){
 					if(checkRoute(top.route, ei, maxCost, maxTime)){
 						next.add(new Node(ei, top.route, top.city));
+						System.out.println("Added: " + ei.name + " " + ei.start.toString() + " " + ei.getEnd().toString());
 					}
 				}
 				Vector<Transport> trans = getAllTrans(top.city, top.time, maxTime);
+				if(trans != null)
 				for(Transport ti : trans){
-					if(checkRoute(top.route, ti, maxCost, maxTime, end)){
+					if(checkRoute(top.route, ti, maxCost, maxTime, end, city)){
 						Route nr = top.route.copy();
 						nr.addActivity(ti);
 						next.add(new Node(ti.end, nr));
@@ -67,11 +73,11 @@ public class Search {
 		v.setSize(N);
 	}
 
-	public boolean checkRoute(Route r, Transport t, double mc, TimeDate mt, City e){
+	public boolean checkRoute(Route r, Transport t, double mc, TimeDate mt, City c, City start){
 		Route nr = r.copy();
 		nr.addActivity(t);
 		nr.addActivity(t.end, getScore(t.end), t.in);
-		if(nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0 || r.lastCity.equals(e)){
+		if(nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0 || r.lastCity.equals(c) || (r.contains(c) && !c.equals(start))){
 			return false;
 		} else {
 			return true;
@@ -81,15 +87,18 @@ public class Search {
 	public boolean checkRoute(Route r, Event e, double mc, TimeDate mt){
 		Route nr = r.copy();
 		nr.addActivity(e, getScore(e));
-		if(nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0){
+		if(nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0 || r.contains(e)){
+			System.out.println("Rejected: " + e.name + " " + r.contains(e));
 			return false;
 		} else {
+			System.out.println("Accepted: " + e.name + " " + r.contains(e));
 			return true;
 		}
 	}
 	
 	public double getScore(City c) {
 		double res = 0;
+		if(c.events != null)
 		for (Event e : c.events) {
 			res += getScore(e);
 		}
@@ -108,7 +117,10 @@ public class Search {
 		
 		public Node(City c, TimeDate t){
 			init();
+			route = new Route();
+			route.addActivity(c, getScore(c), t);
 			city = c;
+			time = t;
 		}
 		public Node(City c, Route r){
 			init();
@@ -124,7 +136,7 @@ public class Search {
 			route = r.copy();
 			route.addActivity(e, getScore(e));
 			city = c;
-			time = e.end;
+			time = e.getEnd().addH(1);
 		}
 		public void init(){
 			if(route == null){
