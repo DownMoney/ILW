@@ -36,7 +36,7 @@ import org.xml.sax.InputSource;
  		Vector<Transport> all = api.getAllTrans(new City("SIP"), new TimeDate(10,10,10,2014,2,24), new TimeDate(10,10,10,2014,3,05));
   		for(Transport t: all)
   		{
-  			//System.out.println(t.start.name);
+  			System.out.println(t.s);
   		}
  		///api.queryRoutes("UK", "SIP", "anytime", "anytime");
   	}
@@ -52,7 +52,8 @@ import org.xml.sax.InputSource;
  	{
  		queryRoutes(city.name, "anywhere", date.toDateB(), enddate.toDateB());
  		HashMap<Integer,String> cities1 = new HashMap<Integer,String>();
- 		Set<String> keys = cities.keySet();
+ 		HashMap<String,City> cities2 = new HashMap<String,City>(cities);
+ 		Set<String> keys = cities2.keySet();
  		/*for(int i = 0; i < trans.size(); i++)
 		{
 				if(trans.get(i).start.type == 1)
@@ -63,16 +64,17 @@ import org.xml.sax.InputSource;
 				}
 		}*/
  		System.out.println("All keys:");
+ 		
  		for(String k : keys)
  		{
  			System.out.println(k);
- 			if(cities.get(k).type == 1)
+ 			if(cities2.get(k).type == 1)
  			{
- 				//if(!IATAcodes.giveCode(cities.get(k).name).equals(""))
- 				//{
- 					queryRoutes(city.name, IATAcodes.giveCode(cities.get(k).name), date.toDateB(), enddate.toDateB());
+ 				if(!IATAcodes.giveCode(cities2.get(k).name).equals(""))
+ 				{
+ 					queryRoutes(city.name, IATAcodes.giveCode(cities2.get(k).name), date.toDateB(), enddate.toDateB());
  	 				System.out.println("CODE");
- 				//}
+ 				}
  				
  			}
  			else
