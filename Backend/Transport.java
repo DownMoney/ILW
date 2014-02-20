@@ -5,10 +5,6 @@ public class Transport {
 	double cost;
 	String outAirport, inAirport;
 	int s,e;
-	public String toString()
-	{
-		return "A transportation from " + start.name + " (" + s + ") to " + end.name + " (" + e + ") at cost of £" + cost;
-	}
  	public Transport(City start, City end, double cost)
  	{
  		this.start = start;

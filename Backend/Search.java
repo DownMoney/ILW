@@ -35,6 +35,7 @@ public class Search {
 						Route nr = top.route.copy();
 						nr.addActivity(ti);
 						next.add(new Node(ti.end, nr));
+						System.out.println("City: " + ti.end.name);
 					}
 				}
 				fin.add(top.route);
@@ -44,10 +45,15 @@ public class Search {
 	}
 	
 	public Vector<Transport> getAllTrans(City c, TimeDate start, TimeDate end){
-		if(c.outTrans != null){
+		if(c.outTrans != null && c.outTrans.size() > 0){
+			System.out.println("Am I called? " + c.outTrans.size());
 			return getAfterTrans(c.outTrans, start);
 		}
-		Vector<Transport> trans = null;
+		ApiToDB api = new ApiToDB("GB", "GBP", "en-GB");
+		TimeDate nt = start.addH(15);
+		api.setTime(start.day, start.mon, start.year);
+		Vector<Transport> trans = api.getAllTrans(new City("EDI"), start, end);
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Hello: " + trans.size());
 		c.outTrans = trans;
 		return trans;
 	}
@@ -78,6 +84,7 @@ public class Search {
 		nr.addActivity(t);
 		nr.addActivity(t.end, getScore(t.end), t.in);
 		if(nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0 || r.lastCity.equals(c) || (r.contains(c) && !c.equals(start))){
+			System.out.println("City Rejected: " + c.name);
 			return false;
 		} else {
 			return true;

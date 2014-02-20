@@ -7,16 +7,18 @@ public class City {
 	Vector<Transport> inTrans, outTrans;
 	TimeDate time;
 	long pop;
-	int type; //0 = airport, 1 = country
+	int type;
 	Vector<String> airports;
 	public City(String name)
 	{
+		this.name = name;
 		this.name = name.split(" ")[0];
 		this.events = null;
 		this.inTrans = null;
 		this.outTrans = null;
 	}
 	public boolean equals(City c){
+		if(c == null) return false;
 		return name.equals(c.name);
 	}
 }
