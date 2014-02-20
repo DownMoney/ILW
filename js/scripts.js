@@ -195,7 +195,7 @@ function getAirport(lng, lat){
 
 function addField(){
 	i =($('#via').children().length);
-	$('#via').append(' <div class="ui-widget">   <label for="from">FLY VIA: </label>  <input id="via'+i+'" name="via'+i+'" class="form-control" onkeyup="autocompleteCity(this);"></div>')
+	$('#via').append(' <div class="viaFields ui-widget">   <label for="from">FLY VIA: </label>  <input id="via'+i+'" name="via'+i+'" class="form-control" onkeyup="autocompleteCity(this);"></div>')
 }
 
 function getEventTypes(){
@@ -218,13 +218,47 @@ function getCurrentAirport(){
 
 function betterSearchBar() {
 	if($('#searchForm').height() > 530) {
-		$('#via').hide();
 		$('#VIA').css('display','inline-block');
-		$('#VIA').animate({height:"50px"});
-		$('#buttonvia').animate({marginLeft:"0px"});
+		$('.viaFields').css({'visibility':'hidden','z-score': '90000'});
+		$('#via').animate({
+			height: "0px"
+		})
+
+		setTimeout(function(){
+			var w = $('.searchbar').width() + 10;
+			$('#buttonvia').animate({marginLeft:"0px"});
+
+			$('#via').css({
+				"position" : "absolute",
+				"visibility" : "hidden",
+				"margin-left" : w + "px",
+				"margin-top" : "50px",
+				"background" : "rgba(0,0,0,0.7)",
+				"width" : "230px",
+				"padding" : "10px"
+			})
+		},500);
 	}
 }
 
+var clicked = false;
 function getVia() {
-	alert("HAHAHA");
+
+	if(!clicked){
+		$('.viaFields').css('visibility','visible');
+		setTimeout($('#via').animate({
+			display : 'block',
+			visibility : "visible",
+			height : "200px"
+		}),500);
+		clicked = true;
+	} else {
+		$('.viaFields').css('visibility','hidden');
+		$('#via').animate({
+			display : 'none',
+			visibility : 'hidden',
+			height: "0px"
+		});
+		clicked = false;
+	}
 }

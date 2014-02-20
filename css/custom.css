@@ -132,30 +132,35 @@ a b {
 	color: #359dd6;
 }
 #VIA {
-	background-color: rgba(0,0,0,0.1);
-	height: 100px;
+	
 	display: none;
-	padding: 0;
+/*	background-color: rgba(0,0,0,0.1);
 	color: white;
 	text-align: center;
-	font-size: 50px;
-	margin: 0 auto;
-	border: 1px solid rgb(100,100,100);
-	border-radius: 10px;
-	width: 70px;
-	float:right;
-}
 
-#VIA:hover {
-	background-color: rgba(0,0,0,1);
-	border: 1px solid black;
+	margin: 0 auto;
+	border: 1px solid rgba(100,100,100);
+	border-radius: 10px;
+	width: 70px;*/
+	float: right;
+	font-size: 50px;
+	margin: 15px auto;
 }
+/*
+#VIA:hover {
+	background: rgb(0,0,0,1);
+	border: 1px solid black;
+}*/
 
 #buttonvia {
-	display: block;
+	display: inline-block;
 	text-align: center;
 	width: 70px;
-	margin: 0 auto;
+	margin: 15px auto;
 	color: black;
 	font-weight: bold;
+}
+
+.viaFields {
+
 }
