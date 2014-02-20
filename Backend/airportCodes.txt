@@ -1,0 +1,2895 @@
+AAL,Aalborg
+AES,Aalesund
+AAR,Aarhus
+YXX,Abbotsford
+ABZ,Aberdeen
+ABR,Aberdeen
+AHB,Abha
+ABJ,Abidjan
+ABI,Abilene
+AUH,Abu Dhabi
+ABS,Abu Simbel
+ABV,Abuja
+ACA,Acapulco
+ACC,Accra
+ADK,Adak Island
+ADA,Adana
+ADD,Addis Ababa
+ADL,Adelaide
+ADE,Aden
+AGA,Agadir
+GUM,Agana
+IXA,Agartala
+QGG,Agedabia
+AGF,Agen
+AGR,Agra
+AJI,Agri
+BQN,Aguadilla
+AGU,Aguascalientes
+IKA – Ahmadabad (Tehran), Iran,Imam Khomeini International Airport
+AMD,Ahmedabad
+AWZ,Ahwaz
+QXB,Aix
+AJA,Ajaccio
+AXT,Akita
+CAK,Akron/Canton
+AKU,Aksu
+PVK,Aktion
+AKV,Akulivik
+AEY,Akureyri
+KQA,Akutan
+AAN,Al Ain
+AAC,Al Arish
+ABT,Al
+AHU,Al Hoceima
+ALM,Alamogordo
+ALS,Alamosa
+ABC,Albacete
+ABY,Albany
+ALB,Albany
+ALL,Albenga
+ABQ,Albuquerque
+ABX,Albury
+ACI,Alderney
+WKK,Aleknagik
+AED,Aleneva
+ALP,Aleppo
+ALY,Alexandria
+HBE,ALexandria
+AEX,Alexandria
+XFS,Alexandria
+AXD,Alexandroupolis
+AHO,Alghero
+ALG,Algiers
+ALC,Alicante
+ASP,Alice Springs
+IXD,Allahabad
+AET,Allakaket
+ABE,Allentown
+ABE,Allentown
+AIA,Alliance
+ALA,Almaty
+LEI,Almeria
+IXV,Along
+AOR,Alor Setar
+GUR,Alotau
+APN,Alpena
+ALE,Alpine
+ALF,Alta
+ATM,Altamira
+LTI,Altai
+AAT,Altay
+ACH,Altenrhein
+AOO,Altoona / Martinsburg
+ASJ,Amami O Shima
+AMA,Amarillo
+ABL,Ambler
+AMQ,Ambon
+ADJ,Amman
+AMM,Amman
+YEY,Amos
+ATQ,Amritsar
+AMS,Amsterdam
+AAQ,Anapa Airport
+ANC,Anchorage
+AOI,Ancona
+AZN,Andizhan
+ASD,Andros Town
+ANG,Angouleme
+AGN,Angoon
+AXA,Anguilla
+ANI,Aniak
+AJN,Anjouan
+ESB,Ankara
+AAE,Annaba
+NCY,Annecy
+ANB,Anniston
+AQG,Anqing
+AOG,Anshan
+AYT,Antalya
+TNR,Antananarivo
+ANU,Antigua
+ANF,Antofagasta
+ANR,Antwerp
+ANV,Anvik
+AOJ,Aomori
+APW,Apia
+ATW,Appleton
+AQJ,Aqaba
+AJU,Aracaju
+AUX,Araguaina
+RAE,Arar
+AUC,Arauca
+AAX,Araxa
+AMH,Arba Mintch
+ACV,Arcata
+AQP,Arequipa
+ARI,Arica
+ARH,Arkhangelsk
+AXM,Armenia
+ARM,Armidale
+ATC,Arthurs Town
+AUA,Aruba
+AVK,Arvaikheer
+YEK,Arviat
+AJR,Arvidsjaur
+AKJ,Asahikawa
+AVL,Asheville / Hendersonville
+ASB,Ashgabat
+ASM,Asmara
+ASO,Asosa
+ASE,Aspen
+ATZ,Assiut
+TSE,Astana
+ASF,Astrakhan Airport
+OVD,Asturias
+JTY,Astypalea Island
+ASU,Asuncion
+ASW,Aswan
+AHN,Athens
+ATH,Athens
+YIB,Atikokan
+ATL,Atlanta
+ACY,Atlantic City /Atlantic Cty
+AIY,Atlantic City International
+YAT,Attawapiskat
+AOU,Attopeu
+MER,Atwater/Merced
+AKL,Auckland
+AGB,Augsburg
+AGS,Augusta
+AUG,Augusta
+YPJ,Aupaluk
+IXU,Aurangabad
+AUS,Austin
+AVV,Avalon
+AVN,Avignon
+AYQ,Ayers Rock
+BCD,Bacolod
+IXB,Bagdogra
+YBG,Bagotville
+BJR,Bahar Dar
+BHV,Bahawalpur Airport
+BHI,Bahia Blanca
+BAH,Bahrain
+BAY,Baia Mare
+YBC,Baie Comeau
+BKM,Bakalalan
+BFL,Bakersfield
+BAK,Baku
+GYD,Baku
+DPS,Bali (Denpasar)
+BPN,Balikpapan
+BNK,Ballina
+BBA,Balmaceda
+BWI,Baltimore
+ABM,Bamaga
+BKO,Bamako
+HOE,Ban Hat Tai
+OUI,Ban Hat Tai
+BMV,Ban Me Thuot
+BND,Bandar Abbas
+BWN,Bandar Seri Begawan
+BDO,Bandung
+YBA,Banff
+BLR,Bangalore (Bengalooru)
+BPX,Bangda
+BKK,Bangkok
+BGR,Bangor
+BGF,Bangui
+QBL,Bani Walid
+BNX,Banja Luka
+BDJ,Banjarmasin
+BJL,Banjul
+BAV,Baotou
+BHB,Bar Harbor
+BGI,Barbados (Bridgetown
+BCI,Barcaldine
+BCN,Barcelona
+BLA,Barcelona
+BDU,Bardufoss
+BRI,Bari
+BNS,Barinas
+BBN,Bario
+BAX,Barnaul
+BRM,Barquisimeto
+BRR,Barra / Hebrides Islands
+EJA,Barrancabermeja
+BAQ,Barranquilla
+BRW,Barrow
+BTI,Barter Island
+UUN,Baruun
+BSL,Basel
+BIA,Bastia
+BTH,Batam
+ZBF,Bathurst
+BHS,Bathurst
+BRT,Bathurst Island
+BAL,Batman
+BTR,Baton Rouge
+BAU,Bauru
+MBS,Bay City / Midland / Saginaw
+BYN,Bayankhongor
+BYU,Bayreuth
+BPT,Beaumont
+BVA,Beauvais
+BKW,Beckley
+BED,Bedford
+YBW,Bedwell Harbor
+EIS,Beef Island
+BEI,Beica
+BHY,Beihai
+NAY,Beijing
+PEK,Beijing
+LAQ,Beida
+BEW,Beira
+BEY,Beirut
+BLG,Belaga
+BEL,Belem
+BHD,Belfast
+BFS,Belfast
+IXG,Belgaum
+EGO,Belgorod
+BEG,Belgrade
+BZE,Belize City
+TZA,Belize City
+XVV,Belleville
+BLI,Bellingham
+CNF,Belo Horizonte /Belo Horizon
+PLU,Belo Horizonte /Belo Horizon
+BJI,Bemidji
+BEB,Benbecula
+RDM,Bend
+BLR,Bengalooru (Bangalore)
+BEN,Benghazi
+BEH,Benton Harbor
+BGO,Bergen
+EGC,Bergerac
+BVG,Berlevag
+BER,Berlin
+SXF,Berlin
+TXL,Berlin
+THF,Berlin
+BDA,Bermuda/Hamilton
+BRN,Berne
+ZDJ,Berne
+BET,Bethel
+BZR,Beziers
+BWA,Bhairawa
+BHU,Bhavnagar
+BHO,Bhopal
+BBI,Bhubaneswar
+BIK,Biak
+BIQ,Biarritz
+BGK,Big Creek
+BIO,Bilbao
+BIL,Billings
+BLL,Billund
+BIM,Bimini
+NSB,Bimini
+BGM,Binghamton/Endicott/Johnson City
+BTU,Bintulu
+BVI,Birdsville
+BHM,Birmingham
+BHX,Birmingham
+BHH,Bisha
+FRU,Bishkek
+BSK,Biskra
+BIS,Bismarck
+OXB,Bissau
+BKQ,Blackall
+BLK,Blackpool
+BLT,Blackwater
+YBX,Blanc Sablon
+BLZ,Blantyre
+BHE,Blenheim
+BFN,Bloemfontein
+BMI,Bloomington
+BMG,Bloomington
+BLF,Bluefield
+BYH,Blytheville
+BVB,Boa Vista
+BOO,Bodo
+BXN,Bodrum
+BFI,Boeing Field/Seattle Kings County International
+BOG,Bogota
+BOI,Boise
+BLQ,Bologna
+BZO,Bolzano
+BOM,Bombay
+BON,Bonaire
+YVB,Bonaventure
+BNJ,Bonn
+BOB,Bora Bora
+BOD,Bordeaux
+HBE,Borg El Arab/Alexandria
+BLE,Borlange
+RNN,Bornholm
+BOS,Boston
+WBU,Boulder
+BOJ,Bourgas
+BZN,Bozeman
+BFD,Bradford
+BRD,Brainerd
+XPN,Brampton
+BMP,Brampton Island
+YBR,Brandon
+XFV,Brantford
+BSB,Brasilia
+BTS,Bratislava
+BZV,Brazzaville
+QKB,Breckenridge
+BRE,Bremen
+PWT,Bremerton
+VBS,Brescia
+BES,Brest
+BDR,Bridgeport
+BGI,Bridgetown
+BDS,Brindisi
+BNE,Brisbane
+BRS,Bristol
+TRI,Bristol/Johnson City/Kingsport
+BVE,BriveLaGaillarde
+BRQ,Brno
+XBR,Brockville
+BHQ,Broken Hill
+BNN,Bronnoysund
+BKX,Brookings
+BME,Broome
+YVM,Broughton Island
+BRO,Brownsville
+BWD,Brownwood
+OST,
+BWN,Brunei/Bandar Seri Begawan
+BQK,Brunswick
+BRU,Brussels
+BGA,Bucaramanga
+BBU,Bucharest
+OTP,Bucharest
+BUD,Budapest
+EZE,Buenos Aires
+AEP,Buenos Aires
+BUF,Buffalo
+BJM,Bujumbura
+BHK,Bukhara
+BUQ,Bulawayo
+UGA,Bulgan
+IFP,Bullhead City
+BDB,Bundaberg
+BUX,Bunia
+BUR,Burbank
+BRL,Burlington
+BTV,Burlington
+BWT,Burnie
+YPZ,Burns Lake
+BUZ,Bushehr
+BTM,Butte
+YKZ,Buttonville
+BXU,Butuan
+BZG,Bydgoszcz
+CFR,Caen
+CGY,Cagayan De Oro
+CAG,Cagliari
+PLS,Caicos
+CNS,Cairns
+CAI,Cairo
+CJA,Cajamarca
+CJC,Calama
+CCU,Calcutta (Kolkata)
+CDW,Caldwell
+YYC,Calgary
+CLO,Cali
+CCJ,Calicut
+CLY,Calvi
+XAZ,Cambellton
+CBG,Cambridge
+YCB,Cambridge Bay
+CDH,Camden
+YBL,Campbell River /Campbell Rvr
+YHH,Campbell River Harbor
+CAL,Campbeltown
+CPE,Campeche
+CPV,Campina Grande
+CPQ,Campinas
+CGR,Campo Grande
+CAJ,Canaima
+LPA,Canary Islands
+CBR,Canberra
+CUN,Cancun
+JCA,Cannes
+YTE,Cape Dorset
+CIW,Canouan Island
+CNY,Canyonlands
+CGI,Cape Girardeau
+EHM,Cape Newenham
+CPT,Cape Town
+XAW,Capreol
+PRJ,Capri
+CCS,Caracas
+CKS,Carajas
+MDH,Carbondale
+CCF,Carcassonne
+CWL,Cardiff
+CLD,Carlsbad
+CNM,Carlsbad
+CRU,Carriacou Island
+CTG,Cartagena
+CUP,Carupano
+LRM,Casa De Campo
+CAS,Casablanca
+CMN,Casablanca
+CAC,Cascavel
+CPR,Casper
+XZB,Casselman
+YCG,Castlegar
+CTA,Catania
+SDQ,Causedo/Santo Domingo
+CXJ,Caxias Do Sul
+CAY,Cayenne
+CYB,Cayman Brac Island
+GCM,Cayman Islands
+CEB,Cebu
+CDC,Cedar City
+CID,Cedar Rapids
+CDR,Chadron
+CED,Ceduna
+SFB,Cantral Florida
+CDR,Chadron
+CMF,Chambery
+XCI,Chambord
+CMI,Champaign
+IXC,Chandigarh
+XDL,Chandler
+CGQ,Changchun
+CGD,Changde
+CSX,Changsha
+CIH,Changzhi
+CZX,Changzhu
+CHQ,Chania
+LEC,Chapada Diamantina
+XAP,Chapeco
+CPC,Chapelco
+YLD,Chapleau
+CHS,Charleston
+CRW,Charleston
+CTL,Charleville
+CLT,Charlotte
+STT,Charlotte
+CHO,Charlottesville
+YYG,Charlottetown
+XCM,Chatham
+CHA,Chattanooga
+CYF,Chefornak
+CJU,Cheju
+CEK,Chelyabinsk
+XHS,Chemainus
+CTU,Chengdu
+MAA,Chennai (Madras)
+CJJ,Cort
+STT,Charlotte
+CHO,Charlottesville
+YYG,Charlottetown
+XCM,Chatham
+CHA,Chattanooga
+CYF,Chefornak
+CJU,Cheju
+CEK,Chelyabinsk
+XHS,Chemainus
+CTU,Chengdu
+MAA,Chennai (Madras)
+CJJ,Cheong Ju City
+CER,Cherbourg
+CTM,Chetumal
+VAK,Chevak
+YHR,Chevery
+CYS,Cheyenne
+CNX,Chiang Mai
+CEI,Chiang Rai
+CYI,Chiayi
+YMT,Chibougamau
+CGX,Chicago
+CHI,Chicago
+DPA,Chicago
+GYY,Chicago
+MDW,Chicago
+NOH,Chicago
+ORD,Chicago
+PWK,Chicago
+RFD,Chicago/Rockford
+CIX,Chiclayo
+CIC,Chico
+KIF,Chifeng
+KCG,Chignik
+KCL,Chignik
+KCQ,Chignik Lake
+CUU,Chihuahua
+YAI,Chillan
+HIN,Chinju
+JKH,Chios
+YKU,Chisasibi
+KIV,Chisinau (Kishinev)
+CJL,Chitral
+CGP,Chittagong
+COQ,Choibalsan
+CKG,Chongqing
+CHC,Christchurch
+STX,Christiansted
+CXI,Christmas Island
+YYQ,Churchill
+CIA,Ciampino
+CVG,Cincinnati
+LUK,Cincinnati
+CBL,Ciudad Bolivar
+CME,Ciudad Del Carmen
+CJS,Ciudad Juarez
+CEN,Ciudad Obregon
+CVM,Ciudad Victoria
+CKB,Clarksburg
+CFE,Clermont
+CLE,Cleveland
+BKL,Cleveland Lakefront
+CNJ,Cloncurry
+CVN,Clovis
+CLJ,Cluj
+YCY,Clyde River
+XGJ,Cobourg
+CBB,Cochabamba
+COK,Cochin
+COD,Cody
+CFA,Coffee Point
+CFS,Coffs Harbour
+CJB,Coimbatore
+CDB,Cold Bay
+CLQ,Colima
+CLL,College Station
+QKL,Cologne
+CGN,Cologne/Bonn
+CMB,Colombo
+CYR,Colonia
+COS,Colorado Springs
+COU,Columbia
+CAE,Columbia
+CSG,Columbus
+GTR,Columbus
+CMH,Columbus
+CJT,Comitan
+CRD,Comodoro Rivadavia
+YQQ,Comox
+CKY,Conakry
+CCP,Concepcion
+NOC,Connaught
+CND,Constanta
+CZL,Constantine
+CPD,Coober Pedy
+OOM,Cooma
+CPH,Copenhagen
+CPO,Copiapo
+YCO,Coppermine
+COR,Cordoba
+CDV,Cordova
+CFU,Corfu (Kerkyra)
+ORK,Cork
+YCC,Cornwall
+CZE,Coro
+CRP,Corpus Christi
+CNQ,Corrientes
+CEZ,Cortez
+CMG,Corumba
+OLB,Costa Smeralda
+CBO,Cotabato
+XGK,Coteau
+COO,Cotonou
+YCA,Courtenay
+CWT,Cowra
+GXQ,Coyhaique
+CZM,Cozumel
+CGA,Craig
+YXC,Cranbrook
+CEC,Crescent City
+CRI,Crooked Island
+CRV,Crotone
+CZS,Cruzeiro Do Sul
+CUC,Cucuta
+CUE,Cuenca
+CVJ,Cuernavaca
+CGB,Cuiaba
+AGT,Cuidad Del Este
+CPX,Culebra
+CUL,Culiacan
+CUM,Cumana
+CBE,Cumberland
+CWB,Curitiba
+CUZ,Cuzco
+DAD,Da Nang
+DKR,Dakar
+VIL,Dakhla
+DLM,Dalaman
+DLZ,Dalanzadgad
+DLI,Dalat
+DLU,Dali City
+DLC,Dalian
+DAL,Dallas
+DFW,Dallas/Ft Worth
+DAM,Damascus
+DMM,Damman
+DDG,Dandong
+DGA,Dangriga
+DNV,Danville
+DAN,Danville
+DAR,Dar Es Salaam
+DRW,Darwin
+YDN,Dauphin
+DVO,Davao
+YDI,Davis Inlet
+DWD,Dawadmi
+YDQ,Dawson Creek
+DYG,Dayong
+DAY,Dayton
+DAB,Daytona Beach
+LGI,Deadmans Cay / Long Island
+DOL,Deauville
+DBM,Debre Marcos
+DEB,Debrechen
+DEC,Decatur
+YDF,Deer Lake
+YVZ,Deer Lake
+DRT,Del Rio
+DEL,Delhi
+DEM,Dembidollo
+DNM,Denham
+DNZ,Denizli
+DPS,Denpasar Bali
+DEN,Denver
+DEA,Dera Ghazi Khan
+DSK,Dera Ismail Khan
+DNF,Derna
+DSM,Des Moines
+YDS,Desolation Sound
+DSE,Dessie
+DSI,Destin
+DTW,Detroit
+DET,Detroit City
+YIP,Detroit
+DVL,Devils Lake
+DPO,Devonport
+DHA,Dhahran
+DAC,Dhaka
+DHM,Dharamsala/Kangra
+DIB,Dibrugarh
+DIJ,Dijon
+DIK,Dickinson
+DIN,Dien Bien Phu
+DIL,Dili
+DLG,Dillingham
+DPL,Dipolog
+DIG,Diqing
+DIR,Dire Dawa
+DIU,Diu
+DIY,Diyarbakir
+DJE,Djerba
+JIB,Djibouti
+DNK,Dnepropetrovsk
+DDC,Dodge City
+DOH,Doha
+DCF,Dominica
+DOM,Dominica
+DSA,Doncaster
+DOK,Donetsk
+DTM,Dortmund
+DHN,Dothan
+DLA,Douala
+DRS,Dresden
+XDM,Drummondville
+YHD,Dryden
+DUJ,Du Bois
+DXB,Dubai
+DBO,Dubbo
+DUB,Dublin
+DBV,Dubrovnik
+DBQ,Dubuque
+QDU,Duesseldorf
+DLH,Duluth
+DGT,Dumaguete
+DUQ,Duncan / Quam
+DND,Dundee
+DUD,Dunedin
+DNH,Dunhuang
+DRO,Durango
+DGO,Durango
+DUR,Durban / La Mercy
+DUS,Dusseldorf
+DUT,Dutch Harbor
+ELS,East London
+EMA,East Midlands
+IPC,Easter Island
+ESD,Eastsound
+EAU,Eau Claire
+ECH,Echuca
+EDI,Edinburgh
+YEG,Edmonton
+YXD,Edmonton
+EDR,Edward River
+EIN,Eindhoven
+SVX,Ekaterinburg
+BCQ,El Beida / La Braq
+FTE,El Calafate
+AZS,El Catey
+ELD,El Dorado
+ELP,El Paso
+ESR,El Salvador
+ETH,Elat
+EBA,Elba Island
+QEJ,Elgarhbolli
+EKO,Elko
+YEL,Elliot Lake
+QEC,Elmarj City
+ELM,Elmira / Corning
+ELY,Ely
+EMD,Emerald
+WDG,Enid
+ENS,Enschede
+EBB,Entebbe/Kampala
+ERF,Erfurt
+ERI,Erie
+ERZ,Erzurum
+EBJ,Esbjerg
+ESC,Escanaba
+EQS,Esquel
+EPR,Esperance
+YPF,Esquimalt
+EUG,Eugene
+EVV,Evansville
+EVE,Evenes
+EXT,Exeter
+FAI,Fairbanks
+FRM,Fairmont
+LYP,Faisalabad
+FAR,Fargo
+FRG,Farmingdale
+FMN,Farmington
+FAO,Faro
+FAE,Faroe Islands
+FYV,Fayetteville
+XNA,Fayetteville
+FAY,Fayetteville
+FFM,Fergus Falls
+FEN,Fernando De Noronha
+FEZ,Fez
+FLG,Flagstaff
+YFO,Flin Flon
+FNT,Flint
+FLR,Florence
+FLO,Florence
+FRS,Flores
+FLN,Florianopolis
+FRO,Floro
+FDE,Forde
+FMA,Formosa
+YFA,Fort Albany
+YVP,Fort Chimo (Kuujjuaq)
+FNL,Fort Collins/Loveland
+FDF,Fort De France
+FOD,Fort Dodge
+FHU,Fort Huachuca/Sierra Vista
+FLL,Fort Lauderdale
+TBN,Fort Leonard Wood
+YMM,Fort Mcmurray
+RSW,Fort Myers
+YYE,Fort Nelson
+YXJ,Fort Saint John
+YFS,Fort Simpson
+FSM,Fort Smith
+YSM,Fort Smith
+YXJ,Fort St John
+FWA,Fort Wayne
+FOR,Fortaleza
+FRA,Frankfurt
+HHN,Frankfurt
+FKL,Franklin
+YXX,Fraser Valley/Abbotsford
+EZF,Fredericksburg
+YFC,Fredericton
+FPO,Freeport
+FAT,Fresno
+FRD,Friday Harbor
+FDH,Friedrichshafen
+YFA,Ft Albany
+YVP,Ft Chimo (Kuujjuaq)
+FNL,Ft Collins/Loveland
+FDF,Ft De France
+FOD,Ft Dodge
+FHU,Ft Huachuca/Sierra Vista
+FLL,Ft Lauderdale
+TBN,Ft Leonard Wood
+YMM,Ft Mcmurray
+RSW,Ft Myers
+YYE,Ft Nelson
+YXJ,Ft Saint John
+YFS,Ft Simpson
+FSM,Ft Smith
+YSM,Ft Smith
+YXJ,Ft St John
+FWA,Ft Wayne
+FUE,Fuerteventura / Puerto Del Rosario
+FUK,Fukuoka
+FUN,Funafuti
+FNC,Funchal
+FUG,Fuyang
+FOC,Fuzhou
+GBE,Gaborone
+GNV,Gainesville
+GPS,Galapagos Islands
+GAL,Galena
+GBG,Galesburg
+GUP,Gallup
+GLS,Galveston
+GWY,Galway
+YQX,Gander
+YGG,Ganges Harbor
+KOW,Ganzhou
+GCK,Garden City
+GYY,Gary
+YGP,Gaspe
+ELQ,Gassim
+YND,Gatineau
+GAU,Gauhati
+GDN,Gdansk
+GVA,Geneva
+GOA,Genoa
+GGT,George Town
+GRJ,George
+GEO,Georgetown
+XHM,Georgetown
+GET,Geraldton
+GRO,Gerona
+LTD,Ghadames
+GHT,Ghat
+QGH,Gherian
+GIB,Gibraltar
+GIL,Gilgit
+GCC,Gillam
+GCC,Gillette
+YGB,Gillies Bay
+GIZ,Gizan (Jizan)
+YHK,Gjoa Haven
+GLT,Gladstone
+GGW,Glasgow
+GLA,Glasgow
+PIK,Glasgow
+XZC,Glencoe
+GDV,Glendive
+GOI,Goa
+YGO,Gods Narrows
+ZGI,Gods River
+GYN,Goiania
+OOL,Gold Coast
+GLF,Golfito
+GLV,Golovin
+GLD,Goodland
+YYR,Goose Bay
+GKA,Goroka
+GTO,Gorontalo
+GOT,Gothenburg
+GOV,Gove
+GHB,Governors Harbour
+LPA,Gran Canaria
+GRX,Granada
+GCN,Grand Canyon
+GCM,Grand Cayman Island
+GFK,Grand Forks
+GRI,Grand Island
+GJT,Grand Junction
+GRR,Grand Rapids
+GDT,Grand Turk Is
+YQU,Grande Prairie
+GRZ,Graz
+GBD,Great Bend
+GTF,Great Falls
+GRB,Green Bay
+LWB,Greenbrier
+GSO,Greensboro / High Point
+GRE,Greenville
+PGV,Greenville
+GLH,Greenville
+GDC,Greenville
+GMU,Greenville
+GSP,Greenville
+GCY,Greenville
+GVT,Greenville
+YGN,Greenway Sound
+GNB,Grenoble
+GFF,Griffith
+XGY,Grimsby
+GRQ,Groningen
+GON,Groton / New London
+GDL,Guadalajara
+GUM,Guam
+CAN,Guangzhou
+GUA,Guatemala City
+GYE,Guayaquil
+GYA,Guayaramerin
+GYM,Guaymas
+XIA,Guelph
+GCI,Guernsey
+GUB,Guerrero Negro
+KWL,Guilin
+KWE,Guiyang
+GPT,Gulfport
+GUC,Gunnison
+URY,Gurayat
+GST,Gustavus
+GWD,Gwadar
+HPA,Ha'Apai
+HBT,Hafr Albatin
+HGR,Hagerstown
+HFA,Haifa
+HAK,Haikou
+HAS,Hail
+HLD,Hailar
+HNS,Haines
+HPH,Haiphong
+HAC,Hachijo Jima
+HKD,Hakodate
+YHZ,Halifax
+YUX,Hall Beach
+HAD,Halmstad
+HAM,Hamburg
+HTI,Hamilton Island
+HLZ,Hamilton
+YHM,Hamilton
+HFT,Hammerfest
+HNM,Hana
+CMX,Hancock
+HGH,Hangzhou
+HAN,Hanoi
+HAJ,Hanover
+HRE,Harare
+ZNA,Harbour/Nanaimo
+HRB,Harbin
+HGA,Hargeisa
+HRL,Harlingen
+MDT,Harrisburg
+HRO,Harrison
+BDL,Hartford
+HSI,Hastings
+HDY,Hat Yai
+HAU,Haugesund
+HAV,Havana
+HVR,Havre
+YHY,Hay River
+HDN,Hayden
+HIS,Hayman Island
+HYS,Hays
+HFE,Hefei
+HEH,Heho
+HDB,Heidelberg
+HLN,Helena
+AGH,Helsingborg
+JHE,Helsingborg
+HEL,Helsinki
+HER,Heraklion
+HEA,Herat
+HDF,Heringsdorf
+HMO,Hermosillo
+HVB,Hervey Bay
+XDU,Hervey
+HIB,Hibbing / Chisholm
+HKY,Hickory
+YOJ,High Level
+ITO,Hilo
+HHH,Hilton Head
+HIJ,Hiroshima
+SGN,Ho Chi Minh City
+HBA,Hobart
+HOB,Hobbs
+HDS,Hoedspruit
+HOQ,Hof Airport
+HOF,Hofuf
+HET,Hohhot
+HKK,Hokitika
+YHI,Holman Island
+HOM,Homer
+HKG,Hong Kong
+HIR,Honiara/Guadalcanal
+HVG,Honningsvag
+HNL,Honolulu
+MKK,Hoolehua
+HNH,Hoonah
+HPB,Hooper Bay
+HID,Horn Island
+YHN,Hornepayne
+HSM,Horsham
+HOR,Horta
+HKN,Hoskins
+HOT,Hot Springs
+HTN,Hotan
+HUM,Houma
+HUQ,Houn
+ZHO,Houston
+IAH,Houston
+EFD,Houston
+HOU,Houston
+HOU,Houston
+IAH,Houston
+HUH,Huahine
+HUN,Hualien
+HYN,Huangyan
+HUX,Huatulco
+YHB,Hudson Bay
+HUI,Hue
+HUY,Humberside
+HTS,Huntington / Ashland
+HSV,Huntsville/Decatur
+HRG,Hurghada
+HON,Huron
+HWN,Hwange National Park
+HYA,Hyannis
+HYG,Hydaburg
+HYD,Hyderabad
+IAS,Iasi
+IBZ,Ibiza
+IDA,Idaho Falls
+IGG,Igiugig
+YGT,Igloolik
+IGU,Iguassu Falls
+IGR,Iguazu
+JIK,Ikaria Island
+YGR,Iles De La Madeleine
+ILF,Ilford
+IOS,Ilheus
+ILI,Iliamna
+ILQ,Ilo
+ILO,Iloilo
+JAV,Ilulissat
+IMP,Imperatriz
+IMF,Imphal
+IGA,Inagua
+ICN,Incheon [Seoul]
+SHC,Indaselassie
+IND,Indianapolis
+IDR,Indore
+XIB,Ingersoll
+INN,Innsbruck
+INL,International Falls
+YPH,Inukjuak
+YEV,Inuvik
+IVC,Invercargill
+INV,Inverness
+IYK,Inyokern
+IOA,Ioannina
+IPI,Ipiales
+IPH,Ipoh
+YFB,Iqaluit
+IQQ,Iquique
+IQT,Iquitos
+IKT,Irkutsk
+IMT,Iron Mountain
+IWD,Ironwood
+ISH,Ischia
+IFN,Isfahan
+ISG,Ishigaki
+ISB,Islamabad
+ILY,Islay
+IOM,Isle Of Man
+ISC,Isles Of Scilly
+ISP,Islip
+IST,Istanbul
+QIE,Istres
+ITB,Itaituba
+ITH,Ithaca
+IVL,Ivalo
+IFO,Ivano
+YIK,Ivujivik
+IWJ,Iwami
+ZIH,Ixtapa/Zihuatanejo
+IJK,Izhevsk
+ADB,Izmir
+IZO,Izumo
+JAG,Jacobabad
+JAT,Jabat
+JAC,Jackson Hole
+JAN,Jackson
+MKL,Jackson
+JAX,Jacksonville
+CRG,Jacksonville
+OAJ,Jacksonville
+JAI,Jaipur
+HLP,Jakarta
+CGK,Jakarta
+JAL,Jalapa
+JMS,Jamestown
+JHW,Jamestown
+IXJ,Jammu
+JGA,Jamnagar
+IXW,Jamshedpur
+YJA,Jasper
+DJJ,Jayapura
+JED,Jeddah
+XRY,Jerez De La Frontera
+JER,Jersey
+JIJ,Jijiga
+JIL,Jilin
+JIM,Jimma
+TNA,Jinan
+JHG,Jinghong
+JJN,Jinjiang
+GIZ,Jizan (Gizan)
+JPA,Joao Pessoa
+JDH,Jodhpur
+JOE,Joensuu
+JNB,Johannesburg
+JON,Johnston Island
+JST,Johnstown
+JHB,Johor Bahru
+JOI,Joinville
+XJL,Joliette
+JMO,Jomsom
+JBR,Jonesboro
+JKG,Jonkoping
+XJQ,Jonquiere
+JLN,Joplin
+JRH,Jorhat
+JOS,Jos
+AJF,Jouf
+JDO,Juazeiro Do Norte
+JUJ,Jujuy
+JUL,Juliaca
+JNU,Juneau
+JYV,Jyvaskyla
+ABK,Kabri Dar
+KBL,Kabul
+DNA,Kadena AFB
+KOJ,Kagoshima
+OGG,Kahului
+IXH,Kailashahar
+KAT,Kaitaia
+KAJ,Kajaani
+KAE,Kake
+AZO,Kalamazoo
+LUP,Kalaupapa
+KGI,Kalgoorlie
+KLO,Kalibo
+KGD,Kaliningrad
+FCA,Kalispell
+GPI,Kalispell
+KLR,Kalmar
+KAL,Kaltag
+IXQ,Kamalpur
+YKA,Kamloops
+MUE,Kamuela
+KDH,Kandahar
+IXY,Kandla
+SFJ,Kangerlussuaq
+XGR,Kangiqsualujjuaq
+YWB,Kangiqsujuaq
+YKG,Kangirsuk
+KAG,Kangnung
+DHM,Kangra
+KAN,Kano
+MKC,Kansas City
+MCI,Kansas City
+KHH,Kaohsiung
+JHM,Kapalua
+YYU,Kapuskasing
+KHI,Karachi
+KAB,Kariba
+KLV,Karlovy Vary
+FKB,Karlsruhe/Baden
+KSD,Karlstad
+AOK,Karpathos
+KTA,Karratha
+KSY,Kars
+KSQ,Karshi
+KRP,Karup
+BBK,Kasane
+ZKE,Kaschechewan
+KHG,Kashi
+KSJ,Kasos Island
+KSF,Kassel
+KZS,Kastelorizo Island
+KSO,Kastoria
+KTR,Katherine
+KTM,Kathmandu
+KTW,Katowice
+LIH,Lihue
+HPV,Kauai Island
+KUN,Kaunas
+KVA,Kavala
+MKK,Kaunakakai/Hoolehua
+ASR,Kayseri
+KZN,Kazan
+EAR,Kearney
+EEN,Keene / Brattleboro
+EFL,Kefallinia Island
+YLW,Kelowna
+KEJ,Kemerovo
+KEM,Kemi/Tornio
+KPS,Kempsey
+ENA,Kenai
+KEH,Kenmore Air Harbor
+YQK,Kenora
+KMA,Kerema
+CFU,Kerkyra
+KER,Kerman
+KSH,Kermanshah
+KKE,Kerikeri
+KIR,Kerry County
+IXK,Keshod
+KTN,Ketchikan
+EYW,Key West
+KHV,Khabarovsk
+HJR,Khajuraho
+KHR,Kharkhorin
+HRK,Kharkov
+KRT,Khartoum
+QKO,Khoms (Al Khums)
+KKC,Khon Kaen
+KOG,Khong Island
+HVD,Khovd
+IXN,Khowai
+HJT,Khujirt
+KEL,Kiel
+KBP,Kiev
+IEV,Kiev
+KGL,Kigali
+TKQ,Kigoma
+JRO,Kilimanjaro
+ILE,Killeen
+KIM,Kimberley
+KVC,King Cove
+KNS,King Island
+AKN,King Salmon
+IGM,Kingman
+KGC,Kingscote
+KIN,Kingston
+YGK,Kingston
+KNH,Kinmen
+FIH,Kinshasa
+ISO,Kinston
+KPN,Kipnuk
+KKN,Kirkenes
+IRK,Kirksville
+KOI,Kirkwall / Orkney Island
+KRN,Kiruna
+KIV,Kishinev
+KKJ,Kitakyushu
+YKF,Kitchener
+KIT,Kithira Island
+KTT,Kittila
+KVL,Kivalina
+KLU,Klagenfurt
+LMT,Klamath Falls
+KLW,Klawock
+TYS,Knoxville
+KCZ,Kochi
+ADQ,Kodiak
+USM,Koh Samui
+KOK,Kokkola/Pietarsaari
+KLH,Kolhapur (Ujlaiwadi)
+KGK,Koliganek
+CCU,
+KMQ,Komatsu
+KOA,Kona
+KKH,Kongiganak
+KYA,Konya
+KRL,Korla
+ROR,Koror
+KGS,Kos Island
+KSC,Kosice
+KSA,Kosrae
+OSZ,Koszalin
+KBR,Kota Bharu
+BKI,Kota Kinabalu
+OTZ,Kotzebue
+KZI,Kozani
+KBV,Krabi
+KRK,Krakow
+KRF,Kramfors
+KRR,Krasnodar
+KJA,Krasnojarsk
+KRS,Kristiansand
+KID,Kristianstad
+KSU,Kristiansund
+HLA,Krugersdorp
+KUL,Kuala Lumpur
+SZB,Kuala Lumpur
+TGG,Kuala Terengganu
+KUA,Kuantan
+KCH,Kuching
+KUD,Kudat
+AKF,Kufrah
+KUS,Kulusuk
+KMJ,Kumamoto
+UEO,Kume Jima
+KMG,Kunming
+KUV,Kunsan
+KNX,Kununurra
+KUO,Kuopio
+KCA,Kuqa
+KUH,Kushiro
+YVP,Kuujjuaq
+YGW,Kuujjuarapik
+KAO,Kuusamo
+KWI,Kuwait
+KWA,Kwajalein
+KWJ,Kwangju
+LCE,La Ceiba
+LCG,La Coruna
+LSE,La Crosse
+YGL,La Grande
+LAP,La Paz
+LPB,La Paz
+IRJ,La Rioja
+LRH,La Rochelle
+LRM,La Romana
+YVC,La Ronge
+SSQ,La Sarre
+LSC,La Serena
+YLQ,La Tuque
+EUN,Laayoune
+LBS,Labasa
+LBU,Labuan
+XEE,Lac Edouard
+XEH,Ladysmith
+LAE,Lae
+LFT,Lafayette / New Iberia
+LAF,Lafayette
+LOS,Lagos
+LDU,Lahad Datu
+LHE,Lahore
+LCH,Lake Charles
+YLC,Lake Harbour
+HII,Lake Havasu City
+LKE,Lake Union Sea Plane Base
+LKL,Lakselv
+LLI,Lalibela
+SUF,Lamezia
+LPT,Lampang
+LMP,Lampedusa Island
+LNY,Lanai City
+LNS,Lancaster
+XEJ,Langford
+LGK,Langkawi
+LAI,Lannion
+LAN,Lansing
+ACE,Lanzarote
+LHW,Lanzhou
+ZGC,Lanzhou
+LAO,Laoag
+LPP,Lappeenranta
+LAR,Laramie
+LRD,Laredo
+LCA,Larnaca
+LRU,Las Cruces
+LSP,Las Piedras
+LAS,Las Vegas
+VGT,Las Vegas
+LBE,Latrobe
+LST,Launceston
+PIB,Laurel
+NAN,Lautoka/Nadi
+LWY,Lawas
+LAW,Lawton
+LZC,Lazaro Cardenas
+LEH,Le Havre
+LEA,Learmonth
+LEB,Lebanon/Hanover/White River
+LBA,Leeds/Bradford
+PVK,Lefkas
+LGP,Legaspi
+IXL,Leh
+LEJ,Leipzig
+LKN,Leknes
+LEN,Leon
+BJX,Leon/Guanajuato
+LRS,Leros
+YQL,Lethbridge
+LET,Leticia
+KLL,Levelock
+LWB,Lewisburg
+LWS,Lewiston
+LWT,Lewistown
+LEX,Lexington
+LXA,Lhasa
+LYG,Lianyungang
+LBL,Liberal
+LIR,Liberia
+LBV,Libreville
+LGG,Liege
+LIF,Lifou Island
+LJG,Lijiang
+IXI,Lilabari
+LIL,Lille
+LLW,Lilongwe
+LIM,Lima
+LMN,Limbang
+LIG,Limoges
+LNJ,Lincang
+LNK,Lincoln
+LPI,Linkoping
+LNZ,Linz
+LIS,Lisbon
+LSY,Lismore
+LIT,Little Rock
+LZH,Liuzhou
+LPL,Liverpool
+LVI,Livingstone
+LJU,Ljubljana
+LFW,Lome
+LNV,Londolovit
+LGW,London
+LHR,London
+LCY,London
+LTN,London
+STN,London
+YXU,London
+LDB,Londrina
+LGB,Long Beach
+LRE,Longreach
+GGG,Longview/Gladewater/Kilgore
+LYR,Longyearbyen
+LDH,Lord Howe Island
+LTO,Loreto
+LRT,Lorient
+LAX,Los Angeles
+LAX,Los Angeles
+LSQ,Los Angeles
+LMM,Los Mochis
+SDF,Louisville
+LDE,Lourdes/Tarbes
+LAD,Luanda
+LBB,Lubbock
+LKO,Lucknow
+LUD,Luderitz
+LUG,Lugano
+VSG,Lugansk
+LUA,Lukla
+LLA,Lulea
+LYA,Luoyang
+LUN,Lusaka
+LUX,Luxembourg
+LUM,Luxi
+LXR,Luxor
+LZO,Luzhou
+CRK,Luzon Is
+LWO,Lvov
+LYB,Little Cayman
+LCJ,Lodz
+RJL,Logrono
+LDY,Londonderry
+LKH,Long Akah
+LBP,Long Banga
+LGL,Long Lellang
+ODN,Long Seridan
+LPS,Lopez Island
+SJD,Los Cabos
+LXG,Luang Namtha
+LPQ,Luang Prabang
+LXR,Luxor
+LYC,Lycksele
+LYH,Lynchburg
+LYS,Lyon
+MST,Maastricht
+MCP,Macapa
+MFM,Macau
+MCZ,Maceio
+MKY,Mackay
+MCN,Macon
+MAG,Madang
+MED,Madinah
+MSN,Madison
+MAA,Madras (Chennai)
+MAD,Madrid
+IXM,Madurai
+HGN,Mae Hong Son
+GDX,Magadan
+SEZ,Mahe Island
+MMO,Maio
+MAJ,Majuro
+MQX,Makale
+MZG,Makung
+AAM,Mala Mala Airport
+SSG,Malabo
+AGP,Malaga
+MLG,Malang
+MLX,Malatya
+MLE,Male
+HMA,Malmo
+JMM,Malmo
+MMX,Malmo
+PTF,Malololailai
+MLA,Malta
+MMH,Mammoth Lakes
+MNF,Mana Island
+MDC,Manado
+MGA,Managua
+MAO,Manaus
+MAN,Manchester
+MHT,Manchester
+MDL,Mandalay
+MXW,Mandalgovi
+IXE,Mangalore
+MAY,Mangrove Cay
+MHK,Manhattan
+MNL,Manila
+MBL,Manistee
+YTH,Manitoba
+MZL,Manizales
+MHG,Mannheim
+KMO,Manokotak
+MKW,Manokwari
+MSE,Manston
+ZLO,Manzanillo
+MTS,Manzini
+MXS,Maotoa
+MPM,Maputo
+MDQ,Mar Del Plata
+MAB,Maraba
+MAR,Maracaibo
+MTH,Marathon
+YSP,Marathon
+MRK,Marco Island
+MQM,Mardin
+MGH,Margate
+MBX,Maribor Airport
+MHQ,Mariehamn
+MGF,Maringa
+MWA,Marion
+MQT,Marquette
+RAK,Marrakech
+MRS,Marseille
+MHH,Marsh Harbour
+RMF,Marsa Alam
+LMQ,Marsa Brega
+MVY,Martha's Vineyard
+MUR,Marudi
+MSU,Maseru
+MHD,Mashad
+MCW,Mason City
+MSS,Massena
+MAM,Matamoros
+AMI,Mataram
+MMJ,Matsumoto
+MYJ,Matsuyama
+MUN,Maturin
+MUB,Maun
+MRU,Mauritius
+XID,Maxville
+MYG,Mayaguana
+MAZ,Mayaguez
+MZT,Mazatlan
+MFE,Mc Allen/Mission
+MCK,Mc Cook
+MCG,Mc Grath
+MES,Medan
+EOH,Medellin
+MDE,Medellin
+MFR,Medford
+YXH,Medicine Hat
+MED,Medinah
+MEY,Meghauli
+MEH,Mehamn
+MXZ,Meixian
+MKS,Mekane Selam
+MYU,Mekoryuk
+MLB,Melbourne
+MEL,Melbourne
+MLN,Melilla
+XEK,Melville
+MMB,Memanbetsu
+MEM,Memphis
+MDZ,Mendoza
+MNM,Menominee
+MAH,Menorca
+MCE,Merced
+MRD,Merida
+MID,Merida
+MEI,Meridian
+MIM,Merimbula
+AZA,Mesa
+ETZ,Metz/Nancy
+MXL,Mexicali
+MEX,Mexico City
+MIA,Miami
+MPB,Miami
+OPF,Miami
+MBS,Midland / Bay City / Saginaw
+MAF,Midland/Odessa
+MYE,Mikake Jima
+JMK,Mikonos
+LIN,Milan
+MXP,Milan
+BGY,Milan
+MQL,Mildura
+MLS,Miles City
+MFN,Milford Sound
+MLT,Millinocket
+MLO,Milos
+MKE,Milwaukee
+MTT,Minatitlan
+MSP,Minneapolis
+MOT,Minot
+MRV,Min Vody
+MSQ,Minsk
+MYY,Miri
+MSJ,Misawa
+MCQ,Miskolc
+MSO,Missoula
+MRA,Misurata
+KMI,Miyazaki
+MMY,Miyako Jima
+MTF,Mizan Teferi
+MBD,Mmabatho
+MQN,Mo I Rana
+CNY,Moab
+MOB,Mobile
+MOD,Modesto
+MGL,Moenchengladbach
+MGQ,Mogadishu
+NWA,Moheli
+MJD,Mohenjodaro
+MPK,Mokpo
+MOL,Molde
+MLI,Moline
+MBA,Mombasa
+MIR,Monastir
+MBE,Monbetsu
+LOV,Monclova
+YQM,Moncton
+MLU,Monroe
+ROB,Monrovia
+MLW,Monrovia
+YYY,Mont Joli
+MCM,Monte Carlo
+MEU,Monte Dourado
+MBJ,Montego Bay
+MRY,Monterey / Carmel
+MTY,Monterrey
+MOC,Montes Claros
+MVD,Montevideo
+MGM,Montgomery
+MPL,Montpellier
+YMQ,Montreal
+YMX,Montreal
+YUL,Montreal
+YHU,Montreal
+MTJ,Montrose
+MNI,Montserrat
+MOZ,Moorea Island
+YMO,Moosonee
+MRZ,Moree
+MLM,Morelia
+MGW,Morgantown
+HNA,Morioka
+ONG,Mornington
+MXV,Moron
+HAH,Moroni (Hahaya)
+YVA,Moroni (Hahaya/Iconi)Comoros
+MMU,Morristown
+MYA,Moruya
+MOW,Moscow
+DME,Moscow
+SVO,Moscow
+VKO,Moscow
+MWH,Moses Lake
+JRO,Moshi
+CWA,Mosinee/Wausau
+MJF,Mosjoen
+MGB,Mount Gambier
+HGU,Mount Hagen
+LLY,Mount Holly
+MHU,Mount Hotham
+ISA,Mount Isa
+MPN,Mount Pleasant
+TPR,Mount Tom Price
+MVN,Mount Vernon
+WMH,Mountain Home
+MPA,Mpacha
+ODY,Muang Xay
+MDG,Mudanjiang
+FMO,Muenster
+MKM,Mukah
+MLH,Mulhouse
+MUX,Multan
+MZV,Mulu
+BOM,Mumbai (Bombay)
+MIE,Muncie
+MUC,Munich
+MIG,Munich
+MJV,Murcia
+MMK,Murmansk
+QMQ,Murzuq (Marzuq)
+MSR,Mus
+MCT,Muscat
+MSL,Muscle Shoals / Florence / Sheffield
+MKG,Muskegon
+MQS,Mustique
+MWZ,Mwanza
+MYR,Myrtle Beach
+MJT,Mytilene
+NDJ,N Djamena
+NAN,Nadi
+NDR,Nador
+WNP,Naga
+NGS,Nagasaki
+NGO,Nagoya
+NKM,Nagoya/Komaki
+NAG,Nagpur
+NAH,Naha
+NBO,Nairobi
+WIL,Nairobi
+SHB,Nakashibetsu
+NAK,Nakhon Ratchasima
+NST,Nakhon Si Thammarat
+NMA,Namangan
+APL,NampulaMozambique
+ZNA,Nanaimo
+YCD,Nanaimo
+KHN,Nanchang
+YSR,Nanisivik
+NKG,Nanjing
+NNY,Nanyang
+SHM,Nanki Shirahama
+NNG,Nanning
+NTE,Nantes
+NTG,Nantong
+ACK,Nantucket
+WNA,Napakiak
+NPE,Napier
+APF,Naples
+NAP,Naples
+NAA,Narrabri
+NRA,Narrandera
+UAK,Narsarsuaq
+JNS,Narssaq
+NNM,Naryan
+BNA,Nashville
+NAS,Nassau
+PID,Nassau
+NAT,Natal
+YNA,Natashquan
+INU,Nauru
+NVT,Navegantes
+JNX,Naxos
+NLA,Ndola
+NEC,Necochea
+EAM,Nejran
+NSN,Nelson
+NLG,Nelson Lagoon
+NLP,Nelspruit
+MQP,Nelspruit
+NER,Neryungri
+KEP,Nepalganj
+NQN,Neuquen
+NEV,Nevis
+EWB,New Bedford/Fall River
+EWN,New Bern
+XEL,New Carlisle
+HVN,New Haven
+MSY,New Orleans
+NPL,New Plymouth
+XEM,New Richmond
+KNW,New Stuyahok
+JRA,New York City
+TSS,New York
+JFK,New York
+LGA,New York
+EWR,Newark
+SWF,Newburgh/Poughkeepsie
+NCL,Newcastle
+XEY,Newcastle
+BEO,Newcastle
+NTL,Newcastle
+ZNE,Newman
+PHF,Newport News/Williamsburg/Hampton
+NQY,Newquay
+WWT,Newtok
+NHA,Nha
+XLV,Niagara Falls
+NIM,Niamey
+NCE,Nice
+NME,Nightmute
+KIJ,Niigata
+IKO,Nikolski
+FNI,Nimes
+NGB,Ningbo
+NIX,Nioro
+NFO,Niuafo'Ou
+NTT,Niuatoputapu
+IUE,Niue
+NJC,Nizhnevartovsk
+GOJ,Nizhniy Novgorod
+OME,Nome
+OFK,Norfolk
+ORF,Norfolk
+NLK,Norfolk Island
+NSK,Norilsk
+NRK,Norrkoping
+YYB,North Bay
+OTH,North Bend
+NCA,North Caicos
+ELH,North Eleuthera
+LBF,North Platte
+NWI,Norwich
+OWD,Norwood
+NKC,Nouakchott
+GEA,Noumea
+NOU,Noumea
+OVB,Novosibirsk
+NUX,Novy Urengoy
+NLD,Nuevo Laredo
+TBU,Nuku Alofa/Tongatapu
+NCU,Nukus
+NUE,Nuremberg
+GOH,Nuuk
+NYU,Nyaung
+ODW,Oak Harbor
+OAK,Oakland
+XOK,Oakville
+OAX,Oaxaca
+OBO,Obihiro
+OCJ,Ochos Rios
+ONJ,Odate Noshiro
+ODE,Odense
+ODS,Odessa
+OGS,Ogdensburg
+OHD,Ohrid
+OIT,Oita
+VPS,Okaloosa County/Valparaiso
+OKJ,Okayama
+OKA,Okinawa
+OKC,Oklahoma City
+OLB,Olbia
+ULG,Olgii
+OLM,Olympia
+OLP,Olympic Dam
+OMA,Omaha
+OMS,Omsk
+UNR,Ondorkhaan
+ONT,Ontario
+OMR,Oradea
+ORN,Oran
+OAG,Orange
+ORB,Orebro
+MBX,Orehova Vas/Slivnica
+ORL,Orlando
+MCO,Orlando
+SFB,Orlando
+OER,Ornskoldsvik
+ITM,Osaka
+KIX,Osaka
+OSA,Osaka
+YOO,Oshawa
+OIM,Oshima
+OSH,Oshkosh
+OSL,Oslo
+ZOS,Osorno
+OST,
+OSD,Ostersund
+OSR,Ostrava
+YOW,Ottawa
+OTM,Ottumwa
+OUA,Ouagadougou
+OZZ,Ouarzazate
+OUD,Oujda
+OUL,Oulu
+VDA,Ovda
+OVD,Oviedo/Asturias
+OWB,Owensboro
+OXR,Oxnard / Ventura
+PDG,Padang
+PAD,Paderborn
+PAH,Paducah
+PGA,Page
+PPG,Pago Pago
+PKZ,Pakse
+YIF,Pakuashipi
+PLQ,Palanga
+PLM,Palembang
+PMO,Palermo
+PBI,Palm Beach/West Palm Beach
+PSP,Palm Springs
+PMI,Palma Mallorca
+PMW,Palmas
+PMD,Palmdale
+PMR,Palmerston North
+PAO,Palo Alto
+PLW,Palu
+PNA,Pamplona
+PFN,Panama City
+PAC,Panama City
+PTY,Panama City
+PAM,Panama City
+YXP,Pangnirtung
+PJG,Panjgur
+PNL,Pantelleria
+PPT,Papeete
+PFO,Paphos
+PBO,Paraburdoo
+PBM,Paramaribo
+XFE,Parent
+PAR,Paris
+CDG,Paris
+JDP,Paris
+LBG,Paris
+ORY,Paris
+BVA,Paris
+PKB,Parkersburg / Marietta
+PKE,Parkes
+XPB,Parksville
+PMF,Parma
+PAS,Paros
+PSC,Pasco
+IXT,Pasighat
+PSI,Pasni
+PFB,Passo Fundo
+PSO,Pasto
+IXP,Pathankot
+PAT,Patna
+PUF,Pau
+YPE,Peace River
+PKU,Pekanbaru
+PLN,Pellston
+YBB,Pelly Bay
+YTA,Pembroke
+PEN,Penang
+YPT,Pender Harbor
+PDT,Pendleton
+PNS,Pensacola
+YYF,Penticton
+PZE,Penzance
+PIA,Peoria
+XFG,Perce
+PEI,Pereira
+PGX,Perigueux
+PEE,Perm
+KPV,Perryville
+PGF,Perpignan
+PER,Perth
+PEG,Perugia
+PSR,Pescara
+PEW,Peshawar
+PSG,Petersburg
+PNZ,Petrolina
+PKC,Petropavlovsk
+PES,Petrozavodsk
+PHW,Phalaborwa
+PHL,Philadelphia
+PHS,Phitsanulok
+PNH,Phnom Penh
+PHX,Phoenix
+AZA,Phoenix/Messa
+XKH,Phonsavan
+HKT,Phuket
+PQC,Phuquoc
+PDS,Piedras Negras
+PIR,Pierre
+PTG,Pietersburg
+PZB,Pietermaritzburg
+PIW,Pikwitonei
+PIP,Pilot Point
+UGB,Pilot Point
+PSA,Pisa
+AGC,Pittsburgh/Allegheny County
+PIT,Pittsburgh
+THU,Pituffik
+PIU,Piura
+PTU,Platinum
+PLB,Plattsburgh
+PXU,Pleiku
+PLH,Plymouth
+PIH,Pocatello
+TGD,Podgorica
+KPO,Pohang
+PNI,Pohnpei
+PHO,Point Hope
+PTP,Pointe A Pitre
+PNR,Pointe Noire
+XPX,PointeAuxTrembles
+PIS,Poitiers
+PKR,Pokhara
+PNC,Ponca City
+PSE,Ponce
+YIO,Pond Inlet
+PDL,Ponta Delgada
+PNK,Pontianak
+PNQ,Poona
+TAT,Poprad
+PBD,Porbandar
+POR,Pori
+PMV,Porlamar
+CLM,Port Angeles
+PAP,Port Au Prince
+IXZ,Port Blair
+PLZ,Port Elizabeth
+BQU,Port Elizabeth
+POG,Port Gentil
+PHC,Port Harcourt
+YZT,Port Hardy
+PHE,Port Hedland
+PTH,Port Heiden
+PLO,Port Lincoln
+PQQ,Port Macquarie
+YMP,Port Mcneil
+PML,Port Moller
+POM,Port Moresby
+POS,Port Of Spain
+VLI,Port Vila
+PCA,Portage Creek
+PTJ,Portland
+PWM,Portland
+PDX,Portland
+OPO,Porto
+POA,Porto Alegre
+PXO,Porto Santo
+BPS,Porto Seguro
+PVH,Porto Velho
+PSM,Portsmouth
+PSS,Posadas
+POU,Poughkeepsie
+YPX,Povungnituk
+YPW,Powell River
+PAZ,Poza Rica
+POZ,Poznan
+PRG,Prague
+RAI,Praia
+PRI,Praslin Island
+PRC,Prescott
+PQI,Presque Isle
+PVK,Preveza
+YPA,Prince Albert
+YXS,Prince George
+YPR,Prince Rupert /Princ Rupert
+PCT,Princeton
+PRN,Pristina
+ZJJ,Procida Harbour
+PPP,Proserpine
+PVD,Providence
+PLS,Providenciales
+PVC,Provincetown
+PVU,Provo
+SCC,Prudhoe Bay
+PCL,Pucallpa
+PBC,Puebla
+PUB,Pueblo
+PUZ,Puerto Cabezas
+PXM,Puerto Escondido
+PEM,Puerto Maldonado
+PMC,Puerto Montt
+PZO,Puerto Ordaz
+POP,Puerto Plata
+PPS,Puerto Princesa
+PSZ,Puerto Suarez
+PVR,Puerto Vallarta
+PUY,Pula
+PUW,Pullman
+PUQ,Punta Arenas
+PUJ,Punta Cana
+SDQ,Punta Causedo
+PDP,Punta del Este
+PUS,Pusan
+FNJ,Pyongyang
+AQI,Qaisumah
+IQM,Qiemo
+TAO,Qingdao
+SHP,Qinhuangdao
+NDG,Qiqihar
+XQU,Qualicum
+YQC,Quaqtaq
+YQB,Quebec
+ZQN,Queenstown
+UEL,Quelimane
+XQP,Quepos
+QRO,Queretaro
+YQZ,Quesnel
+UET,Quetta
+UIB,Quibdo
+UIP,Quimper
+UIN,Quincy
+KWN,Quinhagak
+UIH,Quinhon
+UIO,Quito
+RBA,Rabat
+RAB,Rabaul
+BVC,Rabil
+VKG,Rachgia
+BEK,Rae Bareli
+RAH,Rafha
+RYK,Rahim Yar Khan
+RFP,Raiatea
+YOP,Rainbow Lake
+RPR,Raipur
+RAJ,Rajkot
+RDU,Raleigh/Durham
+IXR,Ranchi
+YRT,Rankin Inlet
+RAP,Rapid City
+RAR,Rarotonga
+RKT,Ras Al Khaimah
+RAS,Rasht
+RDG,Reading
+REC,Recife
+YRL,Red Lake
+RDD,Redding
+RDM,Redmond/Bend
+REG,Reggio Calabria
+YQR,Regina
+RNS,Rennes
+RNO,Reno/Tahoe
+RES,Resistencia
+YRB,Resolute
+REU,Reus
+KEF,Reykjavik
+REK,Reykjavik
+RKV,Reykjavik
+REX,Reynosa
+RHI,Rhinelander
+RHO,Rhodes
+RAO,Ribeirao Preto
+RCB,Richards Bay
+RIC,Richmond
+RIX,Riga
+RMI,Rimini
+TIA,Rinas (Tirana)
+RBR,Rio Branco
+RIO,Rio De Janeiro
+GIG,Rio De Janeiro
+SDU,Rio De Janeiro
+RGL,Rio Gallegos
+RGA,Rio Grande
+RIS,Rishiri
+RIW,Riverton
+XRP,Riviere A Pierre
+YRI,Riviere du Loup
+RUH,Riyadh
+ROA,Roanoke
+RTB,Roatan
+YRJ,Roberval
+RCE,Roche Harbor
+RST,Rochester
+ROC,Rochester
+RSD,Rock Sound
+RKS,Rock Springs
+ZRF,Rockford
+RFD,Rockford
+ROK,Rockhampton
+RKD,Rockland
+RWI,Rocky Mount
+RDZ,Rodez
+RRG,Rodrigues Island
+RMA,Roma
+CIA,Rome
+ROM,Rome
+FCO,Rome
+RNN,Ronne/Bornholm
+RNB,Ronneby
+ROS,Rosario
+RPN,Rosh
+RLG,Rostock
+ROV,Rostov
+ROW,Roswell
+ROP,Rota
+ROT,Rotorua
+RTM,Rotterdam
+URO,Rouen
+YUY,Rouyn Noranda
+RVN,Rovaniemi
+RXS,Roxas
+RUI,Ruidoso
+RUT,Rutland
+RZE,Rzeszow
+SCN,Saarbruecken
+SAB,Saba Island
+SMF,Sacramento
+HSG,Saga
+MBS,Saginaw / Bay City / Midland
+SPD,Saidpur
+YAY,Saint Anthony
+SBH,Saint Barthelemy
+YCM,Saint Catharines
+STC,Saint Cloud
+STX,Saint Croix Island
+SSB,Saint Croix Island
+RUN,Saint Denis De La Reunion
+SGO,Saint George
+SGU,Saint George
+GND,Saint Georges/Grenada
+YSJ,Saint John
+YYT,Saint John's
+ANU,Saint Johns / Antigua
+XIM,Saint Hyacinthe
+SKB,Saint Kitts
+YSL,Saint Leonard
+STL,Saint Louis
+UVF,Saint Lucia
+SLU,Saint Lucia
+SXM,Saint Maarten
+SMS,Saint Marie
+SFG,Saint Martin
+XIO,Saint Marys
+STP,Saint Paul
+SNP,Saint Paul Island
+LED,Saint Petersburg
+PIE,Saint Petersburg/Clearwater
+FSP,Saint Pierre
+STT,Saint Thomas Island
+SPB,Saint Thomas Island
+SVD,Saint Vincent
+SPN,Saipan
+SNO,Sakon Nakhon
+SID,Sal
+SLL,Salalah
+SLM,Salamanca
+SLN,Salina
+SCX,Salina Cruz
+SBY,Salisbury
+YZG,Salluit
+YSN,Salmon Arm
+SLC,Salt Lake City
+SLA,Salta
+SLW,Saltillo
+SSA,Salvador
+SZG,Salzburg
+NEU,Sam Neua
+AZS,Samana/El Catey
+KUF,Samara
+SKD,Samarkand
+SMI,Samos Island
+SZF,Samsun
+ADZ,San Andres Island
+SAQ,San Andros
+SJT,San Angelo
+SAT,San Antonio
+SVZ,San Antonio
+SQL,San Carlos
+BRC,San Carlos De Bariloche
+SZT,San Cristobel de las Casas
+SAN,San Diego
+SFO,San Francisco
+SJD,San Jose Del Cabo
+SJC,San Jose
+SJO,San Jose
+SJI,San Jose
+SIG,San Juan
+SJU,San Juan
+UAQ,San Juan
+LUQ,San Luis
+SBP,San Luis Obispo
+SLP,San Luis Potosi
+CPC,San Martin De Los Andes
+SAP,San Pedro Sula
+SPR,San Pedro
+AFA,San Rafael
+ZSA,San Salvador
+SAL,San Salvador
+EAS,San Sebastian
+SOM,San Tome
+SAH,Sanaa
+SDP,Sand Point
+SDK,Sandakan
+SDN,Sandane
+TRF,Sandefjord
+SSJ,Sandnessjoen
+YZP,Sandspit
+SFB,Sanford/Orlando
+YSK,Sanikiluaq
+SFQ,Sanliurfa
+SNA,Santa Ana
+SBA,Santa Barbara
+SNU,Santa Clara
+PAO,Santa Clara County
+SPC,Santa Cruz La Palma
+VVI,Santa Cruz
+SAF,Santa Fe
+SFN,Santa Fe
+SMX,Santa Maria
+SMR,Santa Marta
+STS,Santa Rosa
+RSA,Santa Rosa
+SDR,Santander
+STM,Santarem
+SCQ,Santiago De Compostela
+SDE,Santiago Del Estero
+SCL,Santiago
+SCU,Santiago
+STI,Santiago
+SDQ,Santo Domingo
+STD,Santo Domingo
+JTR,Santorini/Thira Is
+SYX,Sanya
+SFL,Sao Filipe
+SJP,Sao Jose Do Rio Preto
+SJK,Sao Jose Dos Campos
+SLZ,Sao Luiz
+SNE,Sao Nicolau
+CGH,Sao Paulo
+GRU,Sao Paulo
+VCP,Sao Paulo Viracopos
+TMS,Sao Tome
+CTS,Sapporo
+OKD,Sapporo
+SJJ,Sarajevo
+SLK,Saranac Lake
+SRQ,Sarasota/Bradenton
+VNA,Saravane
+YZR,Sarnia
+YXE,Saskatoon
+SUJ,Satu Mare
+CIU,Sault Ste Marie
+YAM,Sault Ste Marie
+JMC,Sausalito
+SAV,Savannah
+ZVK,Savannakhet
+SVL,Savonlinna
+SVU,Savusavu
+SCM,Scammon Bay
+YKL,Schefferville
+BFF,Scottsbluff
+LKE,Seattle
+SEA,Seattle
+BFI,Seattle Kings County International/Boeing Field
+SEB,Sebha
+SDX,Sedona
+SRG,Semarang
+SMM,Semporna
+SDJ,Sendai
+DJJ,Sentani
+ICN,Seoul
+SEL,Seoul
+YZV,Sept
+SRX,Sert
+SVQ,Sevilla
+SFA,Sfax
+PVG,Shanghai
+SHA,Shanghai
+SNN,Shannon
+SWA,Shantou
+SHJ,Sharjah
+SSH,Sharm El Sheikh
+SHW,Sharurah
+XFL,Shawinigan
+XFM,Shawnigan
+SHE,Shenyang
+SZX,Shenzhen
+SHR,Sheridan
+LSI,Shetland Islands /Shetland Isd
+LWK,Shetland Islands /Shetland Isd
+SJW,Shijiazhuang
+HIL,Shillavo
+SYZ,Shiraz
+SHC,Indaselassie
+SYO,Shonai
+SOW,Show Low
+SHV,Shreveport
+REP,Siam Reap/Angkor Wat
+SBZ,Sibiu
+SBW,Sibu
+SDY,Sidney
+SAY,Siena
+IXS,Silchar
+SVC,Silver City
+SYM,Simao
+SIP,Simferopol
+SIN,Singapore
+SIR,Sion
+SUX,Sioux City
+FSD,Sioux Falls
+YXL,Sioux Lookout
+JSH,Sitia
+SIT,Sitka
+VAS,Sivas
+SGY,Skagway
+KDU,Skardu
+SFT,Skelleftea
+JSI,Skiathos
+SKE,Skien
+SKU,Skiros
+SKP,Skopje
+SLD,Sliac
+SXL,Sligo
+MBX,Slivnica/Orehova Vas
+YSH,Smith Falls
+YYD,Smithers
+SNB,Snake Bay
+AER,Sochi
+SOF,Sofia
+SOG,Sogndal
+SHO,Sokcho
+SQH,Son
+SGD,Sonderborg
+JZH,Songpan Jiuzhai
+RRO,Sorrento
+TZN,South Andros
+SBN,South Bend
+XSC,South Caicos
+TVL,South Lake Tahoe
+WSN,South Naknek
+SOU,Southampton
+SOP,Southern Pines
+SPW,Spencer
+SPU,Split
+GEG,Spokane
+AXP,Spring Point
+SPI,Springfield
+SGF,Springfield
+SXR,Srinagar
+YAY,St Anthony
+SBH,St Barthelemy
+YCM,St Catharines
+STC,St Cloud
+STX,St Croix Island
+SSB,St Croix Island
+RUN,St Denis De La Reunion
+SGO,St George
+GND,St Georges/Grenada
+SGU,St George
+YSJ,St John
+YYT,St John's
+ANU,St Johns / Antigua
+XIM,St Hyacinthe
+SKB,St Kitts
+YSL,St Leonard
+STL,St Louis
+UVF,St Lucia
+SLU,St Lucia
+SXM,St Maarten
+SMS,St Marie
+SFG,St Martin
+XIO,St Marys
+STP,St Paul
+SNP,St Paul Island
+LED,St Petersburg
+PIE,St Petersburg/Clearwater
+FSP,St Pierre
+STT,St Thomas Island
+SPB,St Thomas Island
+SVD,St Vincent
+SCE,State College
+SHD,Staunton
+SVG,Stavanger
+RUN,St Denis De La Reunion
+HDN,Steamboat Springs Hayden
+SML,Stella Maris
+YJT,Stephenville
+ARN,Stockholm
+BMA,Stockholm
+SCK,Stockton
+SKN,Stokmarknes
+YSF,Stony Rapids
+SYY,Stornoway
+SQO,Storuman
+SXB,Strasbourg
+XFD,Stratford
+XTY,Strathroy
+SOY,Stronsay
+YRR,Stuart Island
+SUE,Sturgeon Bay
+STR,Stuttgart
+SRE,Sucre
+YSB,Sudbury
+SUL,Sui
+SKZ,Sukkur
+YTG,Sullivan Bay
+SWQ,Sumbawa Island
+NTY,Sun City
+SUN,Sun Valley/Hailey
+SDL,Sundsvall
+MCY,Sunshine Coast
+SUB,Surabaya
+URT,Surat Thani
+SGC,Surgut
+SUV,Suva
+SVJ,Svolvaer
+SWP,Swakopmund
+QSY,Sydney
+SYD,Sydney
+YQY,Sydney
+ZYL,Sylhet
+SYR,Syracuse
+JSY,Syros Island
+SZZ,Szczecin
+TBT,Tabatinga
+TBZ,Tabriz
+TUU,Tabuk
+TCG,Tacheng
+TAC,Tacloban
+TCQ,Tacna
+TAE,Taegu
+TAG,Tagbilaran
+RNO,Tahoe/Reno
+TXG,Taichung
+TIF,Taif
+TNN,Tainan
+TPE,Taipei
+TSA,Taipei
+TTT,Taitung
+TYN,Taiyuan
+TAI,Taiz
+TAK,Takamatsu
+TLH,Tallahassee
+TLL,Tallinn
+YYH,Taloyak
+TPA,Tampa
+TMP,Tampere
+TAM,Tampico
+TMW,Tamworth
+TNG,Tangier
+TSM,Taos
+TAP,Tapachula
+TRK,Tarakan
+TPP,Tarapoto
+TRO,Taree
+TIZ,Tari
+TJA,Tarija
+XFO,Taschereau
+TAS,Tashkent
+YTQ,Tasiujuaq
+TAT,Tatry/Poprad
+TAV,Tau
+TUO,Taupo
+TRG,Tauranga
+TVU,Taveuni Island
+TBS,Tbilisi
+MME,Teesside
+TFF,Tefe
+TGU,Tegucigalpa
+IKA – Tehran (Ahmadabad), Iran,Imam Khomeini International Airport
+THR,Tehran
+TLV,Tel Aviv Yafo
+SDV,Tel Aviv
+TEX,Telluride
+TIM,Tembagapura
+TPL,Temple
+ZCO,Temuco
+TKE,Tenakee
+TFS,Tenerife
+TCI,Tenerife
+TFN,Tenerife
+TPQ,Tepic
+TER,Terceira Island
+THE,Teresina
+TMJ,Termez
+TTE,Ternate
+YXT,Terrace
+HUF,Terre Haute
+LSS,TerreDeHaut
+TEB,Teterboro
+TXK,Texarkana
+TEZ,Tezpur
+THK,Thakhek
+HAG,The Hague
+YQD,The Pas
+SKG,Thessaloniki
+YTD,Thicket Portage
+TVF,Thief River Falls
+TED,Thisted
+YTH,Thompson
+YQT,Thunder Bay
+TIS,Thursday Island
+TSN,Tianjin
+TIJ,Tijuana
+TIU,Timaru
+TSR,Timisoara
+YTS,Timmins
+TIQ,Tinian
+KTP,Tinson Pen
+TIE,Tippi
+TIA,Tirana (Rinas)
+TRE,Tiree
+TGM,Tirgu Mures
+TRZ,Tiruchirapally
+TIV,Tivat
+TAB,Tobago
+TOB,Tobruk
+YAZ,Tofino
+TOG,Togiak
+OOK,Toksook Bay
+TKN,Tokunoshima
+TKS,Tokushima
+NRT,Tokyo
+NRT,Tokyo
+TOL,Toledo
+TLC,Toluca
+TMG,Tomanggong
+TEN,Tongren
+TWB,Toowoomba
+FOE,Topeka
+YTZ,Toronto
+YYZ,Toronto
+TRC,Torreon
+EIS,Tortola/Beef Island
+TTB,Tortoli
+TTJ,Tottori
+TLN,Toulon
+TLS,Toulouse
+TUF,Tours
+TSV,Townsville
+TOY,Toyama
+TZX,Trabzon
+TST,Trang
+TPS,Trapani
+TVC,Traverse City
+TCB,Treasure Cay
+REL,Trelew
+TTN,Trenton
+TSF,Treviso
+TRS,Trieste
+TDD,Trinidad
+TIP,Tripoli
+TRV,Trivandrum
+THN,Trollhattan
+TMT,Trombetas
+TOS,Tromso
+TRD,Trondheim
+TRU,Trujillo
+TKK,Truk
+XLZ,Truro
+TSZ,Tsetserleg
+TSJ,Tsushima
+TUS,Tucson
+TUC,Tucuman
+TUR,Tucurui
+TUG,Tuguegarao
+TUL,Tulsa
+TBP,Tumbes
+TUN,Tunis
+WTL,Tuntutuliak
+TNK,Tununak
+TXN,Tunxi
+TUP,Tupelo
+TUI,Turaif
+TUK,Turbat Airport
+TRN,Turin
+TKU,Turku
+TCL,Tuscaloosa
+TGZ,Tuxtla Gutierrez
+TBB,Tuyhoa
+TWF,Twin Falls
+TWA,Twin Hills
+TYR,Tyler
+PAM,Tyndall Air Force Base
+TJM,Tyumen
+QUB,Ubari
+UBJ,Ube
+UBA,Uberaba
+UDI,Uberlandia
+UBP,Ubon Ratchathani
+UDR,Udaipur
+UTH,Udon Thani
+UFA,Ufa
+UPG,Ujung Pandang
+ULO,Ulaangom
+ULN,Ulan Bator
+UUD,UlanUde
+ULZ,Uliastai
+USN,Ulsan
+ULD,Ulundi
+ULY,Ulyanovsk
+UME,Umea
+YUD,Umiujaq
+UTT,Umtata
+UNA,Una
+UNK,Unalakleet
+UNI,Union Island
+UNT,Unst Shetland Islands
+UTN,Upington
+UGC,Urgench
+UPN,Uruapan
+URC,Urumqi
+USH,Ushuaia
+UCA,Utica
+UDJ,Uzhgorod
+VAA,Vaasa
+BDQ,Vadodara
+VDS,Vadso
+QBF,Vail/Eagle
+ZBV,Vail/Eagle
+EGE,Vail/Eagle
+YVO,Val D'Or
+VDZ,Valdez
+ZAL,Valdivia
+VLD,Valdosta
+VLC,Valencia
+VLN,Valencia
+VLL,Valladolid
+VUP,Valledupar
+VPS,Valparaiso
+VDE,Valverde
+VAN,Van
+CXH,Vancouver
+YVR,Vancouver
+VAI,Vanimo
+VNE,Vannes
+VRA,Varadero
+VNS,Varanasi
+VRK,Varkaus
+VAR,Varna
+VST,Vasteras
+VAV,Vava'U
+VXO,Vaxjo
+VCE,Venice
+VER,Veracruz
+VRB,Vero Beach
+VRN,Verona
+VEY,Vestmannaeyjar
+VHY,Vichy
+YYJ,Victoria
+YWH,Victoria
+VCT,Victoria
+VFA,Victoria Falls
+VDM,Viedma
+VIE,Vienna
+LVT,Vientiane
+VTE,Vientiane
+VQS,Vieques
+VGO,Vigo
+VLG,Villa Gesell
+VSA,Villahermosa
+VHM,Vilhelmina
+VNO,Vilnius
+VII,Vinh City
+VIJ,Virgin Gorda
+VIS,Visalia
+VBY,Visby
+VTZ,Vishakhapatnam
+VIX,Vitoria
+VIT,Vitoria
+VDC,Vitoria Da Conquista
+VVO,Vladivostok
+SKS,Vojens Lufthavn
+VOG,Volgograd
+YWK,Wabush
+ACT,Waco
+WAE,Wadi Ad Dawasir
+WGA,WaggaWagga
+AIN,Wainwright
+NTQ,Wajima
+WKJ,Wakkanai
+WGE,Walgett
+ALW,Walla Walla
+WVB,Walvis Bay
+WKA,Wanaka
+WAG,Wanganui
+WXN,Wanxian
+WAW,Warsaw
+IAD,Washington
+DCA,Washington
+IAD,Washington
+YKQ,Waskaganish
+WAT,Waterford
+ALO,Waterloo
+ART,Watertown
+ATY,Watertown
+YQH,Watson Lake
+CWA,Wausau
+YXZ,Wawa
+TBN,Waynesville
+EJH,Wedjh
+NRN,Weeze
+WEH,Weihai
+WEI,Weipa
+WLG,Wellington
+EAT,Wenatchee
+ENV,Wendover
+WNZ,Wenzhou
+PBI,West Palm Beach
+WYS,West Yellowstone
+GWT,Westerland
+WST,Westerly
+WSZ,Westport
+WSX,Westsound
+WWK,Wewak
+XFQ,Weymont
+WHK,Whakatane
+WRE,Whangarei
+YWS,Whistler
+HPN,White Plains
+YWR,White River
+YXY,Whitehorse
+WYA,Whyalla
+ICT,Wichita
+SPS,Wichita Falls
+WIC,Wick
+AVP,Wilkes Barre/Scranton
+CUR,Willemstad / Curacao Island
+AZA,Williams Gateway Airport
+YWL,Williams Lake
+IPT,Williamsport
+ISN,Williston
+ILM,Wilmington
+ILG,Wilmington/New Castle County
+ERS,Windhoek
+WDH,Windhoek
+YQG,Windsor
+YWG,Winnipeg
+INT,WinstonSalem
+WIN,Winton
+OLF,Wolf Point
+WJU,Won
+XIP,Woodstock
+UMR,Woomera
+ORH,Worcester
+WRL,Worland
+WRG,Wrangell
+WRI,Wrightstown NJ [McGuire Air Force Base] USA
+WRO,Wroclaw
+WUH,Wuhan
+WUS,Wuyishan
+XWY,Wyoming
+XIY,Xi An
+XMN,Xiamen
+XFN,Xiangfan
+XIL,Xilinhot
+XNN,Xining
+XUZ,Xuzhou
+YKM,Yakima
+YAK,Yakutat
+YKS,Yakutsk
+GAJ,Yamagata
+YNB,Yanbo
+YNZ,Yancheng
+RGN,Yangon
+YNY,Yangyang
+YNJ,Yanji
+YNT,Yantai
+NSI,Yaounde
+YAP,Yap
+YQI,Yarmouth
+AZD,Yazd
+YEC,Yechon
+YZF,Yellowknife
+COD,Yellowstone
+EVN,Yerevan
+YBP,Yibin
+YIH,Yichang
+INC,Yinchuan
+YIN,Yining
+YIW,Yiwu
+JOG,Yogyakarta
+YGJ,Yonago
+RSU,Yosu
+YNG,Youngstown
+YIP,Ypsilanti/Detroit
+YUM,Yuma
+YMS,Yurimaguas
+UUS,Yuzhno
+ZCL,Zacatecas
+ZAD,Zadar
+ZAG,Zagreb
+ZAH,Zahedan
+ZTH,Zakinthos
+ZAM,Zamboanga
+ZNZ,Zanzibar
+OZH,Zaporozhye
+ZAZ,Zaragoza
+QZT,Zawia Town (Zawiat al Mukhayla)
+ZHA,Zhanjiang
+ZAT,Zhaotong
+CGO,Zhengzhou
+PZH,Zhob
+HSN,Zhoushan
+ZUH,Zhuhai
+IEG,Zielona Gora
+QZL,Zliten (Zlitan)
+ZRH,Zurich
+ZQW,Zweibruecken
