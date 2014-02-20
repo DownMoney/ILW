@@ -1,20 +1,21 @@
 import java.io.InputStream;
-  import java.io.InputStreamReader;
-  import java.net.URL;
-  import java.net.URLConnection;
-  import java.util.ArrayList;
-  import java.util.HashMap;
-  import java.util.List;
-  import java.util.Random;
-  import java.util.Vector;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
+import java.util.Vector;
   
-  import javax.xml.parsers.DocumentBuilder;
-  import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
   
-  import org.w3c.dom.Document;
-  import org.w3c.dom.Node;
-  import org.w3c.dom.NodeList;
-  import org.xml.sax.InputSource;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
   
   public class ApiToDB {
   	private String apikey = "ilw03824094427015676662223000993";
@@ -23,27 +24,22 @@ import java.io.InputStream;
   	String locale;
   	String country;
  	int d,m,y;
-  	HashMap<String,City> cities;
-  	List<Transport> trans;
+  	HashMap<Integer,City> cities;
+  	Vector<Transport> trans;
   	List<Event> events;
   	
   	public static void main(String argvs[])
   	{
-  		System.setProperty("http.agent", "");
+  		
   		ApiToDB api = new ApiToDB("GB", "GBP", "en-GB");
  		api.setTime(24,2,2014);
-
-  		api.queryRoutes("UK", "SIP", "anytime", "anytime");
-  	
-
  		Vector<Transport> all = api.getAllTrans(new City("SIP"), new TimeDate(10,10,10,2014,2,24), new TimeDate(10,10,10,2014,3,05));
   		for(Transport t: all)
   		{
-  			System.out.println(t.s);
+  			System.out.println(t);
   		}
  		///api.queryRoutes("UK", "SIP", "anytime", "anytime");
   	}
-
   	
  	public void setTime(int a, int b, int c)
  	{
@@ -52,26 +48,16 @@ import java.io.InputStream;
  		y = c;
  	}
  	
-<<<<<<< HEAD
-=======
  	public Vector<Transport> getAllTrans(City city, TimeDate date, TimeDate enddate)
  	{
  		queryRoutes(city.name, "anywhere", date.toDateB(), enddate.toDateB());
  		HashMap<Integer,String> cities1 = new HashMap<Integer,String>();
- 		HashMap<String,City> cities2 = new HashMap<String,City>(cities);
- 		Set<String> keys = cities2.keySet();
- 		/*for(int i = 0; i < trans.size(); i++)
-		{
-				if(trans.get(i).start.type == 1)
-				{
-					System.out.println("Remove..."+trans.get(i).cost);
-					trans.remove(i);
-					i--;
-				}
-		}*/
+ 		HashMap<Integer,City> cities2 = new HashMap<Integer,City>(cities);
+ 		Set<Integer> keys = cities2.keySet();
+ 		/**/
  		System.out.println("All keys:");
  		
- 		for(String k : keys)
+ 		for(int k : keys)
  		{
  			System.out.println(k);
  			if(cities2.get(k).type == 1)
@@ -79,31 +65,40 @@ import java.io.InputStream;
  				if(!IATAcodes.giveCode(cities2.get(k).name).equals(""))
  				{
  					queryRoutes(city.name, IATAcodes.giveCode(cities2.get(k).name), date.toDateB(), enddate.toDateB());
- 	 				System.out.println("CODE");
+ 	 				//System.out.println("CODE");
  				}
  				
  			}
  			else
  			{
- 				System.out.println("City");
- 				cities1.put(Integer.parseInt(k), cities.get(k).name);
+ 				//System.out.println("City");
+ 				cities1.put(k, cities.get(k).name);
  			}
  		}
  		Vector<Transport> t = new Vector<Transport>();
  		t.addAll(trans);
+ 		for(int i = 0; i < t.size(); i++)
+		{
+				if(t.get(i).start == null)
+				{
+					System.out.println("Remove..."+t.get(i).cost);
+					t.remove(i);
+					i--;
+				}
+		}
  		trans.clear();
  		return t;
  	}
->>>>>>> e2a8266e0a5a98283bb51d2302d596952239d4a4
   	
   	public ApiToDB(String country, String currency, String locale)
   	{
   		this.country = country;
   		this.currency = currency;
   		this.locale = locale;
-  		cities = new HashMap<String,City>();
+  		cities = new HashMap<Integer,City>();
   		trans = new Vector<Transport>();
   		events = new Vector<Event>();
+  		System.setProperty("http.agent", "");
   	}
   	public void queryQuotes(String from, String to, String indate, String outdate)
   	{
@@ -127,7 +122,6 @@ import java.io.InputStream;
   		DocumentBuilder db = null;
   		URL url = null;
   		URLConnection con = null;
-  		String xml = "";
   		System.out.println(query);
   		try {
   			url = new URL(query);
@@ -146,6 +140,7 @@ import java.io.InputStream;
   	public void analyzeXML(Document xml)
   	{
   		System.out.println("Analzye");
+  		List<Transport> trans_ = new ArrayList<Transport>();
   		NodeList all = xml.getFirstChild().getChildNodes();
   		for(int i = 0; i < all.getLength(); i++)
   		{
@@ -174,8 +169,9 @@ import java.io.InputStream;
   				NodeList all_ = all.item(i).getChildNodes();
   				for(int j = 0; j < all_.getLength(); j++)
   				{
-  					String id = null;
+  					int cid = 0;
   					String name = null;
+  					int type = 0;
   					if(all_.item(j).getChildNodes().getLength() > 1)
   					{
   						NodeList inside = all_.item(j).getChildNodes();
@@ -183,40 +179,37 @@ import java.io.InputStream;
   						{	
   							if(inside.item(k).getNodeName().equals("PlaceId"))
   							{
-  								id = inside.item(k).getFirstChild().getNodeValue();
+  								cid = Integer.parseInt(inside.item(k).getFirstChild().getNodeValue());
   							}
   							else if(inside.item(k).getNodeName().equals("Name"))
   							{
   								name = inside.item(k).getFirstChild().getNodeValue();
   							}
-<<<<<<< HEAD
-=======
   							else if(inside.item(k).getNodeName().equals("Type"))
   							{
   								if(inside.item(k).getFirstChild().getNodeValue().equals("Station"))
   								{
   									type = 0;
-  									System.out.println("Rport");
+  									//System.out.println("Rport");
   								} else {
   									type = 1;
-  									System.out.println("Country");
+  									//System.out.println("Country");
   								}
   							}
->>>>>>> e2a8266e0a5a98283bb51d2302d596952239d4a4
   						}
   					}
-  					if(id != null)
+  					if(cid != 0)
   					{
   						City c = new City(name);
   						c.type = type;
-  						System.out.println(id+"="+c.name);
-  						cities.put(id, c);
+  						System.out.println(cid+"="+c.name);
+  						cities.put(cid, c);
   					}
   				}
   			}
   			else if(all.item(i).getNodeName().equals("Routes"))
   			{
-  				System.out.println("Routes");
+  				//System.out.println("Routes");
   				NodeList all_ = all.item(i).getChildNodes();
   				for(int j = 0; j < all_.getLength(); j++)
   				{
@@ -226,11 +219,11 @@ import java.io.InputStream;
   					String price = null;
   					if(all_.item(j).getChildNodes().getLength() > 1)
   					{
-  						System.out.println("Routes2");
+  						//System.out.println("Routes2");
   						NodeList inside = all_.item(j).getChildNodes();
   						for(int k = 0; k < inside.getLength(); k++)
   						{
-  							System.out.println("Routes3");//+inside.item(k).getNodeName());
+  							//System.out.println("Routes3");//+inside.item(k).getNodeName());
   							if(inside.item(k).getNodeName().equals("OriginId"))
   							{
   								origin = inside.item(k).getFirstChild().getNodeValue();
@@ -245,7 +238,8 @@ import java.io.InputStream;
   								{
   									price = inside.item(k).getFirstChild().getNodeValue();
   								} else {
-  									price = "1";
+  									Random rnd = new Random();
+  									price = String.valueOf(50 + rnd.nextInt(100));
   								}
   								
   							}
@@ -261,24 +255,23 @@ import java.io.InputStream;
  						int h = rnd.nextInt(19);
  						c.out = new TimeDate(h, rnd.nextInt(59), 0, y, m, day);
  						c.in = new TimeDate(h+2, rnd.nextInt(59), 0, y,m, day);
-  						trans.add(c);
+  						trans_.add(c);
   					}
   				}
   			}
   				
   		}
-  		
-  		for(int i = 0; i < trans.size(); i++)
+  		System.out.println(trans_.size()+"SIZE!!!");
+  		for(int i = 0; i < trans_.size(); i++)
   		{
-  			System.out.println("SIZE");
-  			if(trans.get(i).start == null)
-  			{
-  				int s = trans.get(i).s;
-  	  			int e = trans.get(i).e;
-  	  			//System.out.println("Updating "+ s + " to " + cities.get(s).name);
-  	  			trans.get(i).update(cities.get(s), cities.get(e));	
-  			}
+  			System.out.println("s="+trans_.get(i).s);
+  			System.out.println("e="+trans_.get(i).e);
+  			int s = trans_.get(i).s;
+  	  		int e = trans_.get(i).e;
+  			System.out.println(cities.get(s).name);
+  	  		System.out.println("Updating "+ s + " to " + cities.get(s).name);
+  	  		trans_.get(i).update(cities.get(s), cities.get(e));	
   		}
-  		
+  		trans.addAll(trans_);
   	}
   }
