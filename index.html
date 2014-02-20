@@ -72,11 +72,12 @@
           <span class="add-on">
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
-        </div></div>
-        <div class="ui-widget">
-  <label for="to">FLY TO: </label>
-  <input id="to" class="form-control" name="to" onkeyup="autocompleteCity(this);" onblur="showPictures(this);">
-</div>
+        </div>
+        </div>
+        
+        <div id="via"></div>
+        <a style="padding-top: 5px" href="#" onclick="addField();">VIA...</a>
+        
        <div class="ui-widget"><label for="from">ARRIVAL DATE: </label>
         <div id="datetimepicker1" class="input-append date">
           <input type="text" name="adate" class="form-control"></input>
@@ -84,9 +85,23 @@
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
         </div></div>
-    
-    <input type="submit"class="btn btn-success" value="Search"/>
-    </form>
+
+        <div class="ui-widget"> <label for="from">EVENT CATEGORY: <i>(optional)</i></label>
+        <div id="datetimepicker" class="input-append date">
+          <select id="eventType" name="eventType" class="form-control">
+            <option value="any">Any</option>
+          </select>
+          
+        </div>
+        </div>
+
+                 <div class="ui-widget">
+  <label for="from">KEYWORDS: <i>(optional)</i></label>
+  <input id="keywords" name="keywords" class="form-control" onkeyup="autocompleteCity(this);">
+</div>
+    <div style="width:100%;text-align: center">
+    <input  style="margin-top: 7px" type="submit"class="btn btn-success" value="Search"/>
+    </div></form>
     </div>
 
 
@@ -194,6 +209,7 @@
      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
     </script>
     <script type="text/javascript">
+      getEventTypes();
       $.fn.datetimepicker.defaults = {
         maskInput: true,        
         pickDate: true,
@@ -232,6 +248,10 @@
                 ddate: {
                     required: true
                 },
+
+                adate:{
+                  required: true
+                }
                 
             },
             errorPlacement: function(error, element) {

@@ -8,19 +8,23 @@ function getRandomPic(){
 	$.getJSON( '/api/randomphoto.php', function(data) {
 		b = true;
   		var items = [];
+
+  		//
 		$.each(data['photos'], function( key, val ) {
 			if (b)
 			{
 				b = false;
+				showEvents(val['position'][0].toString()+','+val['position'][1].toString());
 				items.push ('<div class="item active"> ');
 			}
 			else
 				items.push ('<div class="item"> ');
-		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['title']+'</h1>              <p>'+val['topic_description']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="getAirport(\''+val['position'][1]+'\',\''+val['position'][0]+'\');">Fly here</a></p>            </div>          </div>        </div>');
+		  items.push(' <img src="'+val['images']['1920x1280']['url']+'" alt="Second slide">          <div class="container">           <div class="carousel-caption">              <h1>'+val['topic_description']+'</h1>              <p>'+val['title']+ '</p>              <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="getAirport(\''+val['position'][1]+'\',\''+val['position'][0]+'\');">Fly here</a><a class="btn btn-lg btn-primary" href="#"  data-toggle="modal" data-target="#events" role="button">Check events</a></p>            </div>          </div>        </div>');
 		});
 
 		$('div.carousel-inner').html(items.join(''));
-		console.log(data);
+	//	console.log(data.photos);
+	//console.log(data.photos[0]);
 		$('.carousel').carousel("pause").removeData();
 		$('.carousel').carousel(0);	
 
@@ -107,12 +111,18 @@ function getEvents(city, fn){
 function showEvents(coord){
 
 	getEvents(coord, function(events, city){
-		
-		items = [];
+		console.log(events);
+		var items = [];
 		$.each(events, function(val){
+			console.log(val);
+			try{
 			items.push('<div class="row"><div class="col-md-3"><img src="'+events[val]['image']['medium']['url']+'"/></div><div class="col-md-7"><h4><a href="'+events[val]['url']+'" target ="_blank">'+events[val]['title']+'</a></h4><p>'+events[val]['start_time']+'</p><p>'+events[val]['venue_name']+'</p><p>'+events[val]['venue_address']+'</p></div></div>');
+			}
+			catch(err){
+				;
+			}
 		});
-
+		console.log(items);
 		$('div.eventsList').html(items.join(''));
 		//$('#events').modal('toggle');
 	});
@@ -175,7 +185,24 @@ function getRoute(start, end, travelMode, fn){
 }
 
 function getAirport(lng, lat){
+	showEvents(lat.toString()+','+lng.toString());
 	$.getJSON('/api/airport.php?location='+lat.toString()+','+lng.toString(), function(data){
-		$('#to').val(data['results'][0]['name']);
+		i =($('#via').children().length);
+		addField();
+		$('#via'+i.toString()).val(data['results'][0]['name']);
+		getRandomPic();
+	});
+}
+
+function addField(){
+	i =($('#via').children().length);
+	$('#via').append(' <div class="ui-widget">   <label for="from">FLY VIA: </label>  <input id="via'+i+'" name="via'+i+'" class="form-control" onkeyup="autocompleteCity(this);"></div>')
+}
+
+function getEventTypes(){
+	$.getJSON('/api/eventsCategories.php', function(data){
+		$.each(data['category'], function(i){
+			$('#eventType').append('<option value="'+data['category'][i]['id']+'">'+data['category'][i]['name']+'</option>')
+		});
 	});
 }

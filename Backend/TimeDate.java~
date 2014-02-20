@@ -45,6 +45,14 @@ public class TimeDate {
 	public String toDate() {
 		return String.format("%d%s%s", year, getMonth(), getDay());
 	}
+<<<<<<< HEAD
+
+	public String getMonth() {
+		if (mon < 10)
+			return String.format("0%d", mon);
+		else
+			return String.format("%d", mon);
+=======
 	
 	public String toDateB(){
 		return String.format("%d-%s-%s", year, getMonth(), getDay());
@@ -53,6 +61,7 @@ public class TimeDate {
 	public String getMonth(){
 		if(mon < 10) return String.format("0%d", mon);
 		else return String.format("%d", mon);
+>>>>>>> e2a8266e0a5a98283bb51d2302d596952239d4a4
 	}
 
 	public String getDay() {
