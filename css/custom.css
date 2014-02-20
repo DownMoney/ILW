@@ -132,20 +132,30 @@ a b {
 	color: #359dd6;
 }
 #VIA {
-	background-color: transparent;
-	height:150px;
+	background-color: rgba(0,0,0,0.1);
+	height: 100px;
 	display: none;
+	padding: 0;
 	color: white;
 	text-align: center;
 	font-size: 50px;
-	margin: auto 0;
+	margin: 0 auto;
+	border: 1px solid rgb(100,100,100);
+	border-radius: 10px;
+	width: 70px;
+	float:right;
+}
+
+#VIA:hover {
+	background-color: rgba(0,0,0,1);
+	border: 1px solid black;
 }
 
 #buttonvia {
 	display: block;
 	text-align: center;
 	width: 70px;
-	margin: 15px auto;
+	margin: 0 auto;
 	color: black;
 	font-weight: bold;
 }
