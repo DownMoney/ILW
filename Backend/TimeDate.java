@@ -33,6 +33,10 @@ public class TimeDate {
 		return String.format("%d%s%s", year, getMonth(), getDay());
 	}
 	
+	public String toDateB(){
+		return String.format("%d-%s-%s", year, getMonth(), getDay());
+	}
+	
 	public String getMonth(){
 		if(mon < 10) return String.format("0%d", mon);
 		else return String.format("%d", mon);

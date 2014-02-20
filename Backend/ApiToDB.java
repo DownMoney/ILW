@@ -33,7 +33,12 @@ import org.xml.sax.InputSource;
   		System.setProperty("http.agent", "");
   		ApiToDB api = new ApiToDB("GB", "GBP", "en-GB");
  		api.setTime(24,2,2014);
-  		api.queryRoutes("UK", "SIP", "anytime", "anytime");
+ 		Vector<Transport> all = api.getAllTrans(new City("SIP"), new TimeDate(10,10,10,2014,2,24), new TimeDate(10,10,10,2014,3,05));
+  		for(Transport t: all)
+  		{
+  			//System.out.println(t.start.name);
+  		}
+ 		///api.queryRoutes("UK", "SIP", "anytime", "anytime");
   	}
   	
  	public void setTime(int a, int b, int c)
@@ -43,28 +48,36 @@ import org.xml.sax.InputSource;
  		y = c;
  	}
  	
- 	public Vector<Transport> getAllTrans(City city, TimeDate date)
+ 	public Vector<Transport> getAllTrans(City city, TimeDate date, TimeDate enddate)
  	{
- 		queryRoutes(city.name, "anywhere", date.toDateB(), "anytime");
- 		HashMap<Integer,String> countries = new HashMap<Integer,String>();
+ 		queryRoutes(city.name, "anywhere", date.toDateB(), enddate.toDateB());
  		HashMap<Integer,String> cities1 = new HashMap<Integer,String>();
  		Set<String> keys = cities.keySet();
- 		for(int i = 0; i < trans.size(); i++)
+ 		/*for(int i = 0; i < trans.size(); i++)
 		{
 				if(trans.get(i).start.type == 1)
 				{
+					System.out.println("Remove..."+trans.get(i).cost);
 					trans.remove(i);
 					i--;
 				}
-		}
+		}*/
+ 		System.out.println("All keys:");
  		for(String k : keys)
  		{
+ 			System.out.println(k);
  			if(cities.get(k).type == 1)
  			{
- 				queryRoutes(city.name, cities.get(k).name, date.toDateB(), "anytime");
+ 				//if(!IATAcodes.giveCode(cities.get(k).name).equals(""))
+ 				//{
+ 					queryRoutes(city.name, IATAcodes.giveCode(cities.get(k).name), date.toDateB(), enddate.toDateB());
+ 	 				System.out.println("CODE");
+ 				//}
+ 				
  			}
  			else
  			{
+ 				System.out.println("City");
  				cities1.put(Integer.parseInt(k), cities.get(k).name);
  			}
  		}
@@ -106,6 +119,7 @@ import org.xml.sax.InputSource;
   		URL url = null;
   		URLConnection con = null;
   		String xml = "";
+  		System.out.println(query);
   		try {
   			url = new URL(query);
   			con = url.openConnection();
@@ -172,8 +186,10 @@ import org.xml.sax.InputSource;
   								if(inside.item(k).getFirstChild().getNodeValue().equals("Station"))
   								{
   									type = 0;
+  									System.out.println("Rport");
   								} else {
   									type = 1;
+  									System.out.println("Country");
   								}
   							}
   						}
@@ -181,6 +197,7 @@ import org.xml.sax.InputSource;
   					if(id != null)
   					{
   						City c = new City(name);
+  						c.type = type;
   						System.out.println(id+"="+c.name);
   						cities.put(id, c);
   					}
@@ -213,7 +230,13 @@ import org.xml.sax.InputSource;
   							}
   							else if(inside.item(k).getNodeName().equals("Price"))
   							{
-  								price = inside.item(k).getFirstChild().getNodeValue();
+  								if(inside.item(k).getChildNodes().getLength() > 0)
+  								{
+  									price = inside.item(k).getFirstChild().getNodeValue();
+  								} else {
+  									price = "1";
+  								}
+  								
   							}
   						}
   					}
@@ -237,10 +260,13 @@ import org.xml.sax.InputSource;
   		for(int i = 0; i < trans.size(); i++)
   		{
   			System.out.println("SIZE");
-  			int s = trans.get(i).s;
-  			int e = trans.get(i).e;
-  			//System.out.println("Updating "+ s + " to " + cities.get(s).name);
-  			trans.get(i).update(cities.get(s), cities.get(e));
+  			if(trans.get(i).start == null)
+  			{
+  				int s = trans.get(i).s;
+  	  			int e = trans.get(i).e;
+  	  			//System.out.println("Updating "+ s + " to " + cities.get(s).name);
+  	  			trans.get(i).update(cities.get(s), cities.get(e));	
+  			}
   		}
   		
   	}
