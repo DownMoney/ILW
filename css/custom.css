@@ -22,6 +22,7 @@ body{
 }
 
 .navbar-brand{
+	margin-top: 5px;
 	font-size: 28px;
 }
 
@@ -120,4 +121,8 @@ img{
 
 p a:nth-child(2){
 	margin-left: 7px;
+}
+
+a b {
+	color: #359dd6;
 }
