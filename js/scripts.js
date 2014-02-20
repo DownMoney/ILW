@@ -205,3 +205,13 @@ function getEventTypes(){
 		});
 	});
 }
+
+function getCurrentAirport(){
+	$.getJSON('/api/getCurLocation.php', function(dat){
+		$.getJSON('/api/airport.php?location='+dat['lat'].toString()+','+dat['lon'].toString(), function(data){
+		
+		$('#from').val(data['results'][0]['name']);
+		
+	});
+	});
+}
