@@ -12,4 +12,7 @@ public class City {
 	{
 		this.name = name;
 	}
+	public boolean equals(City c){
+		return name.equals(c.name);
+	}
 }

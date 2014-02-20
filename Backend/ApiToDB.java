@@ -5,7 +5,6 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Random;
 import java.util.Vector;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -22,7 +21,6 @@ public class ApiToDB {
 	String currency;
 	String locale;
 	String country;
-	int d,m,y;
 	HashMap<String,City> cities;
 	List<Transport> trans;
 	List<Event> events;
@@ -31,15 +29,12 @@ public class ApiToDB {
 	{
 		System.setProperty("http.agent", "");
 		ApiToDB api = new ApiToDB("GB", "GBP", "en-GB");
-		api.setTime(24,2,2014);
-		api.queryRoutes("UK", "SIP", "anytime", "anytime");
-	}
-	
-	public void setTime(int a, int b, int c)
-	{
-		d = a;
-		m = b;
-		y = c;
+		api.queryQuotes("EDI", "SIP", "anytime", "anytime");
+		Vector<Event> e = EventAPI.getEvents(new City("Edinburgh"), new TimeDate(0, 0, 0, 2014, 02, 15), new TimeDate(0, 0, 0, 2014, 05, 30));
+		System.out.println(e.size());
+		for(Event ei : e){
+			System.out.println(ei.name);
+		}
 	}
 	
 	
@@ -49,22 +44,17 @@ public class ApiToDB {
 		this.currency = currency;
 		this.locale = locale;
 		cities = new HashMap<String,City>();
-		trans = new Vector<Transport>();
-		events = new Vector<Event>();
+		//trans = new List<Transport>();
+		//events = new List<Event>();
 	}
 	public void queryQuotes(String from, String to, String indate, String outdate)
 	{
 		String query = "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/"+country+"/"+currency+"/"+locale+"/"+from+"/"+to+"/"+indate+"/"+outdate+"?apiKey="+apikey;
 		sendQuery(query);
 	}
-	public void queryRoutes(String from, String to, String indate, String outdate)
+	public void queryRoads(String from, String to, String indate, String outdate)
 	{
 		String query = "http://partners.api.skyscanner.net/apiservices/browseroutes/v1.0/"+country+"/"+currency+"/"+locale+"/"+from+"/"+to+"/"+indate+"/"+outdate+"?apiKey="+apikey;
-		sendQuery(query);
-	}
-	public void queryDates(String from, String to, String indate, String outdate)
-	{
-		String query = "http://partners.api.skyscanner.net/apiservices/browsedates/v1.0/"+country+"/"+currency+"/"+locale+"/"+from+"/"+to+"/"+indate+"/"+outdate+"?apiKey="+apikey;
 		sendQuery(query);
 	}
 	public void sendQuery(String query)
@@ -126,7 +116,7 @@ public class ApiToDB {
 					{
 						NodeList inside = all_.item(j).getChildNodes();
 						for(int k = 0; k < inside.getLength(); k++)
-						{	
+						{
 							if(inside.item(k).getNodeName().equals("PlaceId"))
 							{
 								id = inside.item(k).getFirstChild().getNodeValue();
@@ -147,60 +137,15 @@ public class ApiToDB {
 			}
 			else if(all.item(i).getNodeName().equals("Routes"))
 			{
-				System.out.println("Routes");
 				NodeList all_ = all.item(i).getChildNodes();
 				for(int j = 0; j < all_.getLength(); j++)
 				{
-					System.out.println("Routes1");
 					String origin = null;
 					String destination = null;
 					String price = null;
-					if(all_.item(j).getChildNodes().getLength() > 1)
-					{
-						System.out.println("Routes2");
-						NodeList inside = all_.item(j).getChildNodes();
-						for(int k = 0; k < inside.getLength(); k++)
-						{
-							System.out.println("Routes3");//+inside.item(k).getNodeName());
-							if(inside.item(k).getNodeName().equals("OriginId"))
-							{
-								origin = inside.item(k).getFirstChild().getNodeValue();
-							}
-							else if(inside.item(k).getNodeName().equals("DestinationId"))
-							{
-								destination = inside.item(k).getFirstChild().getNodeValue();
-							}
-							else if(inside.item(k).getNodeName().equals("Price"))
-							{
-								price = inside.item(k).getFirstChild().getNodeValue();
-							}
-						}
-					}
-					if(origin != null)
-					{
-						Transport c = new Transport(Integer.parseInt(origin), Integer.parseInt(destination), Double.parseDouble(price));
-						System.out.println("Got trans!");
-						c.type = TransType.FLIGHT;
-						Random rnd = new Random();
-						int day = d+rnd.nextInt(1);
-						int h = rnd.nextInt(19);
-						c.out = new TimeDate(h, rnd.nextInt(59), 0, y, m, day);
-						c.in = new TimeDate(h+2, rnd.nextInt(59), 0, y,m, day);
-						trans.add(c);
-					}
 				}
 			}
 				
 		}
-		
-		for(int i = 0; i < trans.size(); i++)
-		{
-			System.out.println("SIZE");
-			int s = trans.get(i).s;
-			int e = trans.get(i).e;
-			//System.out.println("Updating "+ s + " to " + cities.get(s).name);
-			trans.get(i).update(cities.get(s), cities.get(e));
-		}
-		
 	}
 }

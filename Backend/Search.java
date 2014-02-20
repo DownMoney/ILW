@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Search {
 	public User user;
-
-	public Vector<Route> findPaths(City city, double maxCost, TimeDate start, TimeDate maxTime,
+	
+	public Vector<Route> findPaths(City city, City end, double maxCost, TimeDate start, TimeDate maxTime,
 			int N, User u) {
 		user = u;
 		Vector<Route> fin = new Vector<Route>(); 
@@ -17,7 +17,7 @@ public class Search {
 			next = new Vector<Node>();
 			while (!curr.isEmpty()) {
 				Node top = curr.get(curr.size() - 1);
-				Vector<Event> events = getAllEvents(top.city, top.time);
+				Vector<Event> events = getAllEvents(top.city, top.time, maxTime);
 				for(Event ei : events){
 					if(checkRoute(top.route, ei, maxCost, maxTime)){
 						next.add(new Node(ei, top.route, top.city));
@@ -25,7 +25,7 @@ public class Search {
 				}
 				Vector<Transport> trans = getAllTrans(top.city, top.time);
 				for(Transport ti : trans){
-					if(checkRoute(top.route, ti, maxCost, maxTime)){
+					if(checkRoute(top.route, ti, maxCost, maxTime, end)){
 						Route nr = top.route.copy();
 						nr.addActivity(ti);
 						next.add(new Node(ti.end, nr));
@@ -37,17 +37,22 @@ public class Search {
 		return fin;
 	}
 	
+	public Vector<Event> getAllEvents(City c, TimeDate s, TimeDate e){
+		System.setProperty("http.agent", "");
+		return EventAPI.getEvents(c, s, e);
+	}
+	
 	public <T extends Comparable<T>> void filter(Vector<T> v, int N){
 		if(v.size() <= N) return;
 		Collections.sort(v);
 		v.setSize(N);
 	}
 
-	public boolean checkRoute(Route r, Transport t, double mc, TimeDate mt){
+	public boolean checkRoute(Route r, Transport t, double mc, TimeDate mt, City e){
 		Route nr = r.copy();
 		nr.addActivity(t);
 		nr.addActivity(t.end, getScore(t.end), t.in);
-		if(nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0){
+		if(nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0 || r.lastCity.equals(e)){
 			return false;
 		} else {
 			return true;
