@@ -15,15 +15,29 @@ public class EventAPI {
 
 	public static Vector<Event> getEvents(City city, TimeDate start,
 			TimeDate end) {
+		if(city.events != null){
+			return getAfter(city.events, start);
+		}
 		String query = eventful + "app_key=" + KEY + "&" + "location="
 				+ getCityName(city) + "&" + "date=" + getDate(start, end);
 		Document doc = getDoc(query);
 		Vector<Event> events;
 		events = fromXml(doc, city);
+		city.events = events;
 		return events;
 
 	}
-
+	
+	public static Vector<Event> getAfter(Vector<Event> evs, TimeDate t){
+		Vector<Event> res = new Vector<Event>();
+		for(Event ei : evs){
+			if(ei.start.after(t)){
+				res.add(ei);
+			}
+		}
+		return res;
+	}
+	
 	private static String getCityName(City c) {
 		String s = c.name;
 		s = s.replace(" ", "+");

@@ -25,8 +25,8 @@ public class TimeDate {
 						- t2.day);
 	}
 
-	public int toSecs() {
-		return day * 24 * 3600 + hour * 3600 + min * 60 + sec;
+	public long toSecs() {
+		return year * 365 + mon * 31 + day * 24 * 3600 + hour * 3600 + min * 60 + sec;
 	}
 	
 	public String toDate(){
@@ -40,5 +40,12 @@ public class TimeDate {
 	public String getDay(){
 		if(day < 10) return String.format("0%d", day);
 		else return String.format("%d", day);
+	}
+	public boolean after(TimeDate t){
+		return (toSecs() - t.toSecs()) > 0;
+	}
+	
+	public boolean equals(TimeDate t){
+		return (toSecs() - t.toSecs()) == 0;
 	}
 }

@@ -23,7 +23,7 @@ public class Search {
 						next.add(new Node(ei, top.route, top.city));
 					}
 				}
-				Vector<Transport> trans = getAllTrans(top.city, top.time);
+				Vector<Transport> trans = getAllTrans(top.city, top.time, maxTime);
 				for(Transport ti : trans){
 					if(checkRoute(top.route, ti, maxCost, maxTime, end)){
 						Route nr = top.route.copy();
@@ -35,6 +35,25 @@ public class Search {
 			}
 		}
 		return fin;
+	}
+	
+	public Vector<Transport> getAllTrans(City c, TimeDate start, TimeDate end){
+		if(c.outTrans != null){
+			return getAfterTrans(c.outTrans, start);
+		}
+		Vector<Transport> trans = null;
+		c.outTrans = trans;
+		return trans;
+	}
+	
+	public Vector<Transport> getAfterTrans(Vector<Transport> trans, TimeDate t){
+		Vector<Transport> res = new Vector<Transport>();
+		for(Transport ti : trans){
+			if(ti.out.after(t)){
+				res.add(ti);
+			}
+		}
+		return res;
 	}
 	
 	public Vector<Event> getAllEvents(City c, TimeDate s, TimeDate e){
