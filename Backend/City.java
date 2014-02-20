@@ -12,4 +12,8 @@ public class City {
 	{
 		this.name = name;
 	}
+	public boolean equals(City c){
+		if(c == null) return false;
+		return name.equals(c.name);
+	}
 }

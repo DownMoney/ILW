@@ -11,7 +11,6 @@ function initialize() {
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            alert("HEHE");
             var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude); 
             alert("Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude);

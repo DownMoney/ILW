@@ -48,8 +48,8 @@
 	<div id="panel" style="width: 300px; float: right;"></div> 
 	<div id="schematictravel"></div> 
 
-
-	<div class="timeline-container" style="width:800;margin-top:50px;">
+	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
+	<div class="timeline-container"  style="width:800;">
 		<div class="time-line-time">
 			<div id="timeline-line" style="width:800;"></div>
 			<span id="legend">
@@ -77,7 +77,9 @@
 
 
 		</div>
-	<div id="timeline-outputtext" style=" top: 150px; left: -275px;"></div>
+		</div>
+		</div>
+	<div id="timeline-outputtext" style=" top: 150px; left: -275px;" ></div>
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
