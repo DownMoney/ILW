@@ -8,7 +8,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="/ico/favicon.ico">
 
-	<title>Red Cookie District</title>
+	<title>SKYPLANNER</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
 		<div class="navbar nav navbar-inverse navbar-fixed-top" role="navigation">
 		  <div class="container">
 			<div class="navbar-header">
-			  <a class="navbar-brand" href="/">Cookie Light District</a>
+			  <a class="navbar-brand" href="/">SKY<b>PLANNER</b></a>
 			</div>
 		  </div>
 		</div>
@@ -80,6 +80,8 @@
 		</div>
 		</div>
 	<div id="timeline-outputtext" style=" top: 150px; left: -275px;" ></div>
+
+	
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -90,8 +92,9 @@
 	<script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58&sensor=false">
     </script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
     <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src= "./js/googlemap.js"></script>
-       
   </body>
 </html>

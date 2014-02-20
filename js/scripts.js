@@ -128,7 +128,6 @@ function showEvents(coord){
 	});
 }
 
-
 function bubbles(){
 	$('body').css('overflow-x','hidden');
 	var con = $('.timeline-container');
@@ -204,5 +203,15 @@ function getEventTypes(){
 		$.each(data['category'], function(i){
 			$('#eventType').append('<option value="'+data['category'][i]['id']+'">'+data['category'][i]['name']+'</option>')
 		});
+	});
+}
+
+function getCurrentAirport(){
+	$.getJSON('/api/getCurLocation.php', function(dat){
+		$.getJSON('/api/airport.php?location='+dat['lat'].toString()+','+dat['lon'].toString(), function(data){
+		
+		$('#from').val(data['results'][0]['name']);
+		
+	});
 	});
 }
