@@ -128,7 +128,6 @@ function showEvents(coord){
 	});
 }
 
-
 function bubbles(){
 	$('body').css('overflow-x','hidden');
 	var con = $('.timeline-container');

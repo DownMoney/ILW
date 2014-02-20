@@ -7,13 +7,18 @@ public class Route implements Comparable<Route> {
 	int index = 0;
 	int size = 0;
 	City lastCity;
+	HashMap<String, Event> events;
+	HashMap<String, City> cities;
 	public Route(){
+		events = new HashMap<String, Event>();
+		cities = new HashMap<String, City>();
 		lastCity = null;
 		time = null;
 		score = 0;
 		cost = 0;
+		route = new Vector<Activity>();
 	}
-	public Route(Vector<Activity> r, double co, TimeDate t, double s, int i, int si, City lc){
+	public Route(Vector<Activity> r, double co, TimeDate t, double s, int i, int si, City lc, HashMap<String, City> cs, HashMap<String, Event> es){
 		route = r;
 		cost = co;
 		time = t;
@@ -21,13 +26,30 @@ public class Route implements Comparable<Route> {
 		index = i;
 		size = si;
 		lastCity = lc;
+		cities = new HashMap<String, City>(cs);
+		events = new HashMap<String, Event>(es);
 	}
+	
+	public void setUpHash(){
+		events = new HashMap<String, Event>();
+		cities = new HashMap<String, City>();
+		if(route != null)
+		for(Activity ai : route){
+			if(ai.city != null){
+				cities.put(ai.city.name, ai.city);
+			} else if(ai.event != null){
+				events.put(ai.event.id, ai.event);
+			}
+		}
+	}
+	
 	public void addActivity(City c, double s, TimeDate t){
 		route.add(new Activity(c, t));
 		lastCity = c;
 		score += s;
 		size++;
 		time = t;
+		cities.put(c.name, c);
 	}
 	public void addActivity(Transport t){
 		route.add(new Activity(t));
@@ -38,9 +60,10 @@ public class Route implements Comparable<Route> {
 	public void addActivity(Event e, double s){
 		route.add(new Activity(e));
 		cost += e.cost;
-		time = e.end;
+		time = e.getEnd().addH(1);
 		score += s;
 		size++;
+		events.put(e.name, e);
 	}
 	public boolean isCity(int i){
 		return (route.get(i).city != null);
@@ -73,10 +96,17 @@ public class Route implements Comparable<Route> {
 	}
 	public Route copy(){
 		Vector<Activity> nr = new Vector<Activity>();
+		if(route != null)
 		for(Activity ai : route){
 			nr.add(ai);
 		}
-		return new Route(nr, cost, time, score, index, size, lastCity);
+		return new Route(nr, cost, time, score, index, size, lastCity, cities, events);
+	}
+	public boolean contains(City c){
+		return !(cities.get(c.name) == null);
+	}
+	public boolean contains(Event e){
+		return !(events.get(e.name) == null);
 	}
 	private class Activity{
 		City city;
@@ -87,7 +117,7 @@ public class Route implements Comparable<Route> {
 		public Activity(Event e){
 			event = e;
 			cost = e.cost;
-			time = e.end;
+			time = e.getEnd().addH(1);
 		}
 		public Activity(City c, TimeDate t){
 			city = c;

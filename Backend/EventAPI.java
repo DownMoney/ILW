@@ -31,7 +31,7 @@ public class EventAPI {
 	public static Vector<Event> getAfter(Vector<Event> evs, TimeDate t){
 		Vector<Event> res = new Vector<Event>();
 		for(Event ei : evs){
-			if(ei.start.after(t)){
+			if(ei.start == null || ei.start.after(t)){
 				res.add(ei);
 			}
 		}

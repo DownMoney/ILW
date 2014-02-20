@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Event {
 	String name;
 	String desc;
@@ -26,6 +28,24 @@ public class Event {
 		url = u;
 		id = i;
 		ad = a;
+	}
+	
+	public TimeDate getEnd(){
+		if(end != null && end.after(start)){
+			return end;
+		} else if(start != null) {
+			Calendar cal = Calendar.getInstance();
+			cal.set(Calendar.YEAR, start.year);
+			cal.set(Calendar.MONTH, start.mon);
+			cal.set(Calendar.DATE, start.day);
+			cal.set(Calendar.HOUR_OF_DAY, start.hour);
+			cal.set(Calendar.MINUTE, start.min);
+			cal.set(Calendar.SECOND, start.sec);
+			cal.add(Calendar.HOUR_OF_DAY, 3);
+			return new TimeDate(cal);
+		} else {
+			return null;
+		}
 	}
 
 }

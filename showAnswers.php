@@ -92,8 +92,9 @@
 	<script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58&sensor=false">
     </script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
     <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src= "./js/googlemap.js"></script>
-       
   </body>
 </html>
