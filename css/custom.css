@@ -54,7 +54,7 @@ img{
 
 .searchbar{
 	position: absolute;
-	
+	display: block;
 	z-index: 100;
 	padding: 10px;
 	background: rgba(0,0,0,0.7);
@@ -62,6 +62,7 @@ img{
 	width: 250px;
 
 	min-height: 357px;
+	height:auto;
 	top: 53px;
 
 	color: white;
@@ -125,4 +126,12 @@ p a:nth-child(2){
 
 a b {
 	color: #359dd6;
+}
+#VIA {
+	background-color: transparent;
+	height:150px;
+	display: none;
+	color: white;
+	text-align: center;
+	font-size: 50px;
 }
