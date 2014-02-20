@@ -166,12 +166,13 @@ function ptext(test){
 function toTimeline(cities){
 	$('#legend').html('');
 	$('#bubbles').html('');
+	div = 100/cities.length;
 	for (var i = 0; i < cities.length; i++) {
-		$('#legend').append('<div class="time-line-circle" style="width:25%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+cities[i]['city']+'</span></a>				</div>');
-		for (var j = 0; j < cities[i]['events'].length; j++)
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+cities[i]['FromCity']+'</span></a>				</div>');
+		/*for (var j = 0; j < cities[i]['events'].length; j++)
 		{
 			$('#bubbles').append('<div class="timeline-circles timeline-circle2change2" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\''+cities[i]['events'][j]['name']+'\');" class="timeline-textformat textincircle2and1">'+cities[i]['events'][j]['name']+'</span></div>');
-		}
+		}*/
 	};
 
 	bubbles();

@@ -113,7 +113,7 @@
 		console.log('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city);
     	$.getJSON('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city, function(data){
     		console.log(data);
-    		
+    		toTimeline(data['Routes']);
     		$.each(data['Routes'], function(i){
     			p = /([a-z]+)/ig;
     			console.log(i);
