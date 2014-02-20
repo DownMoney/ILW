@@ -219,7 +219,12 @@ function getCurrentAirport(){
 function betterSearchBar() {
 	if($('#searchForm').height() > 530) {
 		$('#via').hide();
-		$('#VIA').css('display','block');
+		$('#VIA').css('display','inline-block');
 		$('#VIA').animate({height:"50px"});
+		$('#buttonvia').animate({marginLeft:"0px"});
 	}
+}
+
+function getVia() {
+	alert("HAHAHA");
 }
