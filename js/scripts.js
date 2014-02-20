@@ -217,7 +217,7 @@ function getCurrentAirport(){
 }
 
 function betterSearchBar() {
-	if($('#searchForm').height() > 550) {
+	if($('#searchForm').height() > 530) {
 		$('#via').hide();
 		$('#VIA').css('display','block');
 		$('#VIA').animate({height:"50px"});

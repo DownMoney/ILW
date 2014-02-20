@@ -44,12 +44,6 @@
         <div class="navbar nav navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
               <a class="navbar-brand" href="/">SKY<b>PLANNER</b></a>
             </div>
             
@@ -74,11 +68,14 @@
           </span>
         </div>
         </div>
-
-        <div id="VIA"><p></br>&middot&middot&middot</p></div>
         
+                <div id="VIA" onclick="getVia();"><p></br>&middot&middot&middot</p></div>
+
         <div id="via"></div>
-        <a style="padding-top: 5px" href="#" onclick="addField();betterSearchBar();">VIA...</a>
+        <a id="buttonvia" class="btn btn-warning" href="#" onclick="addField();betterSearchBar();">VIA</a>
+
+        <label for="to">FLY TO: </label>
+          <input id="to " name="to" class="form-control" onkeyup="autocompleteCity(this);">
         
        <div class="ui-widget"><label for="from">ARRIVAL DATE: </label>
         <div id="datetimepicker1" class="input-append date">

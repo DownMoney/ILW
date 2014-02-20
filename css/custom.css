@@ -71,11 +71,15 @@ img{
 
 .searchbar input{
 	color: black;
-	height: 34px !important;
+	height: 25px !important;
+}
+
+#eventType {
+	height: 25px !important;
 }
 
 .add-on{
-	height: 34px !important;
+	height: 25px !important;
 }
 
 .add-on i{
@@ -134,4 +138,14 @@ a b {
 	color: white;
 	text-align: center;
 	font-size: 50px;
+	margin: auto 0;
+}
+
+#buttonvia {
+	display: block;
+	text-align: center;
+	width: 70px;
+	margin: 15px auto;
+	color: black;
+	font-weight: bold;
 }
