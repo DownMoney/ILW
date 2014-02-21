@@ -167,7 +167,7 @@ function toTimeline(cities){
 	$('#legend').html('');
 	$('#bubbles').html('');
 	div = 100/cities.length;
-	p  = /[a-z]+/ig;
+	p  = /\w+/ig;
     			
 			   
 	for (var i = 0; i < cities.length; i++) {
