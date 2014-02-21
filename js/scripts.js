@@ -237,8 +237,10 @@ function getEventTypes(){
 }
 
 function getCurrentAirport(){
-	$.getJSON('/api/getCurLocation.php', function(dat){
-		$.getJSON('/api/airport.php?location='+dat['lat'].toString()+','+dat['lon'].toString(), function(data){
+if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          // var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude); 
+		$.getJSON('/api/airport.php?location='+position.coords.latitude.toString()+','+position.coords.longitude.toString(), function(data){
 		
 			p = /([a-z]+)/ig;
 			cityName = data['results'][0]['name'];
@@ -255,6 +257,7 @@ function getCurrentAirport(){
 		
 	});
 	});
+    }
 }
 
 function betterSearchBar() {
