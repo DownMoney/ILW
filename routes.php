@@ -122,7 +122,30 @@
 		console.log(q);
     	$.get(q, function(data){
     		console.log('done!');
-    		console.log(JSON.parse(data));
+    		json = JSON.parse(data);
+    		console.log(json);
+    		$.each(json['Routes'], function(i){
+    			things = json['Routes'][i][i];
+    			$.each(things, function(j){
+    				console.log(things[j]);
+
+
+    				if(things[j]['type']=='city'){
+	    				getCityLocation(things[j]['name'], function(coord, city){
+		    				console.log(coord);
+		    				point = new google.maps.LatLng(coord['lat'], coord['lng']);
+		    				flightPlanCoordinates2.push(point);
+		    				temp = new google.maps.Marker({
+					  			position : point,
+					  			map : map,
+					  			title : "Point " + i
+					  			});
+	    				});
+	    			}
+
+
+    			});
+    		});
     		/*toTimeline(data['Routes']);
     		$.each(data['Routes'], function(i){
     			p = /([a-z]+)/ig;
