@@ -202,6 +202,19 @@
 
     function draw(){
     	console.log({'a':cities});
+    
+    		getCityLocation("<?php echo $_GET['to'] ?>", function(coord, city){
+		    				console.log(coord);
+		    				cities.push({'FromCity': city});
+		    				point = new google.maps.LatLng(coord['lat'], coord['lng']);
+		    				flightPlanCoordinates2.push(point);
+		    				temp = new google.maps.Marker({
+					  			position : point,
+					  			map : map,
+					  			title : city
+					  			});
+	    				});
+
     	toTimeline(cities);
     	connectPoints(flightPlanCoordinates2, map2);
     }
