@@ -37,10 +37,10 @@ function handleNoGeolocation(errorFlag) {
 
   	var flightPlanCoordinates = [];
 
-    for (var r = 0; r < 10; r++) {
+  /*  for (var r = 0; r < 10; r++) {
         flightPlanCoordinates[r] = new google.maps.LatLng((Math.random() * 180) - 90,(Math.random() * 360) - 180);
         console.log(flightPlanCoordinates);  
-    }
+    }*/
 
   	var i = 1;
   	var j = [];
@@ -55,7 +55,7 @@ function handleNoGeolocation(errorFlag) {
   	});*/
 
   	
-//loadPoints(map);
+loadPoints(map);
 
 }
 
@@ -80,20 +80,6 @@ function connectPoints(flightPlanCoordinates, map){
         });
       }
     });
-
-
-  /*new google.maps.Polyline({
-=======
-  /*    new google.maps.Polyline({
->>>>>>> ffcdd742ac150265e83fb12e878ae822dbdb5210
-          path : [flightPlanCoordinates[flightPlanCoordinates.length-1], flightPlanCoordinates[0]],
-          map: map,
-          geodesic: true,
-          strokeColor: getRandomColor(),
-          strokeOpacity: 1.0,
-          strokeWeight: 2
-        });*/
-
 }
 
 $(window).load(function(){

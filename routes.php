@@ -38,6 +38,9 @@
 			<div class="navbar-header">
 			  <a class="navbar-brand" href="/">SKY<b>PLANNER</b></a>
 			</div>
+			<div id="" style="width:100%; text-align:center;margin-left: -150px; margin-top:15px;">
+				<h2 id="price"></h2>
+			</div>
 		  </div>
 		</div>
 	  </div>
@@ -95,21 +98,21 @@
     </script>
 	
 
-    <script type="text/javascript" src="./js/scripts.js"></script>
-    <script type="text/javascript" src= "./js/googlemap.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+    <script type="text/javascript" src= "/js/googlemap.js"></script>
 
     <script>
+
     var flightPlanCoordinates2 = [];
     var map2;
     var cities = [{"FromCity": "<?php echo $_GET['from'] ?>"}];
     function loadPoints(map){
     	map2 = map;
-    p = /([a-z]+|[a-z]\s[a-z])+\s?\(([a-z]+)\)/ig;
-	cityName = '<?php echo $_GET["from"] ?>';
-	m = p.exec(cityName);
-	//code= m[2];
-	//city = m[1];
+    
+		cityName = '<?php echo $_GET["from"] ?>';
+	
 		q = ('/Backend/bartek.php?from=<?php echo $_GET["from"]?>&ddate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&adate='+encodeURIComponent('<?php echo $_GET["adate"]?>'));
+		
 		q+="<?php 
 		$viacities = '';
 		$i = 0;
@@ -124,6 +127,7 @@
 		console.log(q);
 
 		getCityLocation("<?php echo $_GET['from'] ?>", function(coord, city){
+			console.log(city);
 		    				console.log(coord);
 		    				cities.push({'FromCity': city});
 		    				point = new google.maps.LatLng(coord['lat'], coord['lng']);
@@ -131,7 +135,7 @@
 		    				temp = new google.maps.Marker({
 					  			position : point,
 					  			map : map,
-					  			title : city
+					  			title : city.toString()
 					  			});
 	    				});
 
@@ -145,7 +149,7 @@
     			i=0;
     			things = json['Routes'][i][i];
     			$('#routes').append('<li>Route '+i.toString()+'</li>');
-    			
+    			$('#price').html('£'+things['cost']);
     			$.each(things, function(j){
     				console.log(things[j]);
 
