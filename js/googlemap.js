@@ -83,7 +83,7 @@ function connectPoints(flightPlanCoordinates, map){
 }
 
 $(window).load(function(){
-    plotRouteName('wroclaw','london','panel','drive');
+    plotRouteName('edinburgh','edinburgh','panel','drive');
 });
 
 function getRandomColor() {
