@@ -49,7 +49,7 @@
 
    
 	 <div id="googlemapcanvas"></div>
-	<div id="panel" style="width: 300px; float: right;"></div> 
+	<div id="panel" style="width: 100%,"></div> 
 	<div id="schematictravel"></div> 
 
 	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">

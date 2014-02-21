@@ -34,29 +34,22 @@
 
 <script type="text/javascript" src="./js/scripts.js"></script>
 <script type="text/javascript">
-function initialize() {
-	city = 'edinburgh';
-    getCityLocation(city,function(coor,ci){
-    	console.log(coor['lat']);
-    	console.log(ci);
-        $.getJSON('./api/airport.php?location='+coor['lat'].toString()+','+coor['lng'].toString(), function(hej){
-        	console.log(hej['results'][0]['geometry']['location']);
-        	city='edinburgh';
-            /*$.getJSON('./api/route.php?start=edinburgh&end='+hej['results'][0]['formatted_address']+'&mode=DRIVING',function(json){
-                if(json['status'] == "OK"){*/
+function plotRouteName(from,to,mapname) {
+    getCityLocation(from,function(coor,ci){
+
  						var myOptions = {
   						zoom: 10,
   						center: new google.maps.LatLng(40.84, 14.25),
   						mapTypeId: google.maps.MapTypeId.ROADMAP
 						};
 
-						var mapObject = new google.maps.Map(document.getElementById("directionsmap"), myOptions);
+						var mapObject = new google.maps.Map(document.getElementById(mapname), myOptions);
 
 						
 
 						var directionsRequest = {
-  						origin: 'edinburgh',//new google.maps.LatLng(coor),
-  						destination: 'edinburgh airport',//new google.maps.LatLng(55.94825, -3.364112),
+  						origin: from,//new google.maps.LatLng(coor['lat'],coor['lng']),//new google.maps.LatLng(coor),
+  						destination: to,//new google.maps.LatLng(hej['results'][0]['geometry']['location']['lat'],hej['results'][0]['geometry']['location']['lng']),//'edinburgh airport',//new google.maps.LatLng(55.94825, -3.364112),
   						travelMode: google.maps.DirectionsTravelMode.DRIVING,
   						unitSystem: google.maps.UnitSystem.METRIC
 						};
@@ -75,13 +68,50 @@ function initialize() {
   								}
 
   							});   						
-					               
-                /*} else {
-                	alert('hej!');
-                }
-            });*/
-        });
     });
+}
+
+function plotRouteCoor(from,to,mapname) {
+       
+ 						var myOptions = {
+  						zoom: 10,
+  						center: new google.maps.LatLng(40.84, 14.25),
+  						mapTypeId: google.maps.MapTypeId.ROADMAP
+						};
+
+						var mapObject = new google.maps.Map(document.getElementById(mapname), myOptions);
+
+						
+
+						var directionsRequest = {
+  						origin: from,//new google.maps.LatLng(coor),
+  						destination: to,
+  						travelMode: google.maps.DirectionsTravelMode.DRIVING,
+  						unitSystem: google.maps.UnitSystem.METRIC
+						};
+
+						var directionsService = new google.maps.DirectionsService();
+
+      					directionsService.route( directionsRequest, function(response, status){
+    							if (status == google.maps.DirectionsStatus.OK){
+      								new google.maps.DirectionsRenderer({
+        								map: mapObject,
+        								directions: response,
+        								panel: document.getElementById('panel')
+      								});
+    							} else {
+      								$("#error").append("Unable to retrieve your route<br />");
+  								}
+
+  							}); 
+}
+
+function initialize() {
+	getCityLocation('edinburgh', function(coor,ci) {
+		$.getJSON('./api/airport.php?location='+coor['lat'].toString()+','+coor['lng'].toString(), function(hej){
+			plotRouteCoor(new google.maps.LatLng(coor['lat'],coor['lng']),new google.maps.LatLng(hej['results'][0]['geometry']['location']['lat'],hej['results'][0]['geometry']['location']['lng']),'directionsmap');
+		});
+	});
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
