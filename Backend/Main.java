@@ -1,6 +1,6 @@
 import java.util.*;
 public class Main {
-	final static int N = 5;
+	final static int N = 1;
 	static TimeDate end, start;
 	static City out;
 	static City in;

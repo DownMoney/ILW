@@ -306,6 +306,7 @@ font-style: normal;
     color:#000;
 }
 
+
 .time-line-circle1 {
     width: 100px;
     height: 40px;
@@ -464,7 +465,15 @@ font-style: normal;
             background-color: #411422;
         }
 
-
+.timeline-circle0 {
+             margin-top: 80px;
+            width: 132.5px;
+            height: 132.5px;
+            -moz-border-radius: 66.25px;
+            -webkit-border-radius: 66.25px;
+            border-radius: 66.25px;
+            background-color: pink;
+        }
 
 
         .timeline-circle1 {

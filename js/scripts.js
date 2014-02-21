@@ -46,12 +46,14 @@ function autocompleteCity(text){
 }
 
 function getCityLocation(city, fn){
+	if(city!=""){
 	$.getJSON( "https://maps.googleapis.com/maps/api/geocode/json?address="+city+"&sensor=false&key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58", function( data ) {
 	  coord = data['results'][0]['geometry']['location'];
 	  
 
 	  fn(coord, city);
 	});
+}
 }
 
 function getCoord(city, fn){
@@ -178,6 +180,7 @@ function toTimeline(cities){
     			
 	
 	for (var i = 0; i < cities.length; i++) {
+		if ('FromCity' in cities[i]){
 		name = cities[i]['FromCity'].trim();
 		name = name.split(' ')[0].toUpperCase();
 	//	if (m!=null)
@@ -185,7 +188,7 @@ function toTimeline(cities){
 	//	console.log(m);
 
 
-		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+name+'</span></a>				</div>');
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">										<div class="circleLine" style="opacity: 0;"></div><span>'+name+'</span></a>				</div>');
 		
 		getEvents(name, i, function(data,z,city){
 			console.log(data);
@@ -193,12 +196,23 @@ function toTimeline(cities){
 			for (var j = 0; j < data.length; j++)
 			{
 				try{
-				$('#bubbles').append('<div class="timeline-circles timeline-circle'+(z+1).toString()+'" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\'<h2>'+data[j]['title']+'</h2><p>'+data[j]['description'].replace("'","")+'</p>\');" class="timeline-textformat textincircle2and1">'+data[j]['title']+'</span></div>');
+				$('#bubbles').append('<div class="timeline-circles timeline-circle'+(5%(z+1)).toString()+'" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\'<h2>'+data[j]['title']+'</h2><p>'+data[j]['description'].replace("'","")+'</p>\');" class="timeline-textformat textincircle2and1">'+data[j]['title']+'</span></div>');
 				}
 				catch(errr){}
 			}
 		});
-		
+	}
+	else
+	{
+		name = cities[i]['Event'].trim();
+		name = name.split(' ')[0].toUpperCase()+'...';
+	//	if (m!=null)
+	//		name = m[0];
+	//	console.log(m);
+
+
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a  class="time-line-href href1" href="#" onclick="ptext(\'<h2>'+name+'</h2>\')">					<div class="circleLine" style="opacity: 0;"></div>					<div style="margin-top:30px;-webkit-transform:rotate(45deg);color:#359dd6 "><i>'+name+'</i></div></a>				</div>');
+	}
 	};
 
 	bubbles();
