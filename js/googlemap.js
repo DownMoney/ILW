@@ -55,7 +55,7 @@ function handleNoGeolocation(errorFlag) {
   	});*/
 
   	
-loadPoints(map);
+//loadPoints(map);
 
 }
 
@@ -81,19 +81,19 @@ function connectPoints(flightPlanCoordinates, map){
       }
     });
 
-  new google.maps.Polyline({
+  /*    new google.maps.Polyline({
           path : [flightPlanCoordinates[flightPlanCoordinates.length-1], flightPlanCoordinates[0]],
           map: map,
           geodesic: true,
           strokeColor: getRandomColor(),
           strokeOpacity: 1.0,
           strokeWeight: 2
-        });
+        });*/
 
 }
 
 $(window).load(function(){
-    plotRouteName('edinburgh','edinburgh airport','panel');
+    plotRouteName('opole','london','panel','drive');
 });
 
 function getRandomColor() {
@@ -105,7 +105,9 @@ function getRandomColor() {
     return color;
 }
 
-function plotRouteName(from,to,mapname) {
+var mapColors = {"bus" : "#CC0000" , "flight" : "#0066CC"};
+
+function plotRouteName(from,to,mapname,f) {
     getCityLocation(from,function(coor,ci){
 
                         var myOptions = {
@@ -116,12 +118,17 @@ function plotRouteName(from,to,mapname) {
 
                         var mapObject = new google.maps.Map(document.getElementById(mapname), myOptions);
 
-                        
+                        var flag;
+                        if(f == 'public') {
+                            flag = google.maps.DirectionsTravelMode.TRANSIT;
+                        } else {
+                            flag = google.maps.DirectionsTravelMode.DRIVING;
+                        }
 
                         var directionsRequest = {
                         origin: from,//new google.maps.LatLng(coor['lat'],coor['lng']),//new google.maps.LatLng(coor),
                         destination: to,//new google.maps.LatLng(hej['results'][0]['geometry']['location']['lat'],hej['results'][0]['geometry']['location']['lng']),//'edinburgh airport',//new google.maps.LatLng(55.94825, -3.364112),
-                        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                        travelMode: flag,//google.maps.DirectionsTravelMode.DRIVING,
                         unitSystem: google.maps.UnitSystem.METRIC
                         };
 
@@ -132,7 +139,7 @@ function plotRouteName(from,to,mapname) {
                                     new google.maps.DirectionsRenderer({
                                         map: mapObject,
                                         directions: response,
-                                        //panel: document.getElementById('panel')
+                                        panel: document.getElementById('panelDir')
                                     });
                                 } else {
                                     $("#error").append("Unable to retrieve your route<br />");
@@ -176,25 +183,3 @@ function plotRouteCoor(from,to,mapname) {
 
                             }); 
 }
-
-
-/*
-function plotTravel(cities) {
-    $.each(index,city,function(coor,ci){
-
-    });
-}
-
-function  findClosestAirport(city) {
-    getCityLocation(city,function(coor,ci){
-        $.getJSON('/api/airport.php?location='+coor['lat'].toString()+','+coor['lon'].toString(), function(data){
-            $.getJSON('http://maps.googleapis.com/maps/api/directions/json?origin='+ci+'&destination='+data['results']['formatted_address']+'&sensor=true&key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58',function(json){
-                if(json['status'] == "OK"){
-                
-                } else {
-
-                }
-            });
-        });
-    });
-}*/

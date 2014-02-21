@@ -98,6 +98,21 @@ img{
 	height: 90%;
 }
 
+#panel {
+	width: 70%;
+	height: 300px;
+	float: right;
+	display: inline-block;
+}
+
+#panelDir {
+	width: 30%;
+	height: 300px;
+	float: left;
+	display: inline-block;
+	overflow: scroll;
+}
+
 .modal{
 	margin-bottom: 50px;
 	overflow-y: scroll;

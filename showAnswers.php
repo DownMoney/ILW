@@ -49,8 +49,8 @@
 
    
 	 <div id="googlemapcanvas"></div>
-	<div id="panel" style="width: 100%,"></div> 
-	<div id="schematictravel"></div> 
+
+	 
 
 	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
 	<div class="timeline-container"  style="width:900;">
@@ -63,6 +63,8 @@
 					<span>2001</span></a>
 				</div>
 			</span>
+
+
 			<div id="bubbles" style="width:900; height:400;margin-top:50px;">
 				<div class="timeline-circles timeline-circle1change2" id="timeline-circid1">
 					<span id="textcircid1" onclick="ptext();" class="timeline-textformat textincircle1and2">University</span></div>
@@ -77,12 +79,14 @@
 				<div class="timeline-circles timeline-circle6change2" id="timeline-circid6">
 					<span id="textcircid6" onclick="ptext();" class="timeline-textformat textincircle6and2">Jazz</span></div>
 			</div>
-
+			 
 
 
 		</div>
 		</div>
 		</div>
+		<div id="panelDir"></div>
+			<div id="panel"></div>
 	<div id="timeline-outputtext" style="top: 120px; left: 0px; display:none" ></div>
 
 	
@@ -102,6 +106,7 @@
     <script type="text/javascript" src= "./js/googlemap.js"></script>
 
     <script>
+    /*
     var flightPlanCoordinates2 = [];
     var map2;
     function loadPoints(map){
@@ -143,7 +148,7 @@
 
     function draw(){
     	connectPoints(flightPlanCoordinates2, map2);
-    }
+    }*/
     </script>
   </body>
 </html>
