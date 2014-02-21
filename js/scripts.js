@@ -229,7 +229,7 @@ function addEventToLegend(cities, i, name, div){
 			
 		point = new google.maps.LatLng(cities[i]['Lat'], cities[i]['Lng']);
 		point2 = new google.maps.LatLng(lat, lon);
-		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a  class="time-line-href href1" onclick="alert('+lat+');alert('+cities[i]['Lon']+');plotRouteCoor('+cities[i]['Lat']+','+cities[i]['Lon']+','+lat+','+lon+');ptext(\'<h2>'+name+'</h2>\');">					<div class="circleLine" style="opacity: 0;"></div>					<div style="margin-top:30px;-webkit-transform:rotate(45deg);color:#359dd6 "><i>'+name+'</i></div></a>				</div>');
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a  class="time-line-href href1" onclick="plotRouteCoor('+cities[i]['Lat']+','+cities[i]['Lon']+','+lat+','+lon+');ptext(\'<h2>'+name+'</h2><p>'+cities[i]['Desc'].replace("'","")+'</p>\');">					<div class="circleLine" style="opacity: 0;"></div>					<div style="margin-top:30px;-webkit-transform:rotate(45deg);color:#359dd6 "><i>'+name+'</i></div></a>				</div>');
 	});
 
 		//

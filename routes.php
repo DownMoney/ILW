@@ -59,7 +59,10 @@
 			<span id="legend">
 				
 			</span>
-			<div id="bubbles" style="width:900; height:400;margin-top:90px;">
+			<div style="margin-top:50px">
+			<button class="btn btn-success" onclick="$('#bubbles').toggle();">Toggle Additional Events</button>
+			</div>
+			<div id="bubbles" style="width:900; height:400;margin-top:90px;display:none">
 				</div>
 
 
@@ -67,9 +70,11 @@
 		</div>
 		</div>
 		</div>
+		<div id="timeline-outputtext" style=" top: 150px; left: 0px; display:none" ></div>
+		<div style="margin-top:200px">
    				<div id="panel"></div>
 				<div id="panelDir"></div>
-	<div id="timeline-outputtext" style=" top: 150px; left: 0px; display:none" ></div>
+	</div>
 
 	
 	<!-- Bootstrap core JavaScript
@@ -170,7 +175,7 @@
 	    			}
 
 	    			if(things[j]['type']=='event'){
-	    				cities.push({'Event':things[j]['name'], 'Lon':things[j]['lon'], 'Lat': things[j]['lat']});
+	    				cities.push({'Event':things[j]['name'], 'Lon':things[j]['lon'], 'Lat': things[j]['lat'], 'Desc': things[j]['desc']});
 	    			}
 
 
