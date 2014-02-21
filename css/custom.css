@@ -30,18 +30,23 @@ body{
 	
 }
 
-
+#price{
+	color: #359dd6;
+}
 
 .carousel-caption{
 	height: 140px;
 	overflow: hidden;
 }
 
+.navbar-wrapper{
+	background: rgba(0,0,0,0.7) !important;
+}
 .navbar-fixed-top{
 	border-radius: 0px !important;
 	border-bottom: 3px solid #359dd6;
 	background: rgba(0,0,0,0.7) !important;
-}
+	}
 
 .navbar-wrapper{
 	z-index: 200;

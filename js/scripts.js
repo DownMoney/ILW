@@ -166,7 +166,8 @@ function bubbles(){
 }
 
 function ptext(test){
-	$('#timeline-outputtext').html('text');
+	$('#timeline-outputtext').html(test);
+	$('#timeline-outputtext').show();
 }
 
 function toTimeline(cities){
@@ -184,7 +185,7 @@ function toTimeline(cities){
 	//	console.log(m);
 
 
-		$('#legend').append('<div class="time-line-circle'+i.toString()+'" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+name+'</span></a>				</div>');
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+name+'</span></a>				</div>');
 		
 		getEvents(name, i, function(data,z,city){
 			console.log(data);
@@ -192,7 +193,7 @@ function toTimeline(cities){
 			for (var j = 0; j < data.length; j++)
 			{
 				try{
-				$('#bubbles').append('<div class="timeline-circles timeline-circle'+(z+1).toString()+'" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\''+data[j]['title']+'\');" class="timeline-textformat textincircle2and1">'+data[j]['title']+'</span></div>');
+				$('#bubbles').append('<div class="timeline-circles timeline-circle'+(z+1).toString()+'" id="timeline-circid1"><span id="textcircid1" onclick="ptext(\'<h2>'+data[j]['title']+'</h2><p>'+data[j]['description'].replace("'","")+'</p>\');" class="timeline-textformat textincircle2and1">'+data[j]['title']+'</span></div>');
 				}
 				catch(errr){}
 			}
