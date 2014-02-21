@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 public class TransAPI {
 	public final static String SKYSCANNER = "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/";
 	public final static String KEY = "ilw03824094427015676662223000993";
-	public final static int N = 30;
+	public final static int N = 35;
 	
 	public static Vector<Transport> getAllTrans(City c, String code,
 			TimeDate s, TimeDate e) {
