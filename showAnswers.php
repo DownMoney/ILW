@@ -38,9 +38,13 @@
 			<div class="navbar-header">
 			  <a class="navbar-brand" href="/">SKY<b>PLANNER</b></a>
 			</div>
+			 <div id="" style="width:100%; text-align:center;margin-left: -150px; margin-top:15px;">
+				<h2 id="price"></h2>
+			</div>
 		  </div>
 		</div>
 	  </div>
+	 
 	</div>
 
    
@@ -80,7 +84,7 @@
 		</div>
 		</div>
 		</div>
-	<div id="timeline-outputtext" style=" top: 150px; left: -275px;" ></div>
+	<div id="timeline-outputtext" style="top: 120px; left: 0px; display:none" ></div>
 
 	
 	<!-- Bootstrap core JavaScript
@@ -111,6 +115,7 @@
 		console.log('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city);
     	$.getJSON('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city, function(data){
     		console.log(data);
+    		$('#price').html('£'+data['Price']);
     		toTimeline(data['Routes']);
     		$.each(data['Routes'], function(i){
     			p = /([a-z]+)/ig;
@@ -130,7 +135,7 @@
     			});
     		});
 
-    		setTimeout(draw, 100);
+    		setTimeout(draw, 500);
     		console.log(flightPlanCoordinates)
     		
 

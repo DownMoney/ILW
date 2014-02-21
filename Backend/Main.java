@@ -10,7 +10,7 @@ public class Main {
 		Search s = new Search();
 		//TimeDate start = new TimeDate(10, 0, 0, 2014, 2, 21);
 		//TimeDate end = new TimeDate(10, 0, 0, 2014, 2, 26);
-		long t = System.currentTimeMillis();
+		//long t = System.currentTimeMillis();
 		//Vector<Route> r = s.findPaths(new City("Athens"), null, 600, start, end, 5, user);
 		//System.out.println(r.size());
 		//System.out.println(JSON.toJSON(r));
@@ -19,7 +19,6 @@ public class Main {
 		//}
 		//System.out.println(System.currentTimeMillis() - t);
 		parseArgs(args[0]);
-		TimeDate test = new TimeDate(22,53, 50, 2014, 02, 26);
 		Vector<Route> r = s.findPaths(out, in, maxCost, start, end, N, user);
 		System.out.println(JSON.toJSON(r));
 		//System.out.println(System.currentTimeMillis() - t);

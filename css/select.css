@@ -306,6 +306,16 @@ font-style: normal;
     color:#000;
 }
 
+.time-line-circle1 {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top:-12px;
+    color:yellow;
+}
+
 #timeline-line {
     height:1px;
     background:#000;
@@ -323,6 +333,7 @@ font-style: normal;
     opacity:0;
     background:#fff;
 }
+ 
 
 #timeline-outputtext {
     width: 235px;
@@ -452,6 +463,66 @@ font-style: normal;
             border-radius: 106.25px;
             background-color: #411422;
         }
+
+
+
+
+        .timeline-circle1 {
+             margin-top: 80px;
+            width: 132.5px;
+            height: 132.5px;
+            -moz-border-radius: 66.25px;
+            -webkit-border-radius: 66.25px;
+            border-radius: 66.25px;
+            background-color: #411422;
+        }
+
+        .timeline-circle2 {
+             margin-top: 80px;
+            width: 132.5px;
+            height: 132.5px;
+            -moz-border-radius: 66.25px;
+            -webkit-border-radius: 66.25px;
+            border-radius: 66.25px;
+            background-color: red;
+        }
+        .timeline-circle3 {
+             margin-top: 80px;
+            width: 132.5px;
+            height: 132.5px;
+            -moz-border-radius: 66.25px;
+            -webkit-border-radius: 66.25px;
+            border-radius: 66.25px;
+            background-color: blue;
+        }
+        .timeline-circle4 {
+    margin-top: 80px;
+            width: 132.5px;
+            height: 132.5px;
+            -moz-border-radius: 66.25px;
+            -webkit-border-radius: 66.25px;
+            border-radius: 66.25px;
+            background-color: yellow;
+        }
+        .timeline-circle5 {
+         margin-top: 80px;
+            width: 132.5px;
+            height: 132.5px;
+            -moz-border-radius: 66.25px;
+            -webkit-border-radius: 66.25px;
+            border-radius: 66.25px;
+            background-color: green;
+        }
+        .timeline-circle6 {
+            margin-top: 80px;
+            width: 132.5px;
+            height: 132.5px;
+            -moz-border-radius: 66.25px;
+            -webkit-border-radius: 66.25px;
+            border-radius: 66.25px;
+            background-color: purple;
+        }
+
         .textincircle1and2 {
             height:212.5px;
             width:212.5px;

@@ -43,6 +43,11 @@
 	  </div>
 	</div>
 
+	<div style="position:fixed;" class="searchbar">
+		<h2>Routes</h2>
+		<ul id="routes">
+		</ul>
+	</div>
    
 	 <div id="googlemapcanvas"></div>
 	<div id="panel" style="width: 300px; float: right;"></div> 
@@ -124,8 +129,10 @@
     		console.log('done!');
     		json = JSON.parse(data);
     		console.log(json);
+    		
     		$.each(json['Routes'], function(i){
     			things = json['Routes'][i][i];
+    			$('#routes').append('<li>Route '+i.toString()+'</li>');
     			$.each(things, function(j){
     				console.log(things[j]);
 
@@ -146,6 +153,9 @@
 
     			});
     		});
+
+    		setTimeout(draw, 100);
+
     		/*toTimeline(data['Routes']);
     		$.each(data['Routes'], function(i){
     			p = /([a-z]+)/ig;
