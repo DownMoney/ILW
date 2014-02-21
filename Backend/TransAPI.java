@@ -49,8 +49,8 @@ public class TransAPI {
 			InputStream in = con.getInputStream();
 			doc = db.parse(in);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
+			//System.out.println(e.getMessage());
+			//e.printStackTrace();
 		}
 		return doc;
 	}

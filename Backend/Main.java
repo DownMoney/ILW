@@ -22,7 +22,7 @@ public class Main {
 		TimeDate test = new TimeDate(22,53, 50, 2014, 02, 26);
 		Vector<Route> r = s.findPaths(out, in, maxCost, start, end, N, user);
 		System.out.println(JSON.toJSON(r));
-		System.out.println(System.currentTimeMillis() - t);
+		//System.out.println(System.currentTimeMillis() - t);
 	}
 	
 	public static void parseArgs(String args){
