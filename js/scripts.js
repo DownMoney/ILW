@@ -177,7 +177,7 @@ function toTimeline(cities){
 	$('#bubbles').html('');
 	div = 100/cities.length;
 	p  = /\w+/ig;
-    			
+    	console.log(cities);		
 	
 	for (var i = 0; i < cities.length; i++) {
 		if ('FromCity' in cities[i]){
@@ -216,6 +216,7 @@ function toTimeline(cities){
 	};
 
 	bubbles();
+
 }
 
 function getRoute(start, end, travelMode, fn){
