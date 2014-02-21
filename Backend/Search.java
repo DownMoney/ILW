@@ -56,7 +56,7 @@ public class Search {
 						fin.add(top.route);
 					} else {
 						Route nr = top.route.copy();
-						nr.addActivity(new Transport(nr.lastCity, end, nr.time, nr.time.addH(2), 200));
+						nr.addActivity(new Transport(nr.lastCity, end, nr.time, nr.time.addH(2), 50));
 						fin.add(nr);
 					}
 				}
