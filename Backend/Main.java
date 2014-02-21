@@ -8,8 +8,8 @@ public class Main {
 	static User user;
 	public static void main(String[] args){
 		Search s = new Search();
-		TimeDate start = new TimeDate(10, 0, 0, 2014, 2, 21);
-		TimeDate end = new TimeDate(10, 0, 0, 2014, 2, 26);
+		//TimeDate start = new TimeDate(10, 0, 0, 2014, 2, 21);
+		//TimeDate end = new TimeDate(10, 0, 0, 2014, 2, 26);
 		long t = System.currentTimeMillis();
 		//Vector<Route> r = s.findPaths(new City("Athens"), null, 600, start, end, 5, user);
 		//System.out.println(r.size());

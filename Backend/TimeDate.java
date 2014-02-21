@@ -38,7 +38,7 @@ public class TimeDate {
 	}
 
 	public long toSecs() {
-		return year * 365 + mon * 31 + day * 24 * 3600 + hour * 3600 + min * 60
+		return year * 365*24*3600 + mon * 31*24*3600 + day * 24 * 3600 + hour * 3600 + min * 60
 				+ sec;
 	}
 
@@ -78,7 +78,7 @@ public class TimeDate {
 		cal.set(Calendar.HOUR_OF_DAY, hour);
 		cal.set(Calendar.MINUTE, min);
 		cal.set(Calendar.SECOND, sec);
-		cal.add(Calendar.HOUR_OF_DAY, 3);
+		cal.add(Calendar.HOUR_OF_DAY, h);
 		return new TimeDate(cal);
 	}
 
