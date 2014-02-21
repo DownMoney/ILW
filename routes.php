@@ -43,11 +43,7 @@
 	  </div>
 	</div>
 
-	<div style="position:fixed;" class="searchbar">
-		<h2>Routes</h2>
-		<ul id="routes">
-		</ul>
-	</div>
+
    
 	 <div id="googlemapcanvas"></div>
 	<div id="panel" style="width: 300px; float: right;"></div> 
@@ -105,6 +101,7 @@
     <script>
     var flightPlanCoordinates2 = [];
     var map2;
+    var cities = [];
     function loadPoints(map){
     	map2 = map;
     p = /([a-z]+|[a-z]\s[a-z])+\s?\(([a-z]+)\)/ig;
@@ -130,9 +127,11 @@
     		json = JSON.parse(data);
     		console.log(json);
     		
-    		$.each(json['Routes'], function(i){
+    		//$.each(json['Routes'], function(i){
+    			i=0;
     			things = json['Routes'][i][i];
     			$('#routes').append('<li>Route '+i.toString()+'</li>');
+    			
     			$.each(things, function(j){
     				console.log(things[j]);
 
@@ -140,6 +139,7 @@
     				if(things[j]['type']=='city'){
 	    				getCityLocation(things[j]['name'], function(coord, city){
 		    				console.log(coord);
+		    				cities.push({'FromCity': city});
 		    				point = new google.maps.LatLng(coord['lat'], coord['lng']);
 		    				flightPlanCoordinates2.push(point);
 		    				temp = new google.maps.Marker({
@@ -152,8 +152,8 @@
 
 
     			});
-    		});
-
+    		//});
+    		
     		setTimeout(draw, 100);
 
     		/*toTimeline(data['Routes']);
@@ -183,6 +183,8 @@
     }
 
     function draw(){
+    	console.log({'a':cities});
+    	toTimeline(cities);
     	connectPoints(flightPlanCoordinates2, map2);
     }
     </script>
