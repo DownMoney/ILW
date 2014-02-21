@@ -101,3 +101,19 @@ function getRandomColor() {
     }
     return color;
 }
+
+/*
+function plotTravel(cities) {
+    $.each(index,city,function(coor,ci){
+
+    });
+}
+/*
+function  findClosestAirport(city) {
+    getCityLocation(city,function(coor,ci){
+        $.getJSON('/api/airport.php?location='+coor['lat'].toString()+','+coor['lon'].toString(), function(data){
+            $.getJSON('http://maps.googleapis.com/maps/api/directions/json?origin='+ci+'&destination=latlng='+)
+            latlng=40.714224,-73.961452
+        });
+    });
+}*/
