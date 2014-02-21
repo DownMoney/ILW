@@ -29,7 +29,17 @@ public class Route implements Comparable<Route> {
 		cities = new HashMap<String, City>(cs);
 		events = new HashMap<String, Event>(es);
 	}
-	
+	public String toString(){
+		StringBuffer buff = new StringBuffer();
+		for(Activity ai: route){
+			if(ai.event != null){
+				buff.append("Event ->");
+			} else if (ai.city != null){
+				buff.append(ai.city.name + " ->");
+			}
+		}
+		return buff.toString();
+	}
 	public void setUpHash(){
 		events = new HashMap<String, Event>();
 		cities = new HashMap<String, City>();
@@ -85,7 +95,7 @@ public class Route implements Comparable<Route> {
 		return (Object) (isCity(i) ? route.get(i).city : (isEvent(i)? route.get(i).event : route.get(i).trans));
 	}
 	public int compareTo(Route r){
-		return (new Double(score)).compareTo(new Double(r.score));
+		return -(new Double(score)).compareTo(new Double(r.score));
 	}
 	public void pop(){
 		Activity a = route.get(size-1);

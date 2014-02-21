@@ -9,14 +9,17 @@ public class City {
 	long pop;
 	int type; //0 = airport, 1 = country
 	Vector<String> airports;
+	String code;
 	public City(String name)
 	{
 		this.name = name.split(" ")[0];
 		this.events = null;
 		this.inTrans = null;
 		this.outTrans = null;
+		code = null;
 	}
 	public boolean equals(City c){
+		if(c== null) return false;
 		return name.equals(c.name);
 	}
 }

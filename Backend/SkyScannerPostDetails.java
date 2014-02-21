@@ -54,7 +54,7 @@ public class SkyScannerPostDetails {
 			//writer.write(data);
 			//writer.flush();
 			//con.connect();
-			System.out.println(con.getResponseCode());
+			//System.out.println(con.getResponseCode());
 		} catch(Exception e)
 		{
 			System.out.println("Erra2");
@@ -63,7 +63,7 @@ public class SkyScannerPostDetails {
 			reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			
 			while ((line = reader.readLine()) != null) {
-			    System.out.println(line);
+			    //System.out.println(line);
 			}
 			
 			os.close();

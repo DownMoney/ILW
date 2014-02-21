@@ -129,7 +129,7 @@
     			});
     		});
 
-    		setTimeout(draw, 2000);
+    		setTimeout(draw, 100);
     		console.log(flightPlanCoordinates)
     		
 
