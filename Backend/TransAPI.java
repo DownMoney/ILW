@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 public class TransAPI {
 	public final static String SKYSCANNER = "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/";
 	public final static String KEY = "ilw03824094427015676662223000993";
-	public final static int N = 5;
+	public final static int N = 50;
 	
 	public static Vector<Transport> getAllTrans(City c, String code,
 			TimeDate s, TimeDate e) {
@@ -128,7 +128,7 @@ public class TransAPI {
 								date = getValue(params.item(j).getChildNodes());
 							}
 						}
-						if (!date.equals("") && ido != 0 && idd != 0 && direct) {
+						if (!date.equals("") && ido != 0 && idd != 0) {
 							TimeDate start = fromSC(date);
 							TimeDate end = start.addH(2);
 							City out = cities.get(ido);
