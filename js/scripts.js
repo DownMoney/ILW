@@ -198,7 +198,7 @@ function toTimeline(cities){
 				catch(errr){}
 			}
 		});
-		/**/
+		
 	};
 
 	bubbles();
