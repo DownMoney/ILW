@@ -101,7 +101,7 @@
     <script>
     var flightPlanCoordinates2 = [];
     var map2;
-    var cities = [];
+    var cities = [{"FromCity": "<?php echo $_GET['from'] ?>"}];
     function loadPoints(map){
     	map2 = map;
     p = /([a-z]+|[a-z]\s[a-z])+\s?\(([a-z]+)\)/ig;
@@ -122,6 +122,20 @@
 
 		q+="&maxamount=<?php echo $_GET['maxamount']?>";
 		console.log(q);
+
+		getCityLocation("<?php echo $_GET['from'] ?>", function(coord, city){
+		    				console.log(coord);
+		    				cities.push({'FromCity': city});
+		    				point = new google.maps.LatLng(coord['lat'], coord['lng']);
+		    				flightPlanCoordinates2.push(point);
+		    				temp = new google.maps.Marker({
+					  			position : point,
+					  			map : map,
+					  			title : city
+					  			});
+	    				});
+
+
     	$.get(q, function(data){
     		console.log('done!');
     		json = JSON.parse(data);
@@ -136,8 +150,8 @@
     				console.log(things[j]);
 
 
-    				if(things[j]['type']=='city'){
-	    				getCityLocation(things[j]['name'], function(coord, city){
+    				if(things[j]['type']=='transport'){
+	    				getCityLocation(things[j]['to_city'], function(coord, city){
 		    				console.log(coord);
 		    				cities.push({'FromCity': city});
 		    				point = new google.maps.LatLng(coord['lat'], coord['lng']);
@@ -145,7 +159,7 @@
 		    				temp = new google.maps.Marker({
 					  			position : point,
 					  			map : map,
-					  			title : "Point " + i
+					  			title : city
 					  			});
 	    				});
 	    			}

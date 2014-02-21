@@ -81,14 +81,14 @@ function connectPoints(flightPlanCoordinates, map){
       }
     });
 
-  new google.maps.Polyline({
+  /*new google.maps.Polyline({
           path : [flightPlanCoordinates[flightPlanCoordinates.length-1], flightPlanCoordinates[0]],
           map: map,
           geodesic: true,
           strokeColor: getRandomColor(),
           strokeOpacity: 1.0,
           strokeWeight: 2
-        });
+        });*/
 
 }
 
