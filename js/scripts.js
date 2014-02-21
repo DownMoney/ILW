@@ -289,11 +289,13 @@ var clicked = false;
 function getVia() {
 
 	if(!clicked){
+		$('#via').css({height : "auto"});
+		var i = $('#via').height() + 20;
 		$('.viaFields').css('visibility','visible');
 		setTimeout($('#via').animate({
 			display : 'block',
 			visibility : "visible",
-			height : "200px",
+			height : i,
 			padding : "10px"
 		}),500);
 		clicked = true;

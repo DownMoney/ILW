@@ -46,10 +46,7 @@
    
 	 <div id="googlemapcanvas"></div>
 	<div id="panel" style="width: 300px; float: right;"></div> 
-	<div id="schematictravel"><?php 
-	$command = shell_exec('sensors');
-	echo "<pre>$command</pre>";
-	?></div> 
+	<div id="schematictravel"></div> 
 
 	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
 	<div class="timeline-container"  style="width:900;">
