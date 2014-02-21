@@ -188,7 +188,7 @@ function toTimeline(cities){
 	//	console.log(m);
 
 
-		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">										<div class="circleLine" style="opacity: 0;"></div><span>'+name+'</span></a>				</div>');
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">										<div class="circleLine" style="opacity: 0;"></div><div style="margin-top:30px;-webkit-transform:rotate(45deg);"><i>'+name+'</i></div></a>				</div>');
 		
 		getEvents(name, i, function(data,z,city){
 			console.log(data);

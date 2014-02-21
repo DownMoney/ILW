@@ -52,16 +52,14 @@
    
 	 <div id="googlemapcanvas"></div>
 
-	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
+	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 25px;">
 	<div class="timeline-container"  style="width:900;">
 		<div class="time-line-time">
 			<div id="timeline-line" style="width:900;"></div>
 			<span id="legend">
 				
 			</span>
-			<div style="margin-top:50px">
-			<button class="btn btn-success" onclick="$('#bubbles').toggle();">Toggle Additional Events</button>
-			</div>
+			
 			<div id="bubbles" style="width:900; height:400;margin-top:90px;display:none">
 				</div>
 
@@ -70,8 +68,11 @@
 		</div>
 		</div>
 		</div>
+		<div style="margin-top:50px; width:200px; float: right;">
+			<button class="btn btn-success" onclick="$('#bubbles').toggle();">Toggle Additional Events</button>
+			</div>
 		<div id="timeline-outputtext" style=" top: 150px; left: 0px; display:none" ></div>
-		<div style="margin-top:200px">
+		<div style="margin-top:300px">
    				<div id="panel"></div>
 				<div id="panelDir"></div>
 	</div>
