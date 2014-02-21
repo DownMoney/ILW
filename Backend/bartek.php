@@ -19,8 +19,8 @@
 		$maxmoney = $_GET['maxamount'];
 
 	$command = $fromcity . ";" . $tocity . ";" . $startdate . ";" . $enddate . ";" . $viacities . ";" . $category . ";" . $keywords . ";" . $maxmoney . ";";
-	echo 'java Main "' . $command.'"';
+	//echo 'java Main "' . $command.'"';
 	//echo shell_exec('echo hi');
 	$var = shell_exec('java Main "' . $command.'"');
-	echo $var;
+	echo "{'Routes':".$var."}";
 ?>
