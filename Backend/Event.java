@@ -21,6 +21,7 @@ public class Event {
 		end = e;
 		city = c;
 		cost = co;
+		if(cost == 0) cost = 25;
 		pop = p;
 		lat = la;
 		lon = lo;
