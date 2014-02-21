@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 public class TransAPI {
 	public final static String SKYSCANNER = "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/";
 	public final static String KEY = "ilw03824094427015676662223000993";
-	public final static int N = 35;
+	public final static int N = 5;
 	
 	public static Vector<Transport> getAllTrans(City c, String code,
 			TimeDate s, TimeDate e) {
@@ -49,8 +49,8 @@ public class TransAPI {
 			InputStream in = con.getInputStream();
 			doc = db.parse(in);
 		} catch (Exception e) {
-			//System.out.println(e.getMessage());
-			//e.printStackTrace();
+			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		return doc;
 	}
@@ -146,6 +146,7 @@ public class TransAPI {
 				}
 			}
 		}
+		trans.setSize(Math.min(trans.size(), N));
 		return trans;
 	}
 
