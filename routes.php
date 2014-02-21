@@ -65,21 +65,8 @@
 		</div>
 		</div>
 		</div>
-	<div style="display:block,width:100%"><div class="btn btn-warning" data-toggle="modal" data-target="#opolehehe" id="noniewiemjakiesjaja" onclick="setTimeOut(function(){plotRouteName('opole','london','panel','public');},500)">FUCKING POP-UP BUTTON!</div></div>
-	
-	<div class="modal fade"  tabindex="-1" role="dialog" id="opolehehe" aria-labelledby="myModalLabel" aria-hidden="true">
- 		<div class="modal-dialog">
- 			<div class="modal-header">
-        		
-			</div>
-			<div class="eventsList">
    				<div id="panel"></div>
 				<div id="panelDir"></div>
-  			</div>
-				 
-  			</div>
-	</div>
-
 	<div id="timeline-outputtext" style=" top: 150px; left: 0px; display:none" ></div>
 
 	

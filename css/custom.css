@@ -102,6 +102,7 @@ img{
 }
 
 #panel {
+	margin-top: 50px;
 	width: 70%;
 	height: 300px;
 	float: right;
@@ -110,6 +111,7 @@ img{
 }
 
 #panelDir {
+	margin-top: 50px;
 	width: 30%;
 	height: 300px;
 	float: left;

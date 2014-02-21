@@ -177,7 +177,7 @@ function toTimeline(cities){
 	$('#bubbles').html('');
 	div = 100/cities.length;
 	p  = /\w+/ig;
-    			
+    	console.log(cities);		
 	
 	for (var i = 0; i < cities.length; i++) {
 		if ('FromCity' in cities[i]){
@@ -209,12 +209,14 @@ function toTimeline(cities){
 	//	if (m!=null)
 	//		name = m[0];
 	//	console.log(m);
+
 		addEventToLegend(cities,i,name,div);
-		
+
 	}
 	};
 
 	bubbles();
+
 }
 
 function addEventToLegend(cities, i, name, div){

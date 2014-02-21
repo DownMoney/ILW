@@ -82,9 +82,9 @@ function connectPoints(flightPlanCoordinates, map){
     });
 }
 
-/*$(window).load(function(){
-    plotRouteName('opole','london','panel','drive');
-});*/
+$(window).load(function(){
+    plotRouteName('wroclaw','london','panel','drive');
+});
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
@@ -163,9 +163,9 @@ function plotRouteCoor(from,to,mapname) {
                         directionsService.route( directionsRequest, function(response, status){
                                 if (status == google.maps.DirectionsStatus.OK){
                                     new google.maps.DirectionsRenderer({
-                                        map: mapObject,
-                                        directions: response,
-                                        panel: document.getElementById('panel')
+                                        map: mapname,
+                                        directions: mapObject,
+                                        panel: document.getElementById('panelDir')
                                     });
                                 } else {
                                     $("#error").append("Unable to retrieve your route<br />");
