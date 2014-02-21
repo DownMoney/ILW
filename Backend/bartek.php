@@ -22,5 +22,5 @@
 	//echo 'java Main "' . $command.'"';
 	//echo shell_exec('echo hi');
 	$var = shell_exec('java Main "' . $command.'"');
-	echo "{'Routes':".$var."}";
+	echo '{"Routes":'.$var.'}';
 ?>
