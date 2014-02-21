@@ -38,13 +38,13 @@
 			<div class="navbar-header">
 			  <a class="navbar-brand" href="/">SKY<b>PLANNER</b></a>
 			</div>
-			
+			 <div id="" style="width:100%; text-align:center;margin-left: -150px; margin-top:15px;">
+				<h2 id="price"></h2>
+			</div>
 		  </div>
 		</div>
 	  </div>
-	  <div id="" style="width:100%; text-align:center; margin-top:-7px;">
-				<h2 id="price"></h2>
-			</div>
+	 
 	</div>
 
    
@@ -134,7 +134,7 @@
     			});
     		});
 
-    		setTimeout(draw, 100);
+    		setTimeout(draw, 500);
     		console.log(flightPlanCoordinates)
     		
 
