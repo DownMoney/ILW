@@ -140,6 +140,7 @@ function plotRouteName(from,to,mapname,f) {
 }
 
 function plotRouteCoor(fromLat,fromLng,toLat,toLng) {
+                        $("#panelDir").html("");
                         var from = new google.maps.LatLng(fromLat,fromLng);
                         var to = new google.maps.LatLng(toLat,toLng);
                         var myOptions = {
