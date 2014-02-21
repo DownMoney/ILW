@@ -149,7 +149,7 @@
     			i=0;
     			things = json['Routes'][i][i];
     			$('#routes').append('<li>Route '+i.toString()+'</li>');
-    			$('#price').html('£'+things['cost']);
+    			$('#price').html('£'+json['Routes'][i]['cost']);
     			$.each(things, function(j){
     				console.log(things[j]);
 
