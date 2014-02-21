@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 public class TransAPI {
 	public final static String SKYSCANNER = "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/";
 	public final static String KEY = "ilw03824094427015676662223000993";
-	public final static int N = 30;
+	public final static int N = 35;
 	
 	public static Vector<Transport> getAllTrans(City c, String code,
 			TimeDate s, TimeDate e) {
@@ -22,8 +22,10 @@ public class TransAPI {
 				+ "/" + e.toDateB() + "?apiKey=" + KEY;
 		Document doc = getDoc(query);
 		Vector<Transport> trans;
-		if (doc == null)
+		if (doc == null){
+			//System.out.println("Hello!!1");
 			return null;
+		}
 		trans = parseXml(doc);
 		//System.out.println("Hey: " + trans.size());
 		return trans;
@@ -66,6 +68,7 @@ public class TransAPI {
 				flights = topNodes.item(i).getChildNodes();
 			}
 		}
+		//System.out.println("Sizes: " + places.getLength() + " " + flights.getLength());
 		if (places == null)
 			return trans;
 		if (flights == null)

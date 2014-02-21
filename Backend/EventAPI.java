@@ -12,7 +12,7 @@ import org.w3c.dom.NodeList;
 public class EventAPI {
 	private static final String KEY = "vd93CbRJDN8TgsPG";
 	private static final String eventful = "http://api.evdb.com/rest/events/search?";
-	private static final int N = 3;
+	private static final int N = 2;
 
 	public static Vector<Event> getEvents(City city, TimeDate start,
 			TimeDate end, User u) {
