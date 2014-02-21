@@ -92,6 +92,9 @@ function connectPoints(flightPlanCoordinates, map){
 
 }
 
+$(window).load(function(){
+    plotRouteName('edinburgh','edinburgh airport','panel');
+});
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
@@ -101,6 +104,79 @@ function getRandomColor() {
     }
     return color;
 }
+
+function plotRouteName(from,to,mapname) {
+    getCityLocation(from,function(coor,ci){
+
+                        var myOptions = {
+                        zoom: 10,
+                        center: new google.maps.LatLng(40.84, 14.25),
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+
+                        var mapObject = new google.maps.Map(document.getElementById(mapname), myOptions);
+
+                        
+
+                        var directionsRequest = {
+                        origin: from,//new google.maps.LatLng(coor['lat'],coor['lng']),//new google.maps.LatLng(coor),
+                        destination: to,//new google.maps.LatLng(hej['results'][0]['geometry']['location']['lat'],hej['results'][0]['geometry']['location']['lng']),//'edinburgh airport',//new google.maps.LatLng(55.94825, -3.364112),
+                        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                        unitSystem: google.maps.UnitSystem.METRIC
+                        };
+
+                        var directionsService = new google.maps.DirectionsService();
+
+                        directionsService.route( directionsRequest, function(response, status){
+                                if (status == google.maps.DirectionsStatus.OK){
+                                    new google.maps.DirectionsRenderer({
+                                        map: mapObject,
+                                        directions: response,
+                                        //panel: document.getElementById('panel')
+                                    });
+                                } else {
+                                    $("#error").append("Unable to retrieve your route<br />");
+                                }
+
+                            });                         
+    });
+}
+
+function plotRouteCoor(from,to,mapname) {
+       
+                        var myOptions = {
+                        zoom: 10,
+                        center: new google.maps.LatLng(40.84, 14.25),
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+
+                        var mapObject = new google.maps.Map(document.getElementById(mapname), myOptions);
+
+                        
+
+                        var directionsRequest = {
+                        origin: from,//new google.maps.LatLng(coor),
+                        destination: to,
+                        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                        unitSystem: google.maps.UnitSystem.METRIC
+                        };
+
+                        var directionsService = new google.maps.DirectionsService();
+
+                        directionsService.route( directionsRequest, function(response, status){
+                                if (status == google.maps.DirectionsStatus.OK){
+                                    new google.maps.DirectionsRenderer({
+                                        map: mapObject,
+                                        directions: response,
+                                        panel: document.getElementById('panel')
+                                    });
+                                } else {
+                                    $("#error").append("Unable to retrieve your route<br />");
+                                }
+
+                            }); 
+}
+
 
 /*
 function plotTravel(cities) {
