@@ -116,7 +116,7 @@ $sDate = date('Y-m-d', strtotime($_GET['startDate']));
 $eDate = date('Y-m-d', strtotime($_GET['endDate']));
 $routes = '{"Routes":[';
 $visited = array();
-$stops = 5;
+$stops = 3;
 
 
 for ($i=0; $i < $stops; $i++) { 
@@ -145,8 +145,13 @@ for ($i=0; $i < $stops; $i++) {
 		$json = json_decode($res, true);
 		if($json['price']<99999999)
 		{
-
-			$routes= $routes.'{"From":"'.$code.'", "To": "'.$json['code'].'", "Price":0'.$json['price'].', "FromCity":"'.$city.'", "ToCity":"'.$json['airport'].'", "Date": "'.$json['departureDate'].'"},';
+			$p ="";
+			if(!array_key_exists("price", $json)){
+				$p="0";
+			}
+			else
+				$p=$json['price'];
+			$routes= $routes.'{"From":"'.$code.'", "To": "'.$json['code'].'", "Price":'.$p.', "FromCity":"'.$city.'", "ToCity":"'.$json['airport'].'", "Date": "'.$json['departureDate'].'"},';
 			$cost += $json['price'];
 		}
 		break
