@@ -48,7 +48,7 @@ public class JSON {
 	public static String toJSON(Event e) {
 		return String
 				.format("\"type\" : \"event\", \"name\":\"%s\", \"desc\" : \"%s\", \"postal_code\":\"%s\", \"lon\":\"%f\", \"lat\":\"%f\", \"start\":\"%s\", \"end\":\"%s\", \"id\":\"%s\", \"url\":\"%s\"",
-						e.name, e.desc, e.postal, e.lon, e.lat,
+						e.name.replace("\"", ""), e.desc.replace("\"", ""), e.postal, e.lon, e.lat,
 						e.start.toDate(), e.getEnd().toDate(), e.id, e.url);
 	}
 
