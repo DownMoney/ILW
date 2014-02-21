@@ -51,12 +51,15 @@ function getCityLocation(city, fn){
 		if(city=="BIRMINGHAM"){
 			fn({'lat':52.4774376, 'lng':-1.8636315}, city);
 		}
+		else
+		{
 	$.getJSON( "https://maps.googleapis.com/maps/api/geocode/json?address="+city+"&sensor=false&key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58", function( data ) {
 	  coord = data['results'][0]['geometry']['location'];
 	  
 
 	  fn(coord, city);
 	});
+}
 }
 }
 
