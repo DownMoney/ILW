@@ -172,7 +172,7 @@ function toTimeline(cities){
 			   
 	for (var i = 0; i < cities.length; i++) {
 		name = cities[i]['FromCity'].trim();
-		m = p.exec(name);
+		name = name.split(' ')[0];
 	//	if (m!=null)
 	//		name = m[0];
 		console.log(m);
