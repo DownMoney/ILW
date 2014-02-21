@@ -102,7 +102,7 @@
 	code= m[2];
 	city = m[1];
 		console.log('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city);
-    	$.getJSON('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city, function(data){
+    	$.getJSON('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city+'&maxamount=<?php echo $_GET["maxamount"] ?>', function(data){
     		$("#progress").animate({width:"100%"},1000, function(){
     			$("#progress").css('width', '0%');
     		});
