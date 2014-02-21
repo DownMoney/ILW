@@ -211,7 +211,7 @@ function toTimeline(cities){
 	//	console.log(m);
 
 
-		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a  class="time-line-href href1" href="#" onclick="ptext(\'<h2>'+name+'</h2>\')">					<div class="circleLine" style="opacity: 0;"></div>					<div style="margin-top:30px;-webkit-transform:rotate(45deg);color:#359dd6 "><i>'+name+'</i></div></a>				</div>');
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a  class="time-line-href href1" onclick="ptext(\'<h2>'+name+'</h2>\')">					<div class="circleLine" style="opacity: 0;"></div>					<div style="margin-top:30px;-webkit-transform:rotate(45deg);color:#359dd6 "><i>'+name+'</i></div></a>				</div>');
 	}
 	};
 

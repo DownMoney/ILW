@@ -57,27 +57,11 @@
 		<div class="time-line-time">
 			<div id="timeline-line" style="width:900;"></div>
 			<span id="legend">
-				<div class="time-line-circle" style="width:25%">
-					<a class="time-line-href href1" href="#" onclick="change1()">
-					<div class="circleLine" style="opacity: 0;"></div>
-					<span>2001</span></a>
-				</div>
+				
 			</span>
 
 
 			<div id="bubbles" style="width:900; height:400;margin-top:50px;">
-				<div class="timeline-circles timeline-circle1change2" id="timeline-circid1">
-					<span id="textcircid1" onclick="ptext();" class="timeline-textformat textincircle1and2">University</span></div>
-				<div class="timeline-circles timeline-circle2change2" id="timeline-circid2">
-					<span id="textcircid2" onclick="ptext();" class="timeline-textformat textincircle2and2">Boston</span></div>
-				<div class="timeline-circles timeline-circle3change2" id="timeline-circid3">
-					<span id="textcircid3" onclick="ptext();" class="timeline-textformat textincircle3and2"><img src="key.png"></span></div>
-				<div class="timeline-circles timeline-circle4change2" id="timeline-circid4">
-					<span id="textcircid4" onclick="ptext();" class="timeline-textformat textincircle4and2">Flash</span></div>
-				<div class="timeline-circles timeline-circle5change2" id="timeline-circid5">
-					<span id="textcircid5" onclick="ptext();" class="timeline-textformat textincircle5and2">CSS</span></div>
-				<div class="timeline-circles timeline-circle6change2" id="timeline-circid6">
-					<span id="textcircid6" onclick="ptext();" class="timeline-textformat textincircle6and2">Jazz</span></div>
 			</div>
 			 
 
@@ -106,7 +90,7 @@
     <script type="text/javascript" src= "./js/googlemap.js"></script>
 
     <script>
-    /*
+    
     var flightPlanCoordinates2 = [];
     var map2;
     function loadPoints(map){
@@ -147,8 +131,10 @@
     }
 
     function draw(){
+    	//point = new google.maps.LatLng(coord['lat'], coord['lng']);
+    				flightPlanCoordinates2.push(flightPlanCoordinates2[0]);
     	connectPoints(flightPlanCoordinates2, map2);
-    }*/
+    }
     </script>
   </body>
 </html>

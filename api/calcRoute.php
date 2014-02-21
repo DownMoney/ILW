@@ -116,7 +116,7 @@ $sDate = date('Y-m-d', strtotime($_GET['startDate']));
 $eDate = date('Y-m-d', strtotime($_GET['endDate']));
 $routes = '{"Routes":[';
 $visited = array();
-$stops = 3;
+$stops = 5;
 
 
 for ($i=0; $i < $stops; $i++) { 
