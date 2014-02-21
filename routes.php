@@ -49,8 +49,6 @@
 
    
 	 <div id="googlemapcanvas"></div>
-	<div id="panel"></div>
-	<div id="panelDir"></div> 
 
 	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
 	<div class="timeline-container"  style="width:900;">
@@ -83,6 +81,10 @@
 		</div>
 		</div>
 		</div>
+
+	<div id="panel"></div>
+	<div id="panelDir"></div> 
+
 	<div id="timeline-outputtext" style=" top: 150px; left: -275px;" ></div>
 
 	
