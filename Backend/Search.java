@@ -55,9 +55,9 @@ public class Search {
 						//System.out.println("End");
 						fin.add(top.route);
 					} else {
-						//Route nr = top.route.copy();
-						//nr.addActivity(new Transport(nr.lastCity, end, nr.time, nr.time.addH(2), 200));
-						//fin.add(nr);
+						Route nr = top.route.copy();
+						nr.addActivity(new Transport(nr.lastCity, end, nr.time, nr.time.addH(2), 200));
+						fin.add(nr);
 					}
 				}
 				ready = fin.size() >= N;
@@ -83,7 +83,7 @@ public class Search {
 			return trans;
 		}
 		//System.out.println("Hi" + start.toDate());
-		//if(start.after(new TimeDate(Calendar.getInstance())))
+		if(start.after(new TimeDate(Calendar.getInstance())))
 		trans = TransAPI.getAllTrans(c, code, start, end);
 		c.outTrans = trans;
 		return trans;

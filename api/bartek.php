@@ -3,10 +3,10 @@
 	if($_GET['to'] != ""){
 		$tocity = $_GET['to'];
 	} else {
-		$tocity = "NULL";
+		$tocity = "null";
 	}
-	$startdate = date('Y-m-d', strtotime($_GET['ddate']) . "00:00:00";
-	$enddate = date('Y-m-d', strtotime($_GET['adate']) . "23:59:59";
+	$startdate = date('Y-m-d', strtotime($_GET['ddate'])) . "00:00:00";
+	$enddate = date('Y-m-d', strtotime($_GET['adate'])) . "23:59:59";
 
 		$viacities = '';
 		$i=0;
@@ -19,6 +19,6 @@
 		$maxmoney = $_GET['maxamount'];
 
 	$command = $fromcity . ";" . $tocity . ";" . $startdate . ";" . $enddate . ";" . $viacities . ";" . $category . ";" . $keywords . ";" . $maxmoney . ";";
-	$var = shell_exec('java main ' . $command);
+	$var = shell_exec('java Main ' . $command);
 	echo $var;
 ?>
