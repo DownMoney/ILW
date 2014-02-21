@@ -139,15 +139,16 @@ function plotRouteName(from,to,mapname,f) {
     });
 }
 
-function plotRouteCoor(from,to,mapname) {
-       
+function plotRouteCoor(fromLat,fromLng,toLat,toLng) {
+                        var from = new google.maps.LatLng(fromLat,fromLng);
+                        var to = new google.maps.LatLng(toLat,toLng);
                         var myOptions = {
                         zoom: 10,
                         center: new google.maps.LatLng(40.84, 14.25),
                         mapTypeId: google.maps.MapTypeId.ROADMAP
                         };
 
-                        var mapObject = new google.maps.Map(document.getElementById(mapname), myOptions);
+                        var mapObject = new google.maps.Map(document.getElementById("panel"), myOptions);
 
                         
 
@@ -159,12 +160,11 @@ function plotRouteCoor(from,to,mapname) {
                         };
 
                         var directionsService = new google.maps.DirectionsService();
-
                         directionsService.route( directionsRequest, function(response, status){
                                 if (status == google.maps.DirectionsStatus.OK){
                                     new google.maps.DirectionsRenderer({
-                                        map: mapname,
-                                        directions: mapObject,
+                                        map: mapObject,
+                                        directions: response,
                                         panel: document.getElementById('panelDir')
                                     });
                                 } else {
