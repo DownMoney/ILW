@@ -108,12 +108,17 @@ function plotTravel(cities) {
 
     });
 }
-/*
+
 function  findClosestAirport(city) {
     getCityLocation(city,function(coor,ci){
         $.getJSON('/api/airport.php?location='+coor['lat'].toString()+','+coor['lon'].toString(), function(data){
-            $.getJSON('http://maps.googleapis.com/maps/api/directions/json?origin='+ci+'&destination=latlng='+)
-            latlng=40.714224,-73.961452
+            $.getJSON('http://maps.googleapis.com/maps/api/directions/json?origin='+ci+'&destination='+data['results']['formatted_address']+'&sensor=true&key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58',function(json){
+                if(json['status'] == "OK"){
+                
+                } else {
+
+                }
+            });
         });
     });
 }*/
