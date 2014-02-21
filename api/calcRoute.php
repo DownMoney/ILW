@@ -117,9 +117,9 @@ $eDate = date('Y-m-d', strtotime($_GET['endDate']));
 $routes = '{"Routes":[';
 $visited = array();
 $stops = 5;
+$i =0 ;
 
-
-for ($i=0; $i < $stops; $i++) { 
+while ($cost<$_GET['maxamount']) { 
 	$res = getCheapest($code, $sDate, $eDate, $visited);
 	$json = json_decode($res, true);
 	if($json['price']< 99999999)
@@ -139,9 +139,9 @@ for ($i=0; $i < $stops; $i++) {
 	if($code == $endCode)
 		break;
 
-	if ($i == ($stops-1))
-	{
-		$res = getDirect($code, $startCode, $sDate, $eDate);
+}
+
+$res = getDirect($code, $startCode, $sDate, $eDate);
 		$json = json_decode($res, true);
 		if($json['price']<99999999)
 		{
@@ -153,10 +153,9 @@ for ($i=0; $i < $stops; $i++) {
 				$p=$json['price'];
 			$routes= $routes.'{"From":"'.$code.'", "To": "'.$json['code'].'", "Price":'.$p.', "FromCity":"'.$city.'", "ToCity":"'.$json['airport'].'", "Date": "'.$json['departureDate'].'"},';
 			$cost += $json['price'];
-		}
-		break
-;	}
 }
+
+
 $routes = rtrim($routes, ",");
 $routes = $routes.'], "Price":'.$cost.'}';
 

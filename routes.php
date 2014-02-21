@@ -71,7 +71,7 @@
 		<div style="margin-top:50px; width:200px; float: right;">
 			<button class="btn btn-success" onclick="$('#bubbles').toggle();">Toggle Additional Events</button>
 			</div>
-		<div id="timeline-outputtext" style="height:350px; overflow-y:auto; top: 150px; left: 0px; display:none" ></div>
+		<div id="timeline-outputtext" style="height:350px; overflow-y:auto; border-right: 1px solid gray; top: 150px; left: 0px; display:none" ></div>
 		<div style="margin-top:300px">
    				<div id="panel"></div>
 				<div id="panelDir"></div>
