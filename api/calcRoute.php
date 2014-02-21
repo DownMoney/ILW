@@ -145,7 +145,8 @@ for ($i=0; $i < $stops; $i++) {
 		$json = json_decode($res, true);
 		if($json['price']<99999999)
 		{
-			$routes= $routes.'{"From":"'.$code.'", "To": "'.$json['code'].'", "Price":'.$json['price'].', "FromCity":"'.$city.'", "ToCity":"'.$json['airport'].'", "Date": "'.$json['departureDate'].'"},';
+
+			$routes= $routes.'{"From":"'.$code.'", "To": "'.$json['code'].'", "Price":0'.$json['price'].', "FromCity":"'.$city.'", "ToCity":"'.$json['airport'].'", "Date": "'.$json['departureDate'].'"},';
 			$cost += $json['price'];
 		}
 		break
