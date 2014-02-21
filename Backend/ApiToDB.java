@@ -36,7 +36,7 @@ import org.xml.sax.InputSource;
  		Vector<Transport> all = api.getAllTrans(new City("SIP"), new TimeDate(10,10,10,2014,2,24), new TimeDate(10,10,10,2014,3,05));
   		for(Transport t: all)
   		{
-  			System.out.println(t);
+  			//System.out.println(t);
   		}
  		///api.queryRoutes("UK", "SIP", "anytime", "anytime");
   	}
@@ -55,11 +55,11 @@ import org.xml.sax.InputSource;
  		HashMap<Integer,City> cities2 = new HashMap<Integer,City>(cities);
  		Set<Integer> keys = cities2.keySet();
  		/**/
- 		System.out.println("All keys:");
+ 		//System.out.println("All keys:");
  		
  		for(int k : keys)
  		{
- 			System.out.println(k);
+ 			//System.out.println(k);
  			if(cities2.get(k).type == 1)
  			{
  				if(!IATAcodes.giveCode(cities2.get(k).name).equals(""))
@@ -81,7 +81,7 @@ import org.xml.sax.InputSource;
 		{
 				if(t.get(i).start == null)
 				{
-					System.out.println("Remove..."+t.get(i).cost);
+					//System.out.println("Remove..."+t.get(i).cost);
 					t.remove(i);
 					i--;
 				}
@@ -122,7 +122,7 @@ import org.xml.sax.InputSource;
   		DocumentBuilder db = null;
   		URL url = null;
   		URLConnection con = null;
-  		System.out.println(query);
+  		//System.out.println(query);
   		try {
   			url = new URL(query);
   			con = url.openConnection();
@@ -139,7 +139,7 @@ import org.xml.sax.InputSource;
   	}
   	public void analyzeXML(Document xml)
   	{
-  		System.out.println("Analzye");
+  		//System.out.println("Analzye");
   		List<Transport> trans_ = new ArrayList<Transport>();
   		NodeList all = xml.getFirstChild().getChildNodes();
   		for(int i = 0; i < all.getLength(); i++)
@@ -202,7 +202,7 @@ import org.xml.sax.InputSource;
   					{
   						City c = new City(name);
   						c.type = type;
-  						System.out.println(cid+"="+c.name);
+  						//System.out.println(cid+"="+c.name);
   						cities.put(cid, c);
   					}
   				}
@@ -213,7 +213,7 @@ import org.xml.sax.InputSource;
   				NodeList all_ = all.item(i).getChildNodes();
   				for(int j = 0; j < all_.getLength(); j++)
   				{
-  					System.out.println("Routes1");
+  					//System.out.println("Routes1");
   					String origin = null;
   					String destination = null;
   					String price = null;
@@ -248,7 +248,7 @@ import org.xml.sax.InputSource;
   					if(origin != null)
   					{
   						Transport c = new Transport(Integer.parseInt(origin), Integer.parseInt(destination), Double.parseDouble(price));
-  						System.out.println("Got trans!");
+  						//System.out.println("Got trans!");
   						c.type = TransType.FLIGHT;
  						Random rnd = new Random();
  						int day = d+rnd.nextInt(1);
@@ -261,15 +261,15 @@ import org.xml.sax.InputSource;
   			}
   				
   		}
-  		System.out.println(trans_.size()+"SIZE!!!");
+  		//System.out.println(trans_.size()+"SIZE!!!");
   		for(int i = 0; i < trans_.size(); i++)
   		{
-  			System.out.println("s="+trans_.get(i).s);
-  			System.out.println("e="+trans_.get(i).e);
+  			//System.out.println("s="+trans_.get(i).s);
+  			//System.out.println("e="+trans_.get(i).e);
   			int s = trans_.get(i).s;
   	  		int e = trans_.get(i).e;
-  			System.out.println(cities.get(s).name);
-  	  		System.out.println("Updating "+ s + " to " + cities.get(s).name);
+  			//System.out.println(cities.get(s).name);
+  	  		//System.out.println("Updating "+ s + " to " + cities.get(s).name);
   	  		trans_.get(i).update(cities.get(s), cities.get(e));	
   		}
   		trans.addAll(trans_);

@@ -12,14 +12,16 @@ import org.w3c.dom.NodeList;
 public class EventAPI {
 	private static final String KEY = "vd93CbRJDN8TgsPG";
 	private static final String eventful = "http://api.evdb.com/rest/events/search?";
+	private static final int N = 3;
 
 	public static Vector<Event> getEvents(City city, TimeDate start,
-			TimeDate end) {
-		if(city.events != null){
+			TimeDate end, User u) {
+		if (city.events != null) {
 			return getAfter(city.events, start);
 		}
 		String query = eventful + "app_key=" + KEY + "&" + "location="
-				+ getCityName(city) + "&" + "date=" + getDate(start, end);
+				+ getCityName(city) + "&" + "date=" + getDate(start, end)
+				+ "&sort_oder=popularity&sort_direction=descending" + "&keywords=" + u.getKeys() + "&category=u.getCats()";
 		Document doc = getDoc(query);
 		Vector<Event> events;
 		events = fromXml(doc, city);
@@ -27,17 +29,17 @@ public class EventAPI {
 		return events;
 
 	}
-	
-	public static Vector<Event> getAfter(Vector<Event> evs, TimeDate t){
+
+	public static Vector<Event> getAfter(Vector<Event> evs, TimeDate t) {
 		Vector<Event> res = new Vector<Event>();
-		for(Event ei : evs){
-			if(ei.start == null || ei.start.after(t)){
+		for (Event ei : evs) {
+			if (ei.start == null || ei.start.after(t)) {
 				res.add(ei);
 			}
 		}
 		return res;
 	}
-	
+
 	private static String getCityName(City c) {
 		String s = c.name;
 		s = s.replace(" ", "+");
@@ -54,7 +56,7 @@ public class EventAPI {
 		DocumentBuilder db;
 		URL url;
 		URLConnection con;
-		System.out.println(q);
+		// System.out.println(q);
 		try {
 			url = new URL(q);
 			con = url.openConnection();
@@ -66,9 +68,8 @@ public class EventAPI {
 			InputStream in = con.getInputStream();
 			doc = db.parse(in);
 		} catch (Exception e) {
-			System.out.println("Hi");
-			System.out.println(e.getMessage());
-			e.printStackTrace();
+			//System.out.println(e.getMessage());
+			//e.printStackTrace();
 		}
 		return doc;
 	}
@@ -100,60 +101,78 @@ public class EventAPI {
 						int ad = 0;
 						id = evs.item(e).getAttributes().getNamedItem("id")
 								.getNodeValue();
-						for (int j = 0; j < info.getLength(); j++) {
-							if (info.item(j).getNodeName().equals("title")) {
-								name = getValue(info.item(j).getChildNodes());
-							} else if (info.item(j).getNodeName().equals("url")) {
-								url = getValue(info.item(j).getChildNodes());
-							} else if (info.item(j).getNodeName()
-									.equals("description")) {
-								desc = getValue(info.item(j).getChildNodes());
-							} else if (info.item(j).getNodeName()
-									.equals("start_time")) {
-								String t = getValue(info.item(j)
-										.getChildNodes());
-								if (t.equals("") || t == null) {
-									start = null;
-								} else {
-									start = new TimeDate(t);
-								}
-							} else if (info.item(j).getNodeName()
-									.equals("stop_time")) {
-								String t = getValue(info.item(j)
-										.getChildNodes());
-								if (t.equals("") || t == null) {
-									end = null;
-								} else {
-									end = new TimeDate(t);
-								}
-							} else if (info.item(j).getNodeName()
-									.equals("city_name")) {
+						try {
+							for (int j = 0; j < info.getLength(); j++) {
+								if (info.item(j).getNodeName().equals("title")) {
+									name = getValue(info.item(j)
+											.getChildNodes());
+								} else if (info.item(j).getNodeName()
+										.equals("url")) {
+									url = getValue(info.item(j).getChildNodes());
+								} else if (info.item(j).getNodeName()
+										.equals("description")) {
+									desc = getValue(info.item(j)
+											.getChildNodes());
+								} else if (info.item(j).getNodeName()
+										.equals("start_time")) {
+									String t = getValue(info.item(j)
+											.getChildNodes());
+									if (t.equals("") || t == null) {
+										start = null;
+									} else {
+										start = new TimeDate(t);
+									}
+								} else if (info.item(j).getNodeName()
+										.equals("stop_time")) {
+									String t = getValue(info.item(j)
+											.getChildNodes());
+									if (t.equals("") || t == null) {
+										end = null;
+									} else {
+										end = new TimeDate(t);
+									}
+								} else if (info.item(j).getNodeName()
+										.equals("city_name")) {
 
-							} else if (info.item(j).getNodeName()
-									.equals("latitude")) {
-								lat = Double.parseDouble(getValue(info.item(j)
-										.getChildNodes()));
-							} else if (info.item(j).getNodeName()
-									.equals("longitude")) {
-								lon = Double.parseDouble(getValue(info.item(j)
-										.getChildNodes()));
-							} else if (info.item(j).getNodeName()
-									.equals("postal_code")) {
-								postal = getValue(info.item(j).getChildNodes());
-							} else if (info.item(j).getNodeName()
-									.equals("all_day")) {
-								ad = Integer.parseInt(getValue(info.item(j)
-										.getChildNodes()));
+								} else if (info.item(j).getNodeName()
+										.equals("latitude")) {
+									lat = Double.parseDouble(getValue(info
+											.item(j).getChildNodes()));
+								} else if (info.item(j).getNodeName()
+										.equals("longitude")) {
+									lon = Double.parseDouble(getValue(info
+											.item(j).getChildNodes()));
+								} else if (info.item(j).getNodeName()
+										.equals("postal_code")) {
+									postal = getValue(info.item(j)
+											.getChildNodes());
+								} else if (info.item(j).getNodeName()
+										.equals("all_day")) {
+									ad = Integer.parseInt(getValue(info.item(j)
+											.getChildNodes()));
+								}
 							}
+						} catch (Exception ex) {
+							//ex.printStackTrace();
 						}
-						System.out.println(name);
+						// System.out.println(name);
 						events.add(new Event(name, desc, start, end, city,
 								cost, pop, lat, lon, postal, url, id, ad));
+						if (events.size() >= N) {
+							break;
+						}
 					}
 				}
 			}
 		}
-
+		events.setSize(Math.min(N, events.size()));
+		int maxPop = events.size();
+		for (Event ei : events) {
+			if (ei != null) {
+				ei.pop = maxPop * 10;
+				maxPop--;
+			}
+		}
 		return events;
 	}
 

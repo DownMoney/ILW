@@ -8,13 +8,17 @@ public class Main {
 	static User user;
 	public static void main(String[] args){
 		Search s = new Search();
-		/*TimeDate start = new TimeDate(10, 0, 0, 2014, 2, 15);
-		TimeDate end = new TimeDate(10, 0, 0, 2014, 3, 15);
-		Vector<Route> r = s.findPaths(new City("Edinburgh"), null, 500, start, end, 1000, null);
-		System.out.println(r.size());
-		//System.out.println(JSON.toJSON(r));
-		 * */
-		parseArgs(args[0]); 
+		TimeDate start = new TimeDate(10, 0, 0, 2014, 2, 21);
+		TimeDate end = new TimeDate(10, 0, 0, 2014, 2, 26);
+		long t = System.currentTimeMillis();
+		Vector<Route> r = s.findPaths(new City("Athens"), null, 600, start, end, 5, null);
+		//System.out.println(r.size());
+		System.out.println(JSON.toJSON(r));
+		//for(Route ri : r){
+			//System.out.println(ri.toString());
+		//}
+		//System.out.println(System.currentTimeMillis() - t);
+		//parseArgs(args[0]); 
 	}
 	
 	public static void parseArgs(String args){
@@ -27,8 +31,13 @@ public class Main {
 		}
 		start = new TimeDate(params[2]);
 		end = new TimeDate(params[3]);
+		HashMap<String, Short> cs = new HashMap<String, Short>();
 		String[] cities = params[4].split(",");
+		for(String si: cities){
+			cs.put(si, ((short) 1));
+		}
 		String[] cats = params[5].split(",");
 		String[] keys = params[6].split(",");
+		user = new User(cs, cats, keys);
 	}
 }

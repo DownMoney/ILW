@@ -5,9 +5,17 @@ public class Transport {
 	double cost;
 	String outAirport, inAirport;
 	int s,e;
+	public Transport(City s, City e, TimeDate o, TimeDate i, double c){
+		start = s;
+		end = e;
+		out = o;
+		in = i;
+		cost = c;
+		type = TransType.FLIGHT;
+	}
 	public String toString()
 	{
-		return "A transportation from " + start.name + " (" + s + ") to " + end.name + " (" + e + ") at cost of £" + cost;
+		return "A transportation from " + start.name + " (" + s + ") to " + end.name + " (" + e + ") at cost of ï¿½" + cost;
 	}
  	public Transport(City start, City end, double cost)
  	{
