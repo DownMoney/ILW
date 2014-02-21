@@ -178,7 +178,7 @@
 	    			}
 
 	    			if(things[j]['type']=='event'){
-	    				cities.push({'Event':things[j]['name']});
+	    				cities.push({'Event':things[j]['name'], 'Lon':things[j]['lon'], 'Lat': things[j]['lat']});
 	    			}
 
 

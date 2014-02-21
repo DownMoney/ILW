@@ -209,13 +209,27 @@ function toTimeline(cities){
 	//	if (m!=null)
 	//		name = m[0];
 	//	console.log(m);
-
-
-		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a  class="time-line-href href1" onclick="ptext(\'<h2>'+name+'</h2>\')">					<div class="circleLine" style="opacity: 0;"></div>					<div style="margin-top:30px;-webkit-transform:rotate(45deg);color:#359dd6 "><i>'+name+'</i></div></a>				</div>');
+		addEventToLegend(cities,i,name,div);
+		
 	}
 	};
 
 	bubbles();
+}
+
+function addEventToLegend(cities, i, name, div){
+		$.getJSON('/api/airport.php?location='+cities[i]['Lat'].toString()+','+cities[i]['Lon'].toString(), function(data4){
+
+
+	//	console.log(data4['results'][0]['geometry']['location']['lat']);
+			lat = data4['results'][0]['geometry']['location']['lat'];
+			lon = data4['results'][0]['geometry']['location']['lng'];
+			
+		point = new google.maps.LatLng(cities[i]['Lat'], cities[i]['Lon']);
+		point2 = new google.maps.LatLng(lat, lon);
+
+		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a  class="time-line-href href1" onclick="plotRouteCoor('+point+','+point2+');ptext(\'<h2>'+name+'</h2>\');">					<div class="circleLine" style="opacity: 0;"></div>					<div style="margin-top:30px;-webkit-transform:rotate(45deg);color:#359dd6 "><i>'+name+'</i></div></a>				</div>');
+	});
 }
 
 function getRoute(start, end, travelMode, fn){
