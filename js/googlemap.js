@@ -55,7 +55,7 @@ function handleNoGeolocation(errorFlag) {
   	});*/
 
   	
-loadPoints(map);
+//loadPoints(map);
 
 }
 
@@ -81,7 +81,11 @@ function connectPoints(flightPlanCoordinates, map){
       }
     });
 
+
   /*new google.maps.Polyline({
+=======
+  /*    new google.maps.Polyline({
+>>>>>>> ffcdd742ac150265e83fb12e878ae822dbdb5210
           path : [flightPlanCoordinates[flightPlanCoordinates.length-1], flightPlanCoordinates[0]],
           map: map,
           geodesic: true,
@@ -93,7 +97,7 @@ function connectPoints(flightPlanCoordinates, map){
 }
 
 $(window).load(function(){
-    plotRouteName('edinburgh','edinburgh airport','panel');
+    plotRouteName('opole','london','panel','drive');
 });
 
 function getRandomColor() {
@@ -105,7 +109,9 @@ function getRandomColor() {
     return color;
 }
 
-function plotRouteName(from,to,mapname) {
+var mapColors = {"bus" : "#CC0000" , "flight" : "#0066CC"};
+
+function plotRouteName(from,to,mapname,f) {
     getCityLocation(from,function(coor,ci){
 
                         var myOptions = {
@@ -116,12 +122,17 @@ function plotRouteName(from,to,mapname) {
 
                         var mapObject = new google.maps.Map(document.getElementById(mapname), myOptions);
 
-                        
+                        var flag;
+                        if(f == 'public') {
+                            flag = google.maps.DirectionsTravelMode.TRANSIT;
+                        } else {
+                            flag = google.maps.DirectionsTravelMode.DRIVING;
+                        }
 
                         var directionsRequest = {
                         origin: from,//new google.maps.LatLng(coor['lat'],coor['lng']),//new google.maps.LatLng(coor),
                         destination: to,//new google.maps.LatLng(hej['results'][0]['geometry']['location']['lat'],hej['results'][0]['geometry']['location']['lng']),//'edinburgh airport',//new google.maps.LatLng(55.94825, -3.364112),
-                        travelMode: google.maps.DirectionsTravelMode.TRANSIT,
+                        travelMode: flag,//google.maps.DirectionsTravelMode.DRIVING,
                         unitSystem: google.maps.UnitSystem.METRIC
                         };
 

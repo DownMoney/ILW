@@ -19,7 +19,7 @@ public class JSON {
 	public static String toJSON(Route r, int index) {
 		String res = "";
 		StringBuffer buff = new StringBuffer();
-		buff.append(String.format("{\"%d\":[", index));
+		buff.append(String.format("{\"cost\":\"%f\", \"%d\":[", r.cost, index));
 		for (int i = 0; i < r.size; i++) {
 			buff.append("{");
 			String s = "";

@@ -46,8 +46,8 @@
 
    
 	 <div id="googlemapcanvas"></div>
-	<div id="panel" style="width: 300px; float: right;"></div> 
-	<div id="schematictravel"></div> 
+	<div id="panel"></div>
+	<div id="panelDir"></div> 
 
 	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
 	<div class="timeline-container"  style="width:900;">
