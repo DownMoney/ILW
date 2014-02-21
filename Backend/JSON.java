@@ -6,7 +6,7 @@ public class JSON {
 		StringBuffer buff = new StringBuffer();
 		buff.append("[");
 		for (int i = 0; i < routes.size(); i++) {
-			buff.append(toJSON(routes.get(i)));
+			buff.append(toJSON(routes.get(i), i));
 			if(i != routes.size() - 1){
 				buff.append(",");
 			}
@@ -16,10 +16,10 @@ public class JSON {
 		return res;
 	}
 
-	public static String toJSON(Route r) {
+	public static String toJSON(Route r, int index) {
 		String res = "";
 		StringBuffer buff = new StringBuffer();
-		buff.append("[");
+		buff.append(String.format("'%d':[", index));
 		for (int i = 0; i < r.size; i++) {
 			buff.append("{");
 			String s = "";
