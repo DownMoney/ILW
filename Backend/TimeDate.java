@@ -38,7 +38,7 @@ public class TimeDate {
 	}
 
 	public long toSecs() {
-		return year * 365*24*3600 + mon * 31*24*3600 + day * 24 * 3600 + hour * 3600 + min * 60
+		return year * 365 * 3600 * 24 + mon * 31 * 3600 * 24 + day * 24 * 3600 + hour * 3600 + min * 60
 				+ sec;
 	}
 
