@@ -51,7 +51,13 @@ public class Search {
 						}
 					}
 				if (!cont) {
-					fin.add(top.route);
+					if(end == null){
+						fin.add(top.route);
+					} else {
+						Route nr = top.route.copy();
+						nr.addActivity(new Transport(nr.lastCity, end, nr.time, nr.time.addH(2), 200));
+						fin.add(nr);
+					}
 				}
 				ready = fin.size() >= N;
 			}
