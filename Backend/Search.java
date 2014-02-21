@@ -32,8 +32,8 @@ public class Search {
 				for (Event ei : events) {
 					if (checkRoute(top.route, ei, maxCost, maxTime)) {
 						next.add(new Node(ei, top.route, top.city));
-						// System.out.println("Added: " + ei.name + " " +
-						// ei.start.toString() + " " + ei.getEnd().toString());
+						//System.out.println("Added: " + ei.name + " " +
+						//ei.start.toString() + " " + ei.getEnd().toString());
 						cont = true;
 					}
 				}
@@ -46,17 +46,18 @@ public class Search {
 							Route nr = top.route.copy();
 							nr.addActivity(ti);
 							next.add(new Node(ti.end, nr));
-							// System.out.println("City: " + ti.end.name);
+							//System.out.println("City: " + ti.end.name);
 							cont = true;
 						}
 					}
 				if (!cont) {
 					if(end == null){
+						//System.out.println("End");
 						fin.add(top.route);
 					} else {
-						Route nr = top.route.copy();
-						nr.addActivity(new Transport(nr.lastCity, end, nr.time, nr.time.addH(2), 200));
-						fin.add(nr);
+						//Route nr = top.route.copy();
+						//nr.addActivity(new Transport(nr.lastCity, end, nr.time, nr.time.addH(2), 200));
+						//fin.add(nr);
 					}
 				}
 				ready = fin.size() >= N;
@@ -82,7 +83,7 @@ public class Search {
 			return trans;
 		}
 		//System.out.println("Hi" + start.toDate());
-		if(!start.after(new TimeDate(Calendar.getInstance())))
+		//if(start.after(new TimeDate(Calendar.getInstance())))
 		trans = TransAPI.getAllTrans(c, code, start, end);
 		c.outTrans = trans;
 		return trans;
@@ -115,10 +116,11 @@ public class Search {
 		Route nr = r.copy();
 		nr.addActivity(t);
 		nr.addActivity(t.end, getScore(t.end), t.in);
+		//System.out.println("Dates: " + mt + " " + nr.time);
 		if (nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0
 				|| r.lastCity.equals(c)
 				|| (r.contains(t.end) && !start.equals(c))) {
-			// System.out.println("City Rejected: " + c.name);
+			//System.out.println("City Rejected: " + t.end.name + " " + (TimeDate.diffSZ(mt, nr.time).toSecs() < 0));
 			return false;
 		} else {
 			return true;
@@ -130,7 +132,7 @@ public class Search {
 		nr.addActivity(e, getScore(e));
 		if (nr.cost > mc || TimeDate.diffSZ(mt, nr.time).toSecs() < 0
 				|| r.contains(e)) {
-			// System.out.println("Rejected: " + e.name + " " + r.contains(e));
+			//System.out.println("Rejected: " + e.name + " " + r.contains(e));
 			return false;
 		} else {
 			// System.out.println("Accepted: " + e.name + " " + r.contains(e));
@@ -181,9 +183,13 @@ public class Search {
 			init();
 			event = e;
 			route = r.copy();
+			time = r.time;
 			route.addActivity(e, getScore(e));
 			city = c;
-			time = e.getEnd().addH(1);
+			TimeDate tt = e.getEnd().addH(1);
+			if(time.after(tt)){
+				time = time.addH(3);
+			}
 		}
 
 		public void init() {

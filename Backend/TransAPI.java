@@ -22,8 +22,10 @@ public class TransAPI {
 				+ "/" + e.toDateB() + "?apiKey=" + KEY;
 		Document doc = getDoc(query);
 		Vector<Transport> trans;
-		if (doc == null)
+		if (doc == null){
+			//System.out.println("Hello!!1");
 			return null;
+		}
 		trans = parseXml(doc);
 		//System.out.println("Hey: " + trans.size());
 		return trans;
@@ -66,6 +68,7 @@ public class TransAPI {
 				flights = topNodes.item(i).getChildNodes();
 			}
 		}
+		//System.out.println("Sizes: " + places.getLength() + " " + flights.getLength());
 		if (places == null)
 			return trans;
 		if (flights == null)

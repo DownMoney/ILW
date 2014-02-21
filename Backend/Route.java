@@ -70,7 +70,10 @@ public class Route implements Comparable<Route> {
 	public void addActivity(Event e, double s){
 		route.add(new Activity(e));
 		cost += e.cost;
-		time = e.getEnd().addH(1);
+		TimeDate tt = e.getEnd().addH(1);
+		if(time.after(tt)){
+			time = time.addH(2);
+		}
 		score += s;
 		size++;
 		events.put(e.name, e);
