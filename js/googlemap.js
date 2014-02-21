@@ -121,7 +121,7 @@ function plotRouteName(from,to,mapname) {
                         var directionsRequest = {
                         origin: from,//new google.maps.LatLng(coor['lat'],coor['lng']),//new google.maps.LatLng(coor),
                         destination: to,//new google.maps.LatLng(hej['results'][0]['geometry']['location']['lat'],hej['results'][0]['geometry']['location']['lng']),//'edinburgh airport',//new google.maps.LatLng(55.94825, -3.364112),
-                        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                        travelMode: google.maps.DirectionsTravelMode.TRANSIT,
                         unitSystem: google.maps.UnitSystem.METRIC
                         };
 
@@ -132,7 +132,7 @@ function plotRouteName(from,to,mapname) {
                                     new google.maps.DirectionsRenderer({
                                         map: mapObject,
                                         directions: response,
-                                        //panel: document.getElementById('panel')
+                                        panel: document.getElementById('panelDir')
                                     });
                                 } else {
                                     $("#error").append("Unable to retrieve your route<br />");
@@ -176,25 +176,3 @@ function plotRouteCoor(from,to,mapname) {
 
                             }); 
 }
-
-
-/*
-function plotTravel(cities) {
-    $.each(index,city,function(coor,ci){
-
-    });
-}
-
-function  findClosestAirport(city) {
-    getCityLocation(city,function(coor,ci){
-        $.getJSON('/api/airport.php?location='+coor['lat'].toString()+','+coor['lon'].toString(), function(data){
-            $.getJSON('http://maps.googleapis.com/maps/api/directions/json?origin='+ci+'&destination='+data['results']['formatted_address']+'&sensor=true&key=AIzaSyCsHxnjIW3dFbEh7eJQrLF--Qv1mqy4n58',function(json){
-                if(json['status'] == "OK"){
-                
-                } else {
-
-                }
-            });
-        });
-    });
-}*/
