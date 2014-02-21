@@ -12,7 +12,7 @@ public class City {
 	String code;
 	public City(String name)
 	{
-		this.name = name.split(" ")[0];
+		this.name = name;
 		this.events = null;
 		this.inTrans = null;
 		this.outTrans = null;
