@@ -82,9 +82,9 @@ function connectPoints(flightPlanCoordinates, map){
     });
 }
 
-/*$(window).load(function(){
-    plotRouteName('opole','london','panel','drive');
-});*/
+$(window).load(function(){
+    plotRouteName('birmingham','london','panel','drive');
+});
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
