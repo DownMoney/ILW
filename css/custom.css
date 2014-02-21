@@ -50,7 +50,14 @@ body{
 	z-index: 200;
 }
 
-
+#progress{
+	position: fixed;
+	top: 0px;
+	background: green;
+	width: 0%;
+	height: 54px;
+	z-index: 99;
+}
 
 img{
 	width: 100% !important;
