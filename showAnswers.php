@@ -91,7 +91,7 @@
     <script type="text/javascript" src= "./js/googlemap.js"></script>
 
     <script>
-     $("#progress").animate({width:"83%"},1000);
+     $("#progress").animate({width:"83%"},5000);
     var flightPlanCoordinates2 = [];
     var map2;
     function loadPoints(map){
