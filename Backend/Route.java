@@ -98,7 +98,7 @@ public class Route implements Comparable<Route> {
 		return (Object) (isCity(i) ? route.get(i).city : (isEvent(i)? route.get(i).event : route.get(i).trans));
 	}
 	public int compareTo(Route r){
-		return -(new Double(score)).compareTo(new Double(r.score));
+		return (new Double(score)).compareTo(new Double(r.score));
 	}
 	public void pop(){
 		Activity a = route.get(size-1);
