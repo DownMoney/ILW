@@ -31,6 +31,7 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
+  <div id="progress">&nbsp;</div>
 	<div class="navbar-wrapper">
 	  <div class="container">
 		<div class="navbar nav navbar-inverse navbar-fixed-top" role="navigation">
@@ -90,7 +91,7 @@
     <script type="text/javascript" src= "./js/googlemap.js"></script>
 
     <script>
-    
+     $("#progress").animate({width:"83%"},1000);
     var flightPlanCoordinates2 = [];
     var map2;
     function loadPoints(map){
@@ -102,6 +103,9 @@
 	city = m[1];
 		console.log('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city);
     	$.getJSON('/api/calcRoute.php?startCode='+code+'&startDate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&endDate='+encodeURIComponent('<?php echo $_GET["adate"]?>')+'&startCity='+city, function(data){
+    		$("#progress").animate({width:"100%"},1000, function(){
+    			$("#progress").css('width', '0%');
+    		});
     		console.log(data);
     		$('#price').html('£'+data['Price']);
     		toTimeline(data['Routes']);

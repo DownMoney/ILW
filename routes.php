@@ -31,7 +31,9 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
+  <div id="progress">&nbsp;</div>
 	<div class="navbar-wrapper">
+
 	  <div class="container">
 		<div class="navbar nav navbar-inverse navbar-fixed-top" role="navigation">
 		  <div class="container">
@@ -50,7 +52,7 @@
    
 	 <div id="googlemapcanvas"></div>
 
-	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 100px;">
+	<div onclick="$(window).scrollTop($('#googlemapcanvas').height()-50);" style="padding-top: 50px;">
 	<div class="timeline-container"  style="width:900;">
 		<div class="time-line-time">
 			<div id="timeline-line" style="width:900;"></div>
@@ -86,7 +88,7 @@
     <script type="text/javascript" src= "/js/googlemap.js"></script>
 
     <script>
-
+    $("#progress").animate({width:"83%"},5000);
     var flightPlanCoordinates2 = [];
     var map2;
 
@@ -138,6 +140,9 @@
 
     	$.get(q, function(data){
     		console.log('done!');
+    		$("#progress").animate({width:"100%"},1000, function(){
+    			$("#progress").css('width', '0%');
+    		});
     		json = JSON.parse(data);
     		console.log(json);
     		
