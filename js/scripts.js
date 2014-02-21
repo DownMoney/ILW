@@ -173,8 +173,8 @@ function toTimeline(cities){
 	for (var i = 0; i < cities.length; i++) {
 		name = cities[i]['FromCity'].trim();
 		m = p.exec(name);
-		if (m!=null)
-			name = m[0];
+	//	if (m!=null)
+	//		name = m[0];
 		console.log(m);
 		$('#legend').append('<div class="time-line-circle" style="width:'+div+'%">					<a class="time-line-href href1" href="#" onclick="change1()">					<div class="circleLine" style="opacity: 0;"></div>					<span>'+name+'</span></a>				</div>');
 		
