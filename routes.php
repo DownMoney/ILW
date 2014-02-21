@@ -107,13 +107,25 @@
 
     var flightPlanCoordinates2 = [];
     var map2;
-    var cities = [{"FromCity": "<?php echo $_GET['from'] ?>"}];
+
+  
+	
+	
+ var p = /([a-z]+|[a-z]\s[a-z])+\s?\(([a-z]+)\)/ig;
+    var cities = [];
     function loadPoints(map){
     	map2 = map;
     
-		cityName = '<?php echo $_GET["from"] ?>';
+		var cityName = '<?php echo $_GET["from"] ?>';
+		m = p.exec(cityName);
+	//code= m[2];
+	if (m != null && m.length>0)
+		cityName = m[1];
+
+	cities.push({"FromCity": cityName});
 	
-		q = ('/Backend/bartek.php?from=<?php echo $_GET["from"]?>&ddate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&adate='+encodeURIComponent('<?php echo $_GET["adate"]?>'));
+	console.log(cityName);
+		q = ('/Backend/bartek.php?from='+cityName+'&ddate='+encodeURIComponent('<?php echo $_GET["ddate"]?>')+'&adate='+encodeURIComponent('<?php echo $_GET["adate"]?>'));
 		
 		q+="<?php 
 		$viacities = '';
@@ -128,7 +140,7 @@
 		q+="&maxamount=<?php echo $_GET['maxamount']?>";
 		console.log(q);
 
-		getCityLocation("<?php echo $_GET['from'] ?>", function(coord, city){
+		getCityLocation(cityName, function(coord, city){
 			console.log(city);
 		    				console.log(coord);
 		    				cities.push({'FromCity': city});
@@ -151,7 +163,7 @@
     			i=0;
     			things = json['Routes'][i][i];
     			$('#routes').append('<li>Route '+i.toString()+'</li>');
-    			$('#price').html('£'+json['Routes'][i]['cost']);
+    			$('#price').html('£'+parseFloat(json['Routes'][i]['cost']).toString());
     			$.each(things, function(j){
     				console.log(things[j]);
 
@@ -174,7 +186,7 @@
     			});
     		//});
     		
-    		setTimeout(draw, 100);
+    		setTimeout(draw, 1000);
 
     		/*toTimeline(data['Routes']);
     		$.each(data['Routes'], function(i){
@@ -212,12 +224,14 @@
 		    				flightPlanCoordinates2.push(point);
 		    				temp = new google.maps.Marker({
 					  			position : point,
-					  			map : map,
+					  			map : map2,
 					  			title : city
 					  			});
+
+		    				toTimeline(cities);
+    	
 	    				});
 
-    	toTimeline(cities);
     	connectPoints(flightPlanCoordinates2, map2);
     }
     </script>

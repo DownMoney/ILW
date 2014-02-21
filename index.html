@@ -62,7 +62,7 @@
 </div>
        <div class="ui-widget"> <label for="from">DEPARTURE DATE: </label>
         <div id="datetimepicker" class="input-append date">
-          <input type="text" name="ddate" class="form-control"></input>
+          <input type="text"  data-format="MM/dd/yyyy" name="ddate" class="form-control"></input>
           <span class="add-on">
             <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
           </span>
@@ -229,12 +229,12 @@
         endDate: Infinity
       };
       $('#datetimepicker').datetimepicker({
-        format: 'dd/MM/yyyy',
+        format: 'MM/dd/yyyy',
         language: 'en-US'
       });
 
       $('#datetimepicker1').datetimepicker({
-        format: 'dd/MM/yyyy',
+        format: 'MM/dd/yyyy',
         language: 'en-US'
       });
     </script>
